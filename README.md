@@ -1,31 +1,19 @@
-# nestjs-open-source-template
+<div align="center">
+   <h1>
+       <a href="#"><img src="https://necord.org/img/logo.png" alt ="Necord Logo"></a>
+   </h1>
+   🤖 A module for creating <b><a href="https://discord.com/">Discord</a> bots</b> using <a href="https://nestjs.com">NestJS</a>, based on <a href="https://discord.js.org/">Discord.js</a>
+   <br/><br/>
+   <a href="https://necord.org">Documentation ✨</a> &emsp; <a href="https://github.com/necordjs/necord">Source code 🪡</a> &emsp; <a href="https://github.com/necordjs/samples">Examples 🛠️</a> &emsp; <a href="https://discord.gg/mcBYvMTnwP">Community 💬</a>
+</div>
 
-This is a template for creating a new open source project in NestJS.
 
-## Features
-* [TypeScript](https://www.typescriptlang.org/)
-* [Jest](https://jestjs.io/)
-* [ESLint](https://eslint.org/)
-* [Prettier](https://prettier.io/)
-* GitHub Actions
-* [Dependabot](https://dependabot.com/)
-* Semantic Release
-* Commitizen
-* Commitlint
-* [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)
-* [Semantic Versioning](https://semver.org/)
+<br/>
 
-## Usage
-1. Click the "Use this template" button to create a new repository from this template.
-2. Clone the new repository to your local machine.
-3. Run `npm install` to install dependencies.
-4. Replace name, description, and other fields in `package.json` with your own.
-5. Replace the contents of this file with your own.
-6. Replace name of package at github actions workflow file
+<p align="center">
+    <a href='https://img.shields.io/npm/v/necord'><img src="https://img.shields.io/npm/v/necord" alt="NPM Version" /></a>
+    <a href='https://img.shields.io/npm/l/necord'><img src="https://img.shields.io/npm/l/necord" alt="NPM License" /></a>
+    <a href='https://img.shields.io/npm/dm/necord'><img src="https://img.shields.io/npm/dm/necord" alt="NPM Downloads" /></a>
+    <a href='https://img.shields.io/github/last-commit/necordjs/necord'><img src="https://img.shields.io/github/last-commit/SocketSomeone/necord" alt="Last commit" /></a>
+</p>
 
-## Scripts
-* `npm run build` - Compile TypeScript to JavaScript.
-* `npm run lint` - Lint TypeScript files.
-* `npm run test` - Run tests.
-* `npm run publish:npm` - Publish package to npm.
-* `npm run publish:dev` - Publish package to npm with `dev` tag.
