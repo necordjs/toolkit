@@ -49,7 +49,7 @@ jobs:
                 id: meta
                 uses: docker/metadata-action@v4
                 with:
-                    images: ${{ env.REGISTRY }}/${{ env.ORGANIZATION }}/highlights
+                    images: ${{ env.REGISTRY }}/${{ env.ORGANIZATION }}/toolkit
 
             -   name: Build and push
                 uses: docker/build-push-action@v4
@@ -58,7 +58,7 @@ jobs:
                     file: ./Dockerfile
                     push: true
                     builder: ${{ steps.buildx.outputs.name }}
-                    tags: ${{ steps.meta.outputs.tags }}, ${{ env.REGISTRY }}/${{ env.ORGANIZATION }}/highlights
+                    tags: ${{ steps.meta.outputs.tags }}, ${{ env.REGISTRY }}/${{ env.ORGANIZATION }}/toolkit
                     labels: ${{ steps.meta.outputs.labels }}
                     cache-from: type=local,src=/tmp/.buildx-cache
                     cache-to: type=local,dest=/tmp/.buildx-cache
