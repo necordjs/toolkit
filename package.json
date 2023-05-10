@@ -7,7 +7,8 @@
 		"prepare": "husky install .github/husky",
 		"format": "prettier --write \"src/**/*.ts\"",
 		"lint": "eslint --ignore-path .gitignore src/**/*.ts",
-		"start": "nest start --watch"
+		"start": "nest start",
+		"start:dev": "nest start --watch"
 	},
 	"lint-staged": {
 		"*.ts": "npm run format"
