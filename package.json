@@ -1,16 +1,13 @@
 {
-	"name": "nestjs-open-source-template",
-	"description": "\uD83D\uDCDC My template for creating NestJS Open Source projects",
+	"name": "necordjs-toolkit",
+	"description": "🤖 Source code of Toolkit bot",
 	"version": "1.0.0",
 	"scripts": {
-		"build": "rimraf dist && tsc -p tsconfig.build.json",
-		"prepublish:npm": "npm run build",
-		"publish:npm": "release-it",
-		"prepublish:dev": "npm run build",
-		"publish:dev": "npm publish --access public --tag dev",
+		"build": "nest build",
 		"prepare": "husky install .github/husky",
 		"format": "prettier --write \"src/**/*.ts\"",
-		"lint": "eslint --ignore-path .gitignore src/**/*.ts"
+		"lint": "eslint --ignore-path .gitignore src/**/*.ts",
+		"start": "nest start --watch"
 	},
 	"lint-staged": {
 		"*.ts": "npm run format"
@@ -19,28 +16,36 @@
 		"lib": "src",
 		"test": "test"
 	},
-	"main": "./dist/index.js",
-	"types": "./dist/index.d.ts",
-	"keywords": [],
+	"keywords": [
+		"toolkit",
+		"nestjs",
+		"necord"
+	],
 	"license": "MIT",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/SocketSomeone/nestjs-open-source-template"
+		"url": "https://github.com/necordjs/toolkit"
 	},
 	"bugs": {
-		"url": "https://github.com/SocketSomeone/nestjs-open-source-template"
+		"url": "https://github.com/necordjs/toolkit"
 	},
 	"author": "Alexey Filippov <socket.someone@gmail.com>",
 	"contributors": [
 		"Alexey Filippov <socket.someone@gmail.com>"
 	],
-	"dependencies": {},
+	"dependencies": {
+		"@nestjs/axios": "^2.0.0",
+		"@nestjs/common": "9.4.0",
+		"@nestjs/config": "^2.3.1",
+		"@nestjs/core": "9.4.0",
+		"discord.js": "^14.11.0",
+		"kleur": "^4.1.5",
+		"necord": "^5.8.0"
+	},
 	"devDependencies": {
 		"@commitlint/cli": "17.6.3",
 		"@commitlint/config-angular": "17.6.3",
 		"@favware/npm-deprecate": "1.0.7",
-		"@nestjs/common": "9.4.0",
-		"@nestjs/core": "9.4.0",
 		"@nestjs/testing": "9.4.0",
 		"@types/jest": "29.5.1",
 		"@types/node": "20.1.2",
