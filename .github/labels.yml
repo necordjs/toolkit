@@ -10,7 +10,7 @@
   color: '276bd1'
 - name: 'discussion'
   color: 'b6b1f9'
-- name: 'documentation'
+- name: 'docs'
   color: '0075ca'
 - name: 'duplicate'
   color: 'cfd3d7'

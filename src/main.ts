@@ -8,3 +8,5 @@ async function bootstrap() {
 }
 
 bootstrap();
+
+process.on('unhandledRejection', err => {}).on('uncaughtException', err => {});

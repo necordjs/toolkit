@@ -1,6 +1,7 @@
 import { Module } from '@nestjs/common';
 import { NecordModule } from 'necord';
 import { ConfigModule, ConfigService } from '@nestjs/config';
+import { DocsModule } from './docs/docs.module';
 import { BitfieldsModule } from './bitfields/bitfields.module';
 import { GeneralModule } from './general/general.module';
 import { AppService } from './app.service';
@@ -19,6 +20,7 @@ import { AppService } from './app.service';
 			}),
 			inject: [ConfigService]
 		}),
+		DocsModule,
 		BitfieldsModule,
 		GeneralModule
 	],
