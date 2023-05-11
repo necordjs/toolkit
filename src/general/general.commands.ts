@@ -47,7 +47,7 @@ export class GeneralCommands {
 			content: hyperlink(
 				'(click here)',
 				hideLinkEmbed(
-					`https://discord.com/api/oauth2/authorize?client_id=${this.client.application.id}&permissions=8&scope=bot&applications.commands`
+					`https://discord.com/api/oauth2/authorize?client_id=${this.client.application.id}&scope=bot&applications.commands`
 				)
 			),
 			ephemeral: true
