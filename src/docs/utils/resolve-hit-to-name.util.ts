@@ -6,7 +6,7 @@ export function resolveHitToName(hit: Algolia.Hit) {
 	const category = hierarchy.lvl1 ?? hierarchy.lvl0 ?? '';
 	let subcategory = hierarchy.lvl2 ?? hierarchy.lvl1 ?? '';
 
-	if (category === subcategory) {
+	if (category === subcategory || subcategory === '') {
 		subcategory = 'Introduction';
 	}
 
