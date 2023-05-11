@@ -37,6 +37,18 @@ export class AlgoliaService {
 			appId: '8XSLZMKC5R',
 			apiKey: 'a2edfe9f29fe917013b23d5767ae569a',
 			index: 'discordjs'
+		},
+
+		[AlgoliaApps.Ogma]: {
+			appId: 'U5N45YQUS6',
+			apiKey: 'dad79a1521426f184d0fac2ce3575149',
+			index: 'ogma'
+		},
+
+		[AlgoliaApps.NestCommander]: {
+			appId: '9O0K4CXI15',
+			apiKey: '9689faf6550ca3133e69be1d9861ea92',
+			index: 'nest-commander'
 		}
 	};
 

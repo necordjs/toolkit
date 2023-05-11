@@ -70,6 +70,28 @@ export class DocsCommands {
 		return this.replyWithAlgoliaResponse(interaction, algoliaOptions, AlgoliaApps.TypeScript);
 	}
 
+	@UseInterceptors(AlgoliaAutocomplete(AlgoliaApps.NestCommander))
+	@Subcommand({ name: 'nest-commander', description: 'Display docs for Nest Commander' })
+	public async nestCommander(
+		@Context() [interaction]: SlashCommandContext,
+		@Options() algoliaOptions: AlgoliaOptions
+	) {
+		return this.replyWithAlgoliaResponse(
+			interaction,
+			algoliaOptions,
+			AlgoliaApps.NestCommander
+		);
+	}
+
+	@UseInterceptors(AlgoliaAutocomplete(AlgoliaApps.Ogma))
+	@Subcommand({ name: 'ogma', description: 'Display docs for Ogma' })
+	public async ogma(
+		@Context() [interaction]: SlashCommandContext,
+		@Options() algoliaOptions: AlgoliaOptions
+	) {
+		return this.replyWithAlgoliaResponse(interaction, algoliaOptions, AlgoliaApps.Ogma);
+	}
+
 	private async replyWithAlgoliaResponse(
 		interaction: ChatInputCommandInteraction,
 		algoliaOptions: AlgoliaOptions,

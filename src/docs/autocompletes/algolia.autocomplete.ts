@@ -18,16 +18,28 @@ export function AlgoliaAutocomplete(app: AlgoliaApps) {
 
 			const searchResult = await this.algoliaService.search(query, app);
 			const hits = searchResult.hits?.slice(0, 24) ?? [];
-			const choices = hits.map(hit => {
-				const { objectID } = hit;
 
-				return {
-					name: truncate(resolveHitToName(hit), 95, ''),
-					value: objectID
-				};
-			});
+			const seen = new Set<string>();
 
-			return interaction.respond(choices);
+			return interaction.respond(
+				hits
+					.map(hit => {
+						const { objectID: value } = hit;
+						const name = truncate(resolveHitToName(hit), 95, '');
+
+						return {
+							name,
+							value
+						};
+					})
+					.filter(choice => {
+						if (seen.has(choice.value)) return false;
+
+						seen.add(choice.value);
+
+						return true;
+					})
+			);
 		}
 	}
 
