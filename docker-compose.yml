@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  necord-service:
+    container_name: 'necord-service'
+    restart: unless-stopped
+    image: 'ghcr.io/necordjs/necord:latest'
+    environment:
+      DISCORD_TOKEN: 'your-token'
