@@ -17,7 +17,10 @@ import { TagsModule } from './tags/tags.module';
 				token: configService.get('DISCORD_TOKEN'),
 				prefix: '!',
 				intents: ['Guilds', 'GuildMembers', 'MessageContent'],
-				development: ['742715858157043793', '977861813658075146']
+				development:
+					configService.get('NODE_ENV') === 'development'
+						? ['742715858157043793', '977861813658075146']
+						: undefined
 			}),
 			inject: [ConfigService]
 		}),
