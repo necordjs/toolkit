@@ -10,6 +10,7 @@ import { AlgoliaAutocomplete } from './autocompletes';
 import { AlgoliaApps } from './enums';
 import { AlgoliaOptions } from './options/algolia.options';
 import { DocsService } from './docs.service';
+import { ChatInputCommandInteraction } from 'discord.js';
 
 const DocsCommand = createCommandGroupDecorator({
 	name: 'docs',
@@ -26,15 +27,7 @@ export class DocsCommands {
 		@Context() [interaction]: SlashCommandContext,
 		@Options() algoliaOptions: AlgoliaOptions
 	) {
-		const content = await this.docsService.getAlgoliaResponse(
-			algoliaOptions.query,
-			'Necord',
-			AlgoliaApps.Necord
-		);
-
-		return interaction.reply({
-			content
-		});
+		return this.replyWithAlgoliaResponse(interaction, algoliaOptions, AlgoliaApps.Necord);
 	}
 
 	@UseInterceptors(AlgoliaAutocomplete(AlgoliaApps.NestJS))
@@ -43,14 +36,50 @@ export class DocsCommands {
 		@Context() [interaction]: SlashCommandContext,
 		@Options() algoliaOptions: AlgoliaOptions
 	) {
-		const content = await this.docsService.getAlgoliaResponse(
-			algoliaOptions.query,
-			'NestJS',
-			AlgoliaApps.NestJS
+		return this.replyWithAlgoliaResponse(interaction, algoliaOptions, AlgoliaApps.NestJS);
+	}
+
+	@UseInterceptors(AlgoliaAutocomplete(AlgoliaApps.DiscordJSGuide))
+	@Subcommand({ name: 'discordjs-guide', description: 'Display docs for Discord.JS Guide' })
+	public async discordjsGuide(
+		@Context() [interaction]: SlashCommandContext,
+		@Options() algoliaOptions: AlgoliaOptions
+	) {
+		return this.replyWithAlgoliaResponse(
+			interaction,
+			algoliaOptions,
+			AlgoliaApps.DiscordJSGuide
 		);
+	}
+
+	@UseInterceptors(AlgoliaAutocomplete(AlgoliaApps.Discord))
+	@Subcommand({ name: 'discord', description: 'Display docs for Discord' })
+	public async discord(
+		@Context() [interaction]: SlashCommandContext,
+		@Options() algoliaOptions: AlgoliaOptions
+	) {
+		return this.replyWithAlgoliaResponse(interaction, algoliaOptions, AlgoliaApps.Discord);
+	}
+
+	@UseInterceptors(AlgoliaAutocomplete(AlgoliaApps.TypeScript))
+	@Subcommand({ name: 'typescript', description: 'Display docs for TypeScript' })
+	public async typescript(
+		@Context() [interaction]: SlashCommandContext,
+		@Options() algoliaOptions: AlgoliaOptions
+	) {
+		return this.replyWithAlgoliaResponse(interaction, algoliaOptions, AlgoliaApps.TypeScript);
+	}
+
+	private async replyWithAlgoliaResponse(
+		interaction: ChatInputCommandInteraction,
+		algoliaOptions: AlgoliaOptions,
+		appType: AlgoliaApps
+	) {
+		const content = await this.docsService.getAlgoliaResponse(algoliaOptions.query, appType);
 
 		return interaction.reply({
-			content
+			content,
+			ephemeral: algoliaOptions.hide
 		});
 	}
 }

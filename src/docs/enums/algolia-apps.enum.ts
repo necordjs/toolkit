@@ -1,4 +1,7 @@
 export enum AlgoliaApps {
 	Necord = 'NECORD',
-	NestJS = 'NestJS'
+	NestJS = 'NestJS',
+	TypeScript = 'TypeScript',
+	Discord = 'Discord',
+	DiscordJSGuide = 'DiscordJS Guide'
 }

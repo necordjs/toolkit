@@ -8,10 +8,9 @@ import { resolveHitToName, truncate } from './utils';
 export class DocsService {
 	public constructor(private readonly algoliaService: AlgoliaService) {}
 
-	public async getAlgoliaResponse(objectID: string, target: string, appType: AlgoliaApps) {
+	public async getAlgoliaResponse(objectID: string, appType: AlgoliaApps) {
 		try {
 			const hit = await this.algoliaService.getObject(objectID, appType);
-			console.log(hit);
 
 			return `${bold(`[${appType}] ${resolveHitToName(hit)}`)}${
 				hit.content?.length ? `\n${truncate(hit.content, 300)}` : ''

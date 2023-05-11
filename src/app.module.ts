@@ -16,7 +16,7 @@ import { AppService } from './app.service';
 				token: configService.get('DISCORD_TOKEN'),
 				prefix: '!',
 				intents: ['Guilds', 'GuildMembers', 'MessageContent'],
-				development: ['742715858157043793']
+				development: ['742715858157043793', '977861813658075146']
 			}),
 			inject: [ConfigService]
 		}),

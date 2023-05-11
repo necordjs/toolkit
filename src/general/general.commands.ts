@@ -12,18 +12,44 @@ import {
 	UserCommandContext
 } from 'necord';
 import { GeneralService } from './general.service';
-import { inlineCode, Message, SnowflakeUtil, time, TimestampStyles, User } from 'discord.js';
+import {
+	Client,
+	hideLinkEmbed,
+	hyperlink,
+	inlineCode,
+	Message,
+	SnowflakeUtil,
+	time,
+	TimestampStyles,
+	User
+} from 'discord.js';
 import { SnowflakeOptions, UserOptions } from './options';
 import { DEFAULT_EMBED } from '../app.constants';
 
 @Injectable()
 export class GeneralCommands {
-	public constructor(private readonly generalService: GeneralService) {}
+	public constructor(
+		private readonly generalService: GeneralService,
+		private readonly client: Client
+	) {}
 
 	@SlashCommand({ name: 'ping', description: 'Get bot ping' })
 	public async ping(@Context() [interaction]: SlashCommandContext) {
 		return interaction.reply({
 			content: `Pong!`,
+			ephemeral: true
+		});
+	}
+
+	@SlashCommand({ name: 'invite', description: 'Get bot invite' })
+	public async invite(@Context() [interaction]: SlashCommandContext) {
+		return interaction.reply({
+			content: hyperlink(
+				'(click here)',
+				hideLinkEmbed(
+					`https://discord.com/api/oauth2/authorize?client_id=${this.client.application.id}&permissions=8&scope=bot&applications.commands`
+				)
+			),
 			ephemeral: true
 		});
 	}
