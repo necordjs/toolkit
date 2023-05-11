@@ -52,6 +52,16 @@ export class AlgoliaService {
 		}
 	};
 
+	public static readonly ALGOLIA_APPS_EMOJIS: Record<AlgoliaApps, string> = {
+		[AlgoliaApps.Necord]: '<:necord:983768394757193851>',
+		[AlgoliaApps.NestJS]: '<:nestjs:1106290667438755990>',
+		[AlgoliaApps.TypeScript]: '<:typescript:1106290484982325249>',
+		[AlgoliaApps.Discord]: '<:discord:1106291735488909453>',
+		[AlgoliaApps.DiscordJSGuide]: '<:discordjs:1106292175634972672>',
+		[AlgoliaApps.Ogma]: '<:ogma:1106291049573384293>',
+		[AlgoliaApps.NestCommander]: '<:commander:1106291617343754334>'
+	};
+
 	public constructor(private readonly httpService: HttpService) {}
 
 	public async search(query: string, appType: AlgoliaApps): Promise<Algolia.Search.Response> {

@@ -19,6 +19,7 @@ import {
 	italic
 } from 'discord.js';
 import { truncate } from './utils';
+import { AlgoliaService } from './services';
 
 const DocsCommand = createCommandGroupDecorator({
 	name: 'docs',
@@ -121,10 +122,10 @@ export class DocsCommands {
 		const notices = [];
 
 		if (searchOptions.member) {
-			notices.push(italic(`Searched for ${searchOptions.member.toString()}\n`));
+			notices.push(italic(`Suggestion for ${searchOptions.member.toString()}:`));
 		}
 
-		notices.push(bold(`[${appType}] ${response.title}`));
+		notices.push(`${AlgoliaService.ALGOLIA_APPS_EMOJIS[appType]} ${bold(response.title)}`);
 
 		if (response.description) {
 			notices.push(truncate(response.description, 300));

@@ -5,6 +5,7 @@ import { DocsModule } from './docs/docs.module';
 import { BitfieldsModule } from './bitfields/bitfields.module';
 import { GeneralModule } from './general/general.module';
 import { AppService } from './app.service';
+import { TagsModule } from './tags/tags.module';
 
 @Module({
 	imports: [
@@ -22,7 +23,8 @@ import { AppService } from './app.service';
 		}),
 		DocsModule,
 		BitfieldsModule,
-		GeneralModule
+		GeneralModule,
+		TagsModule
 	],
 	providers: [AppService]
 })
