@@ -1,13 +1,14 @@
 import { Injectable } from '@nestjs/common';
 import { HttpService } from '@nestjs/axios';
 import { Algolia } from '../interfaces';
-import { API_BASE_ALGOLIA } from '../../app.constants';
 import { stringify } from 'node:querystring';
 import { map } from 'rxjs';
 import { AlgoliaApps } from '../enums';
 
 @Injectable()
 export class AlgoliaService {
+	private static readonly API_BASE_ALGOLIA = 'algolia.net';
+
 	public static readonly ALGOLIA_APPS: Record<AlgoliaApps, Algolia.App> = {
 		[AlgoliaApps.Necord]: {
 			appId: 'U7YH0EPYI9',
@@ -66,7 +67,7 @@ export class AlgoliaService {
 
 	public async search(query: string, appType: AlgoliaApps): Promise<Algolia.Search.Response> {
 		const app = AlgoliaService.ALGOLIA_APPS[appType];
-		const url = `https://${app.appId}.${API_BASE_ALGOLIA}/1/indexes/${app.index}/query`;
+		const url = `https://${app.appId}.${AlgoliaService.API_BASE_ALGOLIA}/1/indexes/${app.index}/query`;
 		return this.httpService
 			.post(
 				url,
@@ -89,7 +90,7 @@ export class AlgoliaService {
 
 	public async getObject(objectID: string, appType: AlgoliaApps): Promise<Algolia.Hit> {
 		const app = AlgoliaService.ALGOLIA_APPS[appType];
-		const url = `https://${app.appId}.${API_BASE_ALGOLIA}/1/indexes/${
+		const url = `https://${app.appId}.${AlgoliaService.API_BASE_ALGOLIA}/1/indexes/${
 			app.index
 		}/${encodeURIComponent(objectID)}`;
 		return this.httpService

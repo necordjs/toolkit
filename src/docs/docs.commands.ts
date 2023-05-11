@@ -6,7 +6,7 @@ import {
 	SlashCommandContext,
 	Subcommand
 } from 'necord';
-import { AlgoliaAutocomplete } from './autocompletes';
+import { AlgoliaAutocomplete, MDNAutocomplete } from './autocompletes';
 import { AlgoliaApps } from './enums';
 import { SearchOptions } from './options';
 import { DocsService } from './docs.service';
@@ -16,10 +16,14 @@ import {
 	ButtonBuilder,
 	ButtonStyle,
 	ChatInputCommandInteraction,
-	italic
+	hideLinkEmbed,
+	hyperlink,
+	inlineCode,
+	italic,
+	underscore
 } from 'discord.js';
-import { truncate } from './utils';
-import { AlgoliaService } from './services';
+import { escape, truncate } from './utils';
+import { AlgoliaService, MDNService } from './services';
 
 const DocsCommand = createCommandGroupDecorator({
 	name: 'docs',
@@ -28,7 +32,10 @@ const DocsCommand = createCommandGroupDecorator({
 
 @DocsCommand()
 export class DocsCommands {
-	public constructor(private readonly docsService: DocsService) {}
+	public constructor(
+		private readonly docsService: DocsService,
+		private readonly mdnService: MDNService
+	) {}
 
 	@UseInterceptors(AlgoliaAutocomplete(AlgoliaApps.Necord))
 	@Subcommand({ name: 'necord', description: 'Display docs for Necord' })
@@ -95,6 +102,59 @@ export class DocsCommands {
 		@Options() searchOptions: SearchOptions
 	) {
 		return this.replyWithAlgoliaResponse(interaction, searchOptions, AlgoliaApps.Ogma);
+	}
+
+	@UseInterceptors(MDNAutocomplete)
+	@Subcommand({ name: 'mdn', description: 'Display docs for MDN' })
+	public async mdn(
+		@Context() [interaction]: SlashCommandContext,
+		@Options() searchOptions: SearchOptions
+	) {
+		const hit = await this.mdnService.get(searchOptions.query.trim());
+
+		if (!hit) {
+			return interaction.reply({
+				content: `Invalid result. Make sure to select an entry from the autocomplete.`,
+				ephemeral: true
+			});
+		}
+
+		const url = MDNService.API_BASE_MDN + hit.mdn_url;
+
+		const linkReplaceRegex = /\[(.+?)\]\((.+?)\)/g;
+		const boldCodeBlockRegex = /`\*\*(.*)\*\*`/g;
+		const intro = escape(hit.summary)
+			.replace(/\s+/g, ' ')
+			.replace(
+				linkReplaceRegex,
+				hyperlink('$1', hideLinkEmbed(`${MDNService.API_BASE_MDN}$2`))
+			)
+			.replace(boldCodeBlockRegex, bold(inlineCode('$1')));
+
+		const parts = [
+			`<:mdn:1106294471240466525> \ ${underscore(
+				bold(hyperlink(escape(hit.title), hideLinkEmbed(url)))
+			)}`,
+			intro
+		];
+
+		if (searchOptions.member) {
+			parts.unshift(`\n\n${italic(`Suggestion for ${searchOptions.member}:`)}`);
+		}
+
+		const row = new ActionRowBuilder<ButtonBuilder>().addComponents(
+			new ButtonBuilder()
+				.setEmoji('📖')
+				.setLabel('Read more')
+				.setURL(url)
+				.setStyle(ButtonStyle.Link)
+		);
+
+		return interaction.reply({
+			content: parts.join('\n'),
+			components: [row],
+			ephemeral: searchOptions.hide
+		});
 	}
 
 	private async replyWithAlgoliaResponse(
