@@ -8,9 +8,17 @@ import {
 } from 'necord';
 import { AlgoliaAutocomplete } from './autocompletes';
 import { AlgoliaApps } from './enums';
-import { AlgoliaOptions } from './options/algolia.options';
+import { SearchOptions } from './options';
 import { DocsService } from './docs.service';
-import { ChatInputCommandInteraction } from 'discord.js';
+import {
+	ActionRowBuilder,
+	bold,
+	ButtonBuilder,
+	ButtonStyle,
+	ChatInputCommandInteraction,
+	italic
+} from 'discord.js';
+import { truncate } from './utils';
 
 const DocsCommand = createCommandGroupDecorator({
 	name: 'docs',
@@ -25,29 +33,29 @@ export class DocsCommands {
 	@Subcommand({ name: 'necord', description: 'Display docs for Necord' })
 	public async necord(
 		@Context() [interaction]: SlashCommandContext,
-		@Options() algoliaOptions: AlgoliaOptions
+		@Options() searchOptions: SearchOptions
 	) {
-		return this.replyWithAlgoliaResponse(interaction, algoliaOptions, AlgoliaApps.Necord);
+		return this.replyWithAlgoliaResponse(interaction, searchOptions, AlgoliaApps.Necord);
 	}
 
 	@UseInterceptors(AlgoliaAutocomplete(AlgoliaApps.NestJS))
 	@Subcommand({ name: 'nestjs', description: 'Display docs for NestJS' })
 	public async nestjs(
 		@Context() [interaction]: SlashCommandContext,
-		@Options() algoliaOptions: AlgoliaOptions
+		@Options() searchOptions: SearchOptions
 	) {
-		return this.replyWithAlgoliaResponse(interaction, algoliaOptions, AlgoliaApps.NestJS);
+		return this.replyWithAlgoliaResponse(interaction, searchOptions, AlgoliaApps.NestJS);
 	}
 
 	@UseInterceptors(AlgoliaAutocomplete(AlgoliaApps.DiscordJSGuide))
 	@Subcommand({ name: 'discordjs-guide', description: 'Display docs for Discord.JS Guide' })
 	public async discordjsGuide(
 		@Context() [interaction]: SlashCommandContext,
-		@Options() algoliaOptions: AlgoliaOptions
+		@Options() searchOptions: SearchOptions
 	) {
 		return this.replyWithAlgoliaResponse(
 			interaction,
-			algoliaOptions,
+			searchOptions,
 			AlgoliaApps.DiscordJSGuide
 		);
 	}
@@ -56,52 +64,76 @@ export class DocsCommands {
 	@Subcommand({ name: 'discord', description: 'Display docs for Discord' })
 	public async discord(
 		@Context() [interaction]: SlashCommandContext,
-		@Options() algoliaOptions: AlgoliaOptions
+		@Options() searchOptions: SearchOptions
 	) {
-		return this.replyWithAlgoliaResponse(interaction, algoliaOptions, AlgoliaApps.Discord);
+		return this.replyWithAlgoliaResponse(interaction, searchOptions, AlgoliaApps.Discord);
 	}
 
 	@UseInterceptors(AlgoliaAutocomplete(AlgoliaApps.TypeScript))
 	@Subcommand({ name: 'typescript', description: 'Display docs for TypeScript' })
 	public async typescript(
 		@Context() [interaction]: SlashCommandContext,
-		@Options() algoliaOptions: AlgoliaOptions
+		@Options() searchOptions: SearchOptions
 	) {
-		return this.replyWithAlgoliaResponse(interaction, algoliaOptions, AlgoliaApps.TypeScript);
+		return this.replyWithAlgoliaResponse(interaction, searchOptions, AlgoliaApps.TypeScript);
 	}
 
 	@UseInterceptors(AlgoliaAutocomplete(AlgoliaApps.NestCommander))
 	@Subcommand({ name: 'nest-commander', description: 'Display docs for Nest Commander' })
 	public async nestCommander(
 		@Context() [interaction]: SlashCommandContext,
-		@Options() algoliaOptions: AlgoliaOptions
+		@Options() searchOptions: SearchOptions
 	) {
-		return this.replyWithAlgoliaResponse(
-			interaction,
-			algoliaOptions,
-			AlgoliaApps.NestCommander
-		);
+		return this.replyWithAlgoliaResponse(interaction, searchOptions, AlgoliaApps.NestCommander);
 	}
 
 	@UseInterceptors(AlgoliaAutocomplete(AlgoliaApps.Ogma))
 	@Subcommand({ name: 'ogma', description: 'Display docs for Ogma' })
 	public async ogma(
 		@Context() [interaction]: SlashCommandContext,
-		@Options() algoliaOptions: AlgoliaOptions
+		@Options() searchOptions: SearchOptions
 	) {
-		return this.replyWithAlgoliaResponse(interaction, algoliaOptions, AlgoliaApps.Ogma);
+		return this.replyWithAlgoliaResponse(interaction, searchOptions, AlgoliaApps.Ogma);
 	}
 
 	private async replyWithAlgoliaResponse(
 		interaction: ChatInputCommandInteraction,
-		algoliaOptions: AlgoliaOptions,
+		searchOptions: SearchOptions,
 		appType: AlgoliaApps
 	) {
-		const content = await this.docsService.getAlgoliaResponse(algoliaOptions.query, appType);
+		const response = await this.docsService.getAlgoliaResponse(searchOptions.query, appType);
+
+		if (!response) {
+			return interaction.reply({
+				content: `Invalid result. Make sure to select an entry from the autocomplete.`,
+				ephemeral: true
+			});
+		}
+
+		const row = new ActionRowBuilder<ButtonBuilder>().addComponents(
+			new ButtonBuilder()
+				.setEmoji('📖')
+				.setLabel('Read more')
+				.setURL(response.url)
+				.setStyle(ButtonStyle.Link)
+		);
+
+		const notices = [];
+
+		if (searchOptions.member) {
+			notices.push(italic(`Searched for ${searchOptions.member.toString()}\n`));
+		}
+
+		notices.push(bold(`[${appType}] ${response.title}`));
+
+		if (response.description) {
+			notices.push(truncate(response.description, 300));
+		}
 
 		return interaction.reply({
-			content,
-			ephemeral: algoliaOptions.hide
+			content: notices.join('\n'),
+			components: [row],
+			ephemeral: searchOptions.hide
 		});
 	}
 }

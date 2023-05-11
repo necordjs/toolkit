@@ -33,9 +33,9 @@ export function AlgoliaAutocomplete(app: AlgoliaApps) {
 						};
 					})
 					.filter(choice => {
-						if (seen.has(choice.value)) return false;
+						if (seen.has(choice.name)) return false;
 
-						seen.add(choice.value);
+						seen.add(choice.name);
 
 						return true;
 					})
