@@ -50,6 +50,18 @@ export class AlgoliaService {
 			appId: '9O0K4CXI15',
 			apiKey: '9689faf6550ca3133e69be1d9861ea92',
 			index: 'nest-commander'
+		},
+
+		[AlgoliaApps.Express]: {
+			appId: 'BH4D9OD16A',
+			apiKey: '7164e33055faa6ecddefd9e08fc59f5d',
+			index: 'expressjs'
+		},
+
+		[AlgoliaApps.Fastify]: {
+			appId: 'DMPMC33PLU',
+			apiKey: '12d46b3bfeee6511031cfe00778f3e45',
+			index: 'fastify'
 		}
 	};
 
@@ -60,7 +72,9 @@ export class AlgoliaService {
 		[AlgoliaApps.Discord]: '<:discord:1106291735488909453>',
 		[AlgoliaApps.DiscordJSGuide]: '<:discordjs:1106292175634972672>',
 		[AlgoliaApps.Ogma]: '<:ogma:1106291049573384293>',
-		[AlgoliaApps.NestCommander]: '<:commander:1106291617343754334>'
+		[AlgoliaApps.NestCommander]: '<:commander:1106291617343754334>',
+		[AlgoliaApps.Express]: '<:express:1106556588153647174>',
+		[AlgoliaApps.Fastify]: '<:fastify:1106556585699983381>'
 	};
 
 	public constructor(private readonly httpService: HttpService) {}

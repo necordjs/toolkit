@@ -5,5 +5,7 @@ export enum AlgoliaApps {
 	Discord = 'Discord',
 	DiscordJSGuide = 'DiscordJS Guide',
 	Ogma = 'Ogma',
-	NestCommander = 'Nest Commander'
+	NestCommander = 'Nest Commander',
+	Express = 'Express',
+	Fastify = 'Fastify'
 }
