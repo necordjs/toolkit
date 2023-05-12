@@ -1,8 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { HttpService } from '@nestjs/axios';
 import { Algolia } from '../interfaces';
-import { stringify } from 'node:querystring';
-import { map } from 'rxjs';
+import { catchError, map } from 'rxjs';
 import { AlgoliaApps } from '../enums';
 
 @Injectable()
@@ -82,13 +81,16 @@ export class AlgoliaService {
 	public async search(query: string, appType: AlgoliaApps): Promise<Algolia.Search.Response> {
 		const app = AlgoliaService.ALGOLIA_APPS[appType];
 		const url = `https://${app.appId}.${AlgoliaService.API_BASE_ALGOLIA}/1/indexes/${app.index}/query`;
+
 		return this.httpService
 			.post(
 				url,
 				{
-					params: stringify({
-						query
-					})
+					params: new URLSearchParams({
+						query,
+						hitsPerPage: '25',
+						facetFilters: JSON.stringify(['lang:en'])
+					}).toString()
 				},
 				{
 					headers: {
@@ -98,7 +100,10 @@ export class AlgoliaService {
 					}
 				}
 			)
-			.pipe(map(response => response.data))
+			.pipe(
+				map(response => response.data),
+				catchError(() => [])
+			)
 			.toPromise();
 	}
 
