@@ -3,6 +3,7 @@ import { Context, Options, SlashCommand, SlashCommandContext } from 'necord';
 import { SearchOptions } from '../docs/options';
 import { Tags } from './tags.constants';
 import { TagsAutocomplete } from './tags.autocomplete';
+import { MessageFlags } from 'discord.js';
 
 @Injectable()
 export class TagsCommands {
@@ -29,7 +30,8 @@ export class TagsCommands {
 
 		return interaction.reply({
 			content: `${searchOptions.member?.toString() ?? ''}\n${tag.content}`,
-			ephemeral: searchOptions.hide
+			ephemeral: searchOptions.hide,
+			flags: MessageFlags.SuppressEmbeds
 		});
 	}
 }
