@@ -19,7 +19,7 @@ const BitFieldsCommand = createCommandGroupDecorator({
 export class BitfieldsCommands {
 	public constructor(private readonly service: BitfieldsService) {}
 
-	@Subcommand({ name: 'intents', description: 'Destructure Gateway Intents' })
+	@Subcommand({ name: 'intents', description: '🛠️ Destructure Gateway Intents' })
 	public intents(
 		@Context() [interaction]: SlashCommandContext,
 		@Options() options: BitfieldOptions
@@ -41,7 +41,7 @@ export class BitfieldsCommands {
 		});
 	}
 
-	@Subcommand({ name: 'permissions', description: 'Destructure Permissions' })
+	@Subcommand({ name: 'permissions', description: '🛠️ Destructure Permissions' })
 	public permissions(
 		@Context() [interaction]: SlashCommandContext,
 		@Options() options: BitfieldOptions

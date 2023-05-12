@@ -33,7 +33,7 @@ export class GeneralCommands {
 		private readonly client: Client
 	) {}
 
-	@SlashCommand({ name: 'ping', description: 'Get bot ping' })
+	@SlashCommand({ name: 'ping', description: '🚀 Get bot ping' })
 	public async ping(@Context() [interaction]: SlashCommandContext) {
 		return interaction.reply({
 			content: `Pong!`,
@@ -41,7 +41,7 @@ export class GeneralCommands {
 		});
 	}
 
-	@SlashCommand({ name: 'invite', description: 'Get bot invite' })
+	@SlashCommand({ name: ' invite', description: '🚀 Get bot invite' })
 	public async invite(@Context() [interaction]: SlashCommandContext) {
 		return interaction.reply({
 			content: hyperlink(
@@ -54,7 +54,7 @@ export class GeneralCommands {
 		});
 	}
 
-	@SlashCommand({ name: 'snowflake', description: 'Get snowflake info' })
+	@SlashCommand({ name: 'snowflake', description: '🛠️ Get snowflake info' })
 	public async snowflake(
 		@Context() [interaction]: SlashCommandContext,
 		@Options() options: SnowflakeOptions
@@ -80,7 +80,7 @@ export class GeneralCommands {
 		});
 	}
 
-	@SlashCommand({ name: 'user', description: 'Get user info' })
+	@SlashCommand({ name: 'user', description: '🛠️ Get user info' })
 	public async user(
 		@Context() [interaction]: SlashCommandContext,
 		@Options() options: UserOptions

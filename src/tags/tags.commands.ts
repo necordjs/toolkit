@@ -10,7 +10,7 @@ export class TagsCommands {
 	@UseInterceptors(TagsAutocomplete)
 	@SlashCommand({
 		name: 'tag',
-		description: 'Send a tag by name or alias',
+		description: '📌 Send a tag by name or alias',
 		guilds: ['977861813658075146']
 	})
 	public async tag(

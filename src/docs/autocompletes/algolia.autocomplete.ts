@@ -1,9 +1,10 @@
 import { AutocompleteInterceptor } from 'necord';
 import { AutocompleteInteraction } from 'discord.js';
 import { AlgoliaService } from '../services';
-import { resolveHitToName, truncate } from '../utils';
+import { truncate } from '../utils';
 import { AlgoliaApps } from '../enums';
 import { Inject } from '@nestjs/common';
+import { Algolia } from '../interfaces';
 
 export function AlgoliaAutocomplete(app: AlgoliaApps) {
 	class AlgoliaAutocompleteInterceptor extends AutocompleteInterceptor {
@@ -25,7 +26,7 @@ export function AlgoliaAutocomplete(app: AlgoliaApps) {
 				hits
 					.map(hit => {
 						const { objectID: value } = hit;
-						const name = truncate(resolveHitToName(hit), 95, '');
+						const name = truncate(Algolia.Hit.getFormattedHierarchy(hit), 95, '');
 
 						return {
 							name,

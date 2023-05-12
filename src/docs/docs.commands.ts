@@ -1,28 +1,19 @@
-import { UseInterceptors } from '@nestjs/common';
-import {
-	Context,
-	createCommandGroupDecorator,
-	Options,
-	SlashCommandContext,
-	Subcommand
-} from 'necord';
-import { AlgoliaAutocomplete, MDNAutocomplete } from './autocompletes';
+import { Injectable, UseInterceptors } from '@nestjs/common';
+import { Context, Options, SlashCommand, SlashCommandContext } from 'necord';
+import { AlgoliaAutocomplete, DiscordJSAutocomplete, MDNAutocomplete } from './autocompletes';
 import { AlgoliaApps } from './enums';
-import { SearchOptions } from './options';
+import { DiscordJSSearchOptions, SearchOptions } from './options';
 import { DocsService } from './docs.service';
 import { ButtonStyle } from 'discord.js';
 
-const DocsCommand = createCommandGroupDecorator({
-	name: 'docs',
-	description: 'Documentation commands'
-});
+const DOC_DESCRIPTION = (app: string) => `📖 Display docs for ${app}`;
 
-@DocsCommand()
+@Injectable()
 export class DocsCommands {
 	public constructor(private readonly docsService: DocsService) {}
 
 	@UseInterceptors(AlgoliaAutocomplete(AlgoliaApps.Necord))
-	@Subcommand({ name: 'necord', description: 'Display docs for Necord' })
+	@SlashCommand({ name: 'necord', description: DOC_DESCRIPTION('Necord') })
 	public async necord(
 		@Context() [interaction]: SlashCommandContext,
 		@Options() searchOptions: SearchOptions
@@ -31,7 +22,7 @@ export class DocsCommands {
 	}
 
 	@UseInterceptors(AlgoliaAutocomplete(AlgoliaApps.NestJS))
-	@Subcommand({ name: 'nestjs', description: 'Display docs for NestJS' })
+	@SlashCommand({ name: 'nestjs', description: DOC_DESCRIPTION('NestJS') })
 	public async nestjs(
 		@Context() [interaction]: SlashCommandContext,
 		@Options() searchOptions: SearchOptions
@@ -39,8 +30,26 @@ export class DocsCommands {
 		return this.docsService.replyAlgolia(interaction, searchOptions, AlgoliaApps.NestJS);
 	}
 
+	@UseInterceptors(AlgoliaAutocomplete(AlgoliaApps.Discord))
+	@SlashCommand({ name: 'discord', description: DOC_DESCRIPTION('Discord') })
+	public async discord(
+		@Context() [interaction]: SlashCommandContext,
+		@Options() searchOptions: SearchOptions
+	) {
+		return this.docsService.replyAlgolia(interaction, searchOptions, AlgoliaApps.Discord);
+	}
+
+	@UseInterceptors(DiscordJSAutocomplete)
+	@SlashCommand({ name: 'discordjs', description: DOC_DESCRIPTION('Discord.js') })
+	public async discordjs(
+		@Context() [interaction]: SlashCommandContext,
+		@Options() searchOptions: DiscordJSSearchOptions
+	) {
+		return this.docsService.replyDiscordJS(interaction, searchOptions);
+	}
+
 	@UseInterceptors(AlgoliaAutocomplete(AlgoliaApps.DiscordJSGuide))
-	@Subcommand({ name: 'discordjs-guide', description: 'Display docs for Discord.JS Guide' })
+	@SlashCommand({ name: 'discordjs-guide', description: DOC_DESCRIPTION('Discord.js Guide') })
 	public async discordjsGuide(
 		@Context() [interaction]: SlashCommandContext,
 		@Options() searchOptions: SearchOptions
@@ -52,17 +61,8 @@ export class DocsCommands {
 		);
 	}
 
-	@UseInterceptors(AlgoliaAutocomplete(AlgoliaApps.Discord))
-	@Subcommand({ name: 'discord', description: 'Display docs for Discord' })
-	public async discord(
-		@Context() [interaction]: SlashCommandContext,
-		@Options() searchOptions: SearchOptions
-	) {
-		return this.docsService.replyAlgolia(interaction, searchOptions, AlgoliaApps.Discord);
-	}
-
 	@UseInterceptors(AlgoliaAutocomplete(AlgoliaApps.TypeScript))
-	@Subcommand({ name: 'typescript', description: 'Display docs for TypeScript' })
+	@SlashCommand({ name: 'typescript', description: DOC_DESCRIPTION('TypeScript') })
 	public async typescript(
 		@Context() [interaction]: SlashCommandContext,
 		@Options() searchOptions: SearchOptions
@@ -71,7 +71,7 @@ export class DocsCommands {
 	}
 
 	@UseInterceptors(AlgoliaAutocomplete(AlgoliaApps.NestCommander))
-	@Subcommand({ name: 'nest-commander', description: 'Display docs for Nest Commander' })
+	@SlashCommand({ name: 'nest-commander', description: DOC_DESCRIPTION('Nest Commander') })
 	public async nestCommander(
 		@Context() [interaction]: SlashCommandContext,
 		@Options() searchOptions: SearchOptions
@@ -80,7 +80,7 @@ export class DocsCommands {
 	}
 
 	@UseInterceptors(AlgoliaAutocomplete(AlgoliaApps.Ogma))
-	@Subcommand({ name: 'ogma', description: 'Display docs for Ogma' })
+	@SlashCommand({ name: 'ogma', description: DOC_DESCRIPTION('Ogma') })
 	public async ogma(
 		@Context() [interaction]: SlashCommandContext,
 		@Options() searchOptions: SearchOptions
@@ -89,7 +89,7 @@ export class DocsCommands {
 	}
 
 	@UseInterceptors(AlgoliaAutocomplete(AlgoliaApps.Express))
-	@Subcommand({ name: 'express', description: 'Display docs for Express' })
+	@SlashCommand({ name: 'express', description: DOC_DESCRIPTION('Express') })
 	public async express(
 		@Context() [interaction]: SlashCommandContext,
 		@Options() searchOptions: SearchOptions
@@ -98,7 +98,7 @@ export class DocsCommands {
 	}
 
 	@UseInterceptors(AlgoliaAutocomplete(AlgoliaApps.Fastify))
-	@Subcommand({ name: 'fastify', description: 'Display docs for Fastify' })
+	@SlashCommand({ name: 'fastify', description: DOC_DESCRIPTION('Fastify') })
 	public async fastify(
 		@Context() [interaction]: SlashCommandContext,
 		@Options() searchOptions: SearchOptions
@@ -107,7 +107,7 @@ export class DocsCommands {
 	}
 
 	@UseInterceptors(MDNAutocomplete)
-	@Subcommand({ name: 'mdn', description: 'Display docs for MDN' })
+	@SlashCommand({ name: 'mdn', description: DOC_DESCRIPTION('MDN') })
 	public async mdn(
 		@Context() [interaction]: SlashCommandContext,
 		@Options() searchOptions: SearchOptions

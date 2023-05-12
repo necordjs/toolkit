@@ -1,5 +1,5 @@
 import { Module } from '@nestjs/common';
-import { AlgoliaService, MDNService } from './services';
+import { AlgoliaService, DiscordJSService, MDNService } from './services';
 import { HttpModule } from '@nestjs/axios';
 import { DocsCommands } from './docs.commands';
 import { DocsService } from './docs.service';
@@ -10,6 +10,6 @@ import { DocsService } from './docs.service';
 			timeout: 5000
 		})
 	],
-	providers: [AlgoliaService, DocsService, DocsCommands, MDNService]
+	providers: [AlgoliaService, DocsService, DocsCommands, MDNService, DiscordJSService]
 })
 export class DocsModule {}

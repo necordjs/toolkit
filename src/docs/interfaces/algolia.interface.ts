@@ -30,5 +30,18 @@ export namespace Algolia {
 			lvl5?: string;
 			lvl6?: string;
 		}
+
+		export function getFormattedHierarchy(hit: Hit) {
+			const { hierarchy } = hit;
+
+			const category = hierarchy.lvl1 ?? hierarchy.lvl0 ?? '';
+			let subcategory = hierarchy.lvl2 ?? hierarchy.lvl1 ?? '';
+
+			if (category === subcategory || subcategory === '') {
+				subcategory = 'Introduction';
+			}
+
+			return `${category}: ${subcategory}${hierarchy.lvl3 ? ` - ${hierarchy.lvl3}` : ''}`;
+		}
 	}
 }

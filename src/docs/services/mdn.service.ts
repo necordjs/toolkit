@@ -67,11 +67,10 @@ export class MDNService implements OnApplicationBootstrap {
 		}
 
 		return this.httpService
-			.get(qString)
+			.get<MDN.APIResult>(qString)
 			.pipe(
 				map(response => response.data?.doc),
-				tap(hit => this.cache.set(qString, hit)),
-				catchError(() => undefined)
+				tap(hit => this.cache.set(qString, hit))
 			)
 			.toPromise();
 	}

@@ -64,18 +64,6 @@ export class AlgoliaService {
 		}
 	};
 
-	public static readonly ALGOLIA_APPS_EMOJIS: Record<AlgoliaApps, string> = {
-		[AlgoliaApps.Necord]: '<:necord:983768394757193851>',
-		[AlgoliaApps.NestJS]: '<:nestjs:1106290667438755990>',
-		[AlgoliaApps.TypeScript]: '<:typescript:1106290484982325249>',
-		[AlgoliaApps.Discord]: '<:discord:1106291735488909453>',
-		[AlgoliaApps.DiscordJSGuide]: '<:discordjs:1106292175634972672>',
-		[AlgoliaApps.Ogma]: '<:ogma:1106291049573384293>',
-		[AlgoliaApps.NestCommander]: '<:commander:1106291617343754334>',
-		[AlgoliaApps.Express]: '<:express:1106556588153647174>',
-		[AlgoliaApps.Fastify]: '<:fastify:1106556585699983381>'
-	};
-
 	public constructor(private readonly httpService: HttpService) {}
 
 	public async search(query: string, appType: AlgoliaApps): Promise<Algolia.Search.Response> {
@@ -88,7 +76,6 @@ export class AlgoliaService {
 				{
 					params: new URLSearchParams({
 						query,
-						hitsPerPage: '25',
 						facetFilters: JSON.stringify(['lang:en'])
 					}).toString()
 				},
@@ -122,5 +109,30 @@ export class AlgoliaService {
 			})
 			.pipe(map(response => response.data))
 			.toPromise();
+	}
+
+	public getAlgoliaAppEmoji(appType: AlgoliaApps): string {
+		switch (appType) {
+			case AlgoliaApps.Necord:
+				return '<:necord:983768394757193851>';
+			case AlgoliaApps.NestJS:
+				return '<:nestjs:1106290667438755990>';
+			case AlgoliaApps.TypeScript:
+				return '<:typescript:1106290484982325249>';
+			case AlgoliaApps.Discord:
+				return '<:discord:1106291735488909453>';
+			case AlgoliaApps.DiscordJSGuide:
+				return '<:discordjs:1106292175634972672>';
+			case AlgoliaApps.Ogma:
+				return '<:ogma:1106291049573384293>';
+			case AlgoliaApps.NestCommander:
+				return '<:commander:1106291617343754334>';
+			case AlgoliaApps.Express:
+				return '<:express:1106556588153647174>';
+			case AlgoliaApps.Fastify:
+				return '<:fastify:1106556585699983381>';
+			default:
+				return '';
+		}
 	}
 }

@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
-import { AlgoliaService, MDNService } from './services';
+import { AlgoliaService, DiscordJSService, MDNService } from './services';
 import { AlgoliaApps } from './enums';
-import { escape, resolveHitToName, truncate } from './utils';
+import { escape, truncate } from './utils';
 import {
 	ActionRowBuilder,
 	bold,
@@ -12,16 +12,19 @@ import {
 	hyperlink,
 	inlineCode,
 	italic,
+	MessageFlags,
 	underscore
 } from 'discord.js';
-import { SearchOptions } from './options';
-import { DocsOptions } from './interfaces/docs-options.interface';
+import { DiscordJSSearchOptions, SearchOptions } from './options';
+import { Algolia, DiscordJS, DocsOptions } from './interfaces';
+import { SourcesStringUnion } from 'discordjs-docs-parser';
 
 @Injectable()
 export class DocsService {
 	public constructor(
 		private readonly algoliaService: AlgoliaService,
-		private readonly mdnService: MDNService
+		private readonly mdnService: MDNService,
+		private readonly discordJSService: DiscordJSService
 	) {}
 
 	public async getAlgoliaResponse(objectID: string, appType: AlgoliaApps): Promise<DocsOptions> {
@@ -29,7 +32,7 @@ export class DocsService {
 			const hit = await this.algoliaService.getObject(objectID, appType);
 
 			return {
-				title: bold(resolveHitToName(hit)),
+				title: bold(Algolia.Hit.getFormattedHierarchy(hit)),
 				description: hit.content?.length ? hit.content : null,
 				url: hit.url
 			};
@@ -64,6 +67,25 @@ export class DocsService {
 		}
 	}
 
+	private async getDiscordJSResponse(source: string, query: string): Promise<DocsOptions> {
+		try {
+			const [element, doc] = await this.discordJSService.get(
+				source as SourcesStringUnion,
+				query
+			);
+
+			const description = (element.formattedDescription || element.description) ?? '';
+
+			return {
+				title: DiscordJS.resolveElementString(element, doc),
+				description,
+				url: element.url
+			};
+		} catch (err) {
+			return null;
+		}
+	}
+
 	public async replyAlgolia(
 		interaction: ChatInputCommandInteraction,
 		searchOptions: SearchOptions,
@@ -71,18 +93,42 @@ export class DocsService {
 	) {
 		const response = await this.getAlgoliaResponse(searchOptions.query, appType);
 
+		if (!response) {
+			return this.replyInvalid(interaction);
+		}
+
 		return this.reply(interaction, searchOptions, {
 			...response,
-			emoji: AlgoliaService.ALGOLIA_APPS_EMOJIS[appType]
+			emoji: this.algoliaService.getAlgoliaAppEmoji(appType)
 		});
 	}
 
 	public async replyMDN(interaction: ChatInputCommandInteraction, searchOptions: SearchOptions) {
 		const response = await this.getMDNResponse(searchOptions.query);
 
+		if (!response) {
+			return this.replyInvalid(interaction);
+		}
+
 		return this.reply(interaction, searchOptions, {
 			...response,
 			emoji: '<:mdn:1106294471240466525>'
+		});
+	}
+
+	public async replyDiscordJS(
+		interaction: ChatInputCommandInteraction,
+		searchOptions: DiscordJSSearchOptions
+	) {
+		const response = await this.getDiscordJSResponse(searchOptions.source, searchOptions.query);
+
+		if (!response) {
+			return this.replyInvalid(interaction);
+		}
+
+		return this.reply(interaction, searchOptions, {
+			...response,
+			emoji: '<:discordjs:1106292175634972672>'
 		});
 	}
 
@@ -92,10 +138,7 @@ export class DocsService {
 		options: DocsOptions
 	) {
 		if (!options) {
-			return interaction.reply({
-				content: `Invalid result. Make sure to select an entry from the autocomplete.`,
-				ephemeral: true
-			});
+			return this.replyInvalid(interaction);
 		}
 
 		const row = new ActionRowBuilder<ButtonBuilder>().addComponents(
@@ -121,7 +164,15 @@ export class DocsService {
 		return interaction.reply({
 			content: notices.join('\n'),
 			components: [row],
-			ephemeral: searchOptions.hide
+			ephemeral: searchOptions.hide,
+			flags: MessageFlags.SuppressEmbeds
+		});
+	}
+
+	public replyInvalid(interaction: ChatInputCommandInteraction) {
+		return interaction.reply({
+			content: `Invalid result. Make sure to select an entry from the autocomplete.`,
+			ephemeral: true
 		});
 	}
 }
