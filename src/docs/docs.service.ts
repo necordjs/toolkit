@@ -24,7 +24,7 @@ export class DocsService {
 		private readonly mdnService: MDNService
 	) {}
 
-	public async getAlgoliaResponse(objectID: string, appType: AlgoliaApps) {
+	public async getAlgoliaResponse(objectID: string, appType: AlgoliaApps): Promise<DocsOptions> {
 		try {
 			const hit = await this.algoliaService.getObject(objectID, appType);
 
@@ -38,7 +38,7 @@ export class DocsService {
 		}
 	}
 
-	public async getMDNResponse(query: string) {
+	public async getMDNResponse(query: string): Promise<DocsOptions> {
 		try {
 			const hit = await this.mdnService.get(query);
 
