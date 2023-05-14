@@ -41,7 +41,7 @@ export class GeneralCommands {
 		});
 	}
 
-	@SlashCommand({ name: ' invite', description: '🚀 Get bot invite' })
+	@SlashCommand({ name: 'invite', description: '🚀 Get bot invite' })
 	public async invite(@Context() [interaction]: SlashCommandContext) {
 		return interaction.reply({
 			content: hyperlink(
