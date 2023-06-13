@@ -37,7 +37,7 @@
 	"dependencies": {
 		"@nestjs/axios": "2.0.0",
 		"@nestjs/common": "9.4.3",
-		"@nestjs/config": "2.3.2",
+		"@nestjs/config": "2.3.3",
 		"@nestjs/core": "9.4.3",
 		"axios": "^1.4.0",
 		"discord.js": "14.11.0",
