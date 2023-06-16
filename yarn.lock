@@ -5348,10 +5348,10 @@ natural-compare@^1.4.0:
   resolved "https://registry.npmjs.org/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
   integrity sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==
 
-necord@5.8.4:
-  version "5.8.4"
-  resolved "https://registry.npmjs.org/necord/-/necord-5.8.4.tgz#fdbe5d8e00895ae921db3c890eb4dcc0a33e7a14"
-  integrity sha512-R9IxjZYepofbfUvHy+qT3QvKhN/4s6yHGaJUotutdIkQ5ZVGdZzvJ+OYjLZv6UZ/8liXYPurcrq0+h0LIl7oLg==
+necord@5.8.5:
+  version "5.8.5"
+  resolved "https://registry.yarnpkg.com/necord/-/necord-5.8.5.tgz#e0f1870dabad0725f2d20d579d85e6f2384a29ec"
+  integrity sha512-tS+gNNO8mUKMuUj2xfaw1Iu0RTcNanTWKX5v7g63qOPNqiD2+GVac29KzbUMv3tDVV0HYVrYd5Guq94lAA8zAg==
   dependencies:
     path-to-regexp "6.2.1"
 
