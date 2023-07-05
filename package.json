@@ -49,7 +49,7 @@
 		"@commitlint/cli": "17.6.6",
 		"@commitlint/config-angular": "17.6.6",
 		"@favware/npm-deprecate": "1.0.7",
-		"@nestjs/cli": "^10.1.4",
+		"@nestjs/cli": "^10.1.7",
 		"@nestjs/schematics": "^10.0.1",
 		"@nestjs/testing": "9.4.3",
 		"@types/jest": "29.5.2",
