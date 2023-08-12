@@ -30,12 +30,12 @@ export class ChangelogController implements OnModuleInit {
 												url: release.author.url,
 												iconURL: release.author.avatar_url
 											})
-											.setTitle(`Changelog`)
+											.setTitle(`Changelog | Release ${release.tag_name}`)
 											.setURL(release.url)
 											.setDescription(
 												release.body
 													.slice(0, 4096)
-													.replace('\r\n\r\n', '\n')
+													.replace(/\r\n\r\n/g, '\n')
 											)
 											.setColor('Blurple')
 											.setFields([
@@ -60,7 +60,6 @@ export class ChangelogController implements OnModuleInit {
 													inline: true
 												}
 											])
-											.setFooter({ text: `Release ${release.tag_name}` })
 									)
 								)
 							)

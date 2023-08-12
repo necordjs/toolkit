@@ -24,9 +24,9 @@ export class BitfieldsService {
 		return entries
 			.map(
 				(entry, index) =>
-					`${entry.represented ? kleur.green('[✔]') : kleur.red('[✖]')} ${entry.name} (${
-						entry.bit
-					}) 1<<${index}`
+					`${entry.represented ? kleur.green('[✔]') : kleur.red('[✖]')} ${
+						entry.name
+					} (${entry.bit}) 1<<${index}`
 			)
 			.join('\n');
 	}
