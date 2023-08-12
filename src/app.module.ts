@@ -6,6 +6,7 @@ import { BitfieldsModule } from './bitfields/bitfields.module';
 import { GeneralModule } from './general/general.module';
 import { AppService } from './app.service';
 import { TagsModule } from './tags/tags.module';
+import { ChangelogModule } from './changelog/changelog.module';
 
 @Module({
 	imports: [
@@ -18,14 +19,15 @@ import { TagsModule } from './tags/tags.module';
 				prefix: '!',
 				intents: ['Guilds', 'GuildMembers', 'MessageContent'],
 				development:
-					configService.get('NODE_ENV') === 'development'
+					configService.get('NODE_ENV', 'development') === 'development'
 						? ['742715858157043793', '977861813658075146']
 						: undefined
 			}),
 			inject: [ConfigService]
 		}),
-		DocsModule,
 		BitfieldsModule,
+		ChangelogModule,
+		DocsModule,
 		GeneralModule,
 		TagsModule
 	],
