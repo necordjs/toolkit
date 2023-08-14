@@ -963,10 +963,10 @@
   resolved "https://registry.npmjs.org/@lukeed/csprng/-/csprng-1.1.0.tgz#1e3e4bd05c1cc7a0b2ddbd8a03f39f6e4b5e6cfe"
   integrity sha512-Z7C/xXCiGWsg0KuKsHTKJxbWhpI3Vs5GwLfOean7MGyVFGqdRgBbAjOCh6u4bbjPc/8MJ2pZmK/0DLdCbivLDA==
 
-"@necord/pagination@^1.1.2":
-  version "1.1.2"
-  resolved "https://registry.npmjs.org/@necord/pagination/-/pagination-1.1.2.tgz#fa0faf2cac086f34ad1da1cbe5c2570c8cefc1e5"
-  integrity sha512-8nZvJ/rjU0fbqve4Kckt9rvZ5S2As1wlDRe7lJuo8k11VGCewgZ96llMSPobw4iLntDMAg67tfBb9+6OPq02+g==
+"@necord/pagination@^1.1.5":
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/@necord/pagination/-/pagination-1.1.5.tgz#eb1501240f645902512aabaaca617ceefeb32757"
+  integrity sha512-rEhmfFbBlZeaoF8C+oiO1khR7MLKdZXGjI4aqqtRFSj7CPOClT7gRadzrznP/ypXRt7CKMB4IU47I+9CjYstEw==
 
 "@nestjs/axios@3.0.0":
   version "3.0.0"
