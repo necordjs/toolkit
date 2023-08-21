@@ -8,7 +8,7 @@ export interface Release {
 	tag_name: string;
 	name: string;
 	body: string;
-	url: string;
+	html_url: string;
 	author: ReleaseAuthor;
 	created_at: string;
 	published_at: string;
