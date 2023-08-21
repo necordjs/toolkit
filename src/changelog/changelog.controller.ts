@@ -31,7 +31,7 @@ export class ChangelogController implements OnModuleInit {
 												iconURL: release.author.avatar_url
 											})
 											.setTitle(`Changelog | Release ${release.tag_name}`)
-											.setURL(release.url)
+											.setURL(release.html_url)
 											.setDescription(
 												release.body
 													.slice(0, 4096)
