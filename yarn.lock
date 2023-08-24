@@ -980,10 +980,10 @@
   resolved "https://registry.yarnpkg.com/@nestjs/axios/-/axios-3.0.0.tgz#a2e70b118e3058f3d4b9c3deacd496ec4e3ee69e"
   integrity sha512-ULdH03jDWkS5dy9X69XbUVbhC+0pVnrRcj7bIK/ytTZ76w7CgvTZDJqsIyisg3kNOiljRW/4NIjSf3j6YGvl+g==
 
-"@nestjs/cli@^10.1.14":
-  version "10.1.14"
-  resolved "https://registry.yarnpkg.com/@nestjs/cli/-/cli-10.1.14.tgz#4a0fac72b1f8d5b6a9d20ea48d3545bf5c39bb8a"
-  integrity sha512-oxfoebzrq6g+MKc6FRx2O8D86Vk0ViEmlP4B1E3dzwC3X5yjxlA1IDulLrVz3VIpGjuyuXmrQjjd8l0NUVZiKg==
+"@nestjs/cli@^10.1.15":
+  version "10.1.15"
+  resolved "https://registry.yarnpkg.com/@nestjs/cli/-/cli-10.1.15.tgz#4f64b4ad84289c5ff6b095f34ac106adb36b7991"
+  integrity sha512-BYUAacihz0OE1nGeGrfpn9wvFffOVPtlVFanegmHdWip0kngqiZnwlb6nQL5047JRghuPnLTIBycgLQWoeI+jw==
   dependencies:
     "@angular-devkit/core" "16.2.0"
     "@angular-devkit/schematics" "16.2.0"
