@@ -47,7 +47,7 @@
 		"necord": "6.1.0"
 	},
 	"devDependencies": {
-		"@commitlint/cli": "17.7.2",
+		"@commitlint/cli": "17.8.0",
 		"@commitlint/config-angular": "17.8.0",
 		"@favware/npm-deprecate": "1.0.7",
 		"@nestjs/cli": "^10.1.18",
