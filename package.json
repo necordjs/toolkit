@@ -35,7 +35,7 @@
 		"Alexey Filippov <socket.someone@gmail.com>"
 	],
 	"dependencies": {
-		"@necord/pagination": "^1.1.5",
+		"@necord/pagination": "^1.1.6",
 		"@nestjs/axios": "3.0.1",
 		"@nestjs/common": "9.4.3",
 		"@nestjs/config": "3.1.1",
