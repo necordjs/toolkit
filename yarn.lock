@@ -1017,9 +1017,9 @@
   resolved "https://registry.npmjs.org/@lukeed/csprng/-/csprng-1.1.0.tgz#1e3e4bd05c1cc7a0b2ddbd8a03f39f6e4b5e6cfe"
   integrity sha512-Z7C/xXCiGWsg0KuKsHTKJxbWhpI3Vs5GwLfOean7MGyVFGqdRgBbAjOCh6u4bbjPc/8MJ2pZmK/0DLdCbivLDA==
 
-"@necord/pagination@^1.1.6":
+"@necord/pagination@1.1.6":
   version "1.1.6"
-  resolved "https://registry.yarnpkg.com/@necord/pagination/-/pagination-1.1.6.tgz#d3e5fe6055b1f0abfc3acef5b5066afe6838edad"
+  resolved "https://registry.npmjs.org/@necord/pagination/-/pagination-1.1.6.tgz#d3e5fe6055b1f0abfc3acef5b5066afe6838edad"
   integrity sha512-Kx4EeZbxfgmJfS1GEVAwKdBRDw1iwfEWSqfxLKXyS8fhwozHYm+4HA3P8E6aWvWEUTOISOuM1ZAujnDI7nEdvQ==
 
 "@nestjs/axios@3.0.1":
@@ -1056,14 +1056,14 @@
     webpack "5.89.0"
     webpack-node-externals "3.0.0"
 
-"@nestjs/common@9.4.3":
-  version "9.4.3"
-  resolved "https://registry.yarnpkg.com/@nestjs/common/-/common-9.4.3.tgz#f907c5315b4273f7675864a05c4dda7056632b87"
-  integrity sha512-Gd6D4IaYj01o14Bwv81ukidn4w3bPHCblMUq+SmUmWLyosK+XQmInCS09SbDDZyL8jy86PngtBLTdhJ2bXSUig==
+"@nestjs/common@10.3.0":
+  version "10.3.0"
+  resolved "https://registry.npmjs.org/@nestjs/common/-/common-10.3.0.tgz#d78f0ff2062d1d53c79c170a79c12a1548e2e598"
+  integrity sha512-DGv34UHsZBxCM3H5QGE2XE/+oLJzz5+714JQjBhjD9VccFlQs3LRxo/epso4l7nJIiNlZkPyIUC8WzfU/5RTsQ==
   dependencies:
     uid "2.0.2"
     iterare "1.2.1"
-    tslib "2.5.3"
+    tslib "2.6.2"
 
 "@nestjs/config@3.1.1":
   version "3.1.1"
@@ -1075,17 +1075,17 @@
     lodash "4.17.21"
     uuid "9.0.0"
 
-"@nestjs/core@9.4.3":
-  version "9.4.3"
-  resolved "https://registry.yarnpkg.com/@nestjs/core/-/core-9.4.3.tgz#7d6d3417e18c0a598684b87c955e4caac4f56dd4"
-  integrity sha512-Qi63+wi55Jh4sDyaj5Hhx2jOpKqT386aeo+VOKsxnd+Ql9VvkO/FjmuwBGUyzkJt29ENYc+P0Sx/k5LtstNpPQ==
+"@nestjs/core@10.3.0":
+  version "10.3.0"
+  resolved "https://registry.npmjs.org/@nestjs/core/-/core-10.3.0.tgz#d5c6b26d6d9280664910d5481153d25c5da4ec00"
+  integrity sha512-N06P5ncknW/Pm8bj964WvLIZn2gNhHliCBoAO1LeBvNImYkecqKcrmLbY49Fa1rmMfEM3MuBHeDys3edeuYAOA==
   dependencies:
     uid "2.0.2"
     "@nuxtjs/opencollective" "0.3.2"
     fast-safe-stringify "2.1.1"
     iterare "1.2.1"
     path-to-regexp "3.2.0"
-    tslib "2.5.3"
+    tslib "2.6.2"
 
 "@nestjs/schematics@^10.0.1", "@nestjs/schematics@^10.0.3":
   version "10.0.3"
@@ -2004,9 +2004,9 @@ available-typed-arrays@^1.0.5:
   resolved "https://registry.npmjs.org/available-typed-arrays/-/available-typed-arrays-1.0.5.tgz#92f95616501069d07d10edb2fc37d3e1c65123b7"
   integrity sha512-DMD0KiN46eipeziST1LPP/STfDU0sufISXmjSgvVsoU2tqxctQeASejWcfNtxYKqETM1UxQ8sp2OrSBWpHY6sw==
 
-axios@^1.6.2:
+axios@1.6.2:
   version "1.6.2"
-  resolved "https://registry.yarnpkg.com/axios/-/axios-1.6.2.tgz#de67d42c755b571d3e698df1b6504cde9b0ee9f2"
+  resolved "https://registry.npmjs.org/axios/-/axios-1.6.2.tgz#de67d42c755b571d3e698df1b6504cde9b0ee9f2"
   integrity sha512-7i24Ri4pmDRfJTR7LDBhsOTtcm+9kjX5WiY1X3wIisx6G9So3pfMkEiU7emUBe46oceVImccTEM3k6C5dbVW8A==
   dependencies:
     follow-redirects "^1.15.0"
@@ -2842,9 +2842,9 @@ discord.js@14.14.1:
     undici "5.27.2"
     ws "8.14.2"
 
-discordjs-docs-parser@^1.3.3:
+discordjs-docs-parser@1.3.3:
   version "1.3.3"
-  resolved "https://registry.yarnpkg.com/discordjs-docs-parser/-/discordjs-docs-parser-1.3.3.tgz#219f8bccb31c7dc175bf8c5bd692fb6062c82171"
+  resolved "https://registry.npmjs.org/discordjs-docs-parser/-/discordjs-docs-parser-1.3.3.tgz#219f8bccb31c7dc175bf8c5bd692fb6062c82171"
   integrity sha512-F/5ucqUuRWjPjlH20tmv4quRlB/giYzYnx/C2ypGD3kCQIRZ6nVpDNM6AnaR+ua014+6Sfe6CwS3/n9r5XUgAQ==
   dependencies:
     "@sapphire/fetch" "^2.4.1"
@@ -5625,10 +5625,10 @@ natural-compare@^1.4.0:
   resolved "https://registry.npmjs.org/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
   integrity sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==
 
-necord@6.1.0:
-  version "6.1.0"
-  resolved "https://registry.yarnpkg.com/necord/-/necord-6.1.0.tgz#ced8e05704204eab1289b2e8d8ebf45fb797459f"
-  integrity sha512-nvnc6Lr9uLGVhyK3J2X+M7RLJXDZhwHsLchG7TSVS2jE/sfQltJwV/3QKybIjgKDsyxV4lYDOSwQ/RtU7THQ1Q==
+necord@6.5.0:
+  version "6.5.0"
+  resolved "https://registry.npmjs.org/necord/-/necord-6.5.0.tgz#0556649d537e8114f20fec02dd5f2bbac54a2e19"
+  integrity sha512-gBd2l4McrxyHY9ON8bfHwshxznIm8lSaUygS8St176jiDYjkvqaKoO7yXjGWTpJ9DdgGbjiyg+IBqAlG4ue9MQ==
   dependencies:
     path-to-regexp "6.2.1"
 
