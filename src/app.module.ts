@@ -20,7 +20,7 @@ import { ChangelogModule } from './changelog/changelog.module';
 				intents: ['Guilds', 'GuildMembers', 'MessageContent'],
 				development:
 					configService.get('NODE_ENV', 'development') === 'development'
-						? ['742715858157043793', '977861813658075146']
+						? [configService.get('DISCORD_TEST_GUILD')]
 						: undefined
 			}),
 			inject: [ConfigService]
