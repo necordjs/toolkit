@@ -1,10 +1,9 @@
+import otelSDK from './tracing';
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
-import { Logger } from '@nestjs/common';
-
-const logger = new Logger('Runtime');
 
 async function bootstrap() {
+	otelSDK.start();
 	const app = await NestFactory.createApplicationContext(AppModule);
 
 	return app.init();
