@@ -1,20 +1,28 @@
 import { NodeSDK } from '@opentelemetry/sdk-node';
 import { PrometheusExporter } from '@opentelemetry/exporter-prometheus';
-import { getNodeAutoInstrumentations } from '@opentelemetry/auto-instrumentations-node';
+import {
+	getNodeAutoInstrumentations,
+	getResourceDetectors
+} from '@opentelemetry/auto-instrumentations-node';
 import { Logger } from '@nestjs/common';
 import { Resource } from '@opentelemetry/resources';
 import { SemanticResourceAttributes } from '@opentelemetry/semantic-conventions';
 
 const logger = new Logger('OpenTelemetry');
 
+const metricReader = new PrometheusExporter({ port: 8081 }, () =>
+	logger.log('Prometheus scrape endpoint started on port 8081')
+);
+
 const otelSDK = new NodeSDK({
 	resource: new Resource({
-		[SemanticResourceAttributes.SERVICE_NAME]: 'necord'
+		[SemanticResourceAttributes.SERVICE_NAME]: 'toolkit',
+		[SemanticResourceAttributes.SERVICE_NAMESPACE]: 'necord',
+		[SemanticResourceAttributes.SERVICE_VERSION]: '1.0.0'
 	}),
-	metricReader: new PrometheusExporter({
-		port: 8081
-	}),
-	instrumentations: [getNodeAutoInstrumentations()]
+	metricReader,
+	instrumentations: [getNodeAutoInstrumentations()],
+	resourceDetectors: getResourceDetectors()
 });
 
 export default otelSDK;

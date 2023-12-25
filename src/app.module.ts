@@ -1,4 +1,4 @@
-import { Module } from '@nestjs/common';
+import { Module, OnModuleInit } from '@nestjs/common';
 import { NecordModule } from 'necord';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { DocsModule } from './docs/docs.module';
@@ -7,6 +7,8 @@ import { GeneralModule } from './general/general.module';
 import { AppService } from './app.service';
 import { TagsModule } from './tags/tags.module';
 import { ChangelogModule } from './changelog/changelog.module';
+import { metrics } from '@opentelemetry/api';
+import { setupNodeMetrics } from '@sesamecare-oss/opentelemetry-node-metrics';
 
 @Module({
 	imports: [
@@ -33,4 +35,10 @@ import { ChangelogModule } from './changelog/changelog.module';
 	],
 	providers: [AppService]
 })
-export class AppModule {}
+export class AppModule implements OnModuleInit {
+	public onModuleInit(): any {
+		const meterProvider = metrics.getMeterProvider();
+		const meter = meterProvider.getMeter('node-metrics');
+		setupNodeMetrics(meter);
+	}
+}
