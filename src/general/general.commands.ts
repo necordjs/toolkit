@@ -36,7 +36,7 @@ export class GeneralCommands {
 	@SlashCommand({ name: 'ping', description: '🚀 Get bot ping' })
 	public async ping(@Context() [interaction]: SlashCommandContext) {
 		return interaction.reply({
-			content: `Pong!`,
+			content: `Pong! ${inlineCode(`${Math.round(this.client.ws.ping)}ms`)}}`,
 			ephemeral: true
 		});
 	}

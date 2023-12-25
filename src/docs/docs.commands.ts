@@ -4,7 +4,6 @@ import { AlgoliaAutocomplete, DiscordJSAutocomplete, MDNAutocomplete } from './a
 import { AlgoliaApps } from './enums';
 import { DiscordJSSearchOptions, SearchOptions } from './options';
 import { DocsService } from './docs.service';
-import { ButtonStyle } from 'discord.js';
 
 const DOC_DESCRIPTION = (app: string) => `📖 Display docs for ${app}`;
 
