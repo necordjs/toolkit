@@ -1,4 +1,4 @@
-import otelSDK from './tracing';
+import { otelSDK } from './tracing';
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 

@@ -7,6 +7,8 @@ import {
 import { Logger } from '@nestjs/common';
 import { Resource } from '@opentelemetry/resources';
 import { SemanticResourceAttributes } from '@opentelemetry/semantic-conventions';
+import { metrics } from '@opentelemetry/api';
+import { setupNodeMetrics } from '@sesamecare-oss/opentelemetry-node-metrics';
 
 const logger = new Logger('OpenTelemetry');
 
@@ -14,18 +16,26 @@ const metricReader = new PrometheusExporter({ port: 8081 }, () =>
 	logger.log('Prometheus scrape endpoint started on port 8081')
 );
 
-const otelSDK = new NodeSDK({
-	resource: new Resource({
-		[SemanticResourceAttributes.SERVICE_NAME]: 'toolkit',
-		[SemanticResourceAttributes.SERVICE_NAMESPACE]: 'necord',
-		[SemanticResourceAttributes.SERVICE_VERSION]: '1.0.0'
-	}),
+const resource = new Resource({
+	[SemanticResourceAttributes.SERVICE_NAME]: 'toolkit',
+	[SemanticResourceAttributes.SERVICE_NAMESPACE]: 'necord',
+	[SemanticResourceAttributes.SERVICE_VERSION]: '1.0.0'
+});
+
+const instrumentations = [getNodeAutoInstrumentations()];
+
+export const otelSDK = new NodeSDK({
+	resource,
 	metricReader,
-	instrumentations: [getNodeAutoInstrumentations()],
+	instrumentations,
 	resourceDetectors: getResourceDetectors()
 });
 
-export default otelSDK;
+setImmediate(() => {
+	const meterProvider = metrics.getMeterProvider();
+	const meter = meterProvider.getMeter('node-metrics');
+	setupNodeMetrics(meter, { labels: resource.attributes as any });
+});
 
 // You can also use the shutdown method to gracefully shut down the SDK before process shutdown
 // or on some operating system signal.
