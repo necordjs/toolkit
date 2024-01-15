@@ -1418,14 +1418,14 @@
   dependencies:
     "@opentelemetry/semantic-conventions" "1.20.0"
 
-"@opentelemetry/exporter-prometheus@0.46.0":
-  version "0.46.0"
-  resolved "https://registry.npmjs.org/@opentelemetry/exporter-prometheus/-/exporter-prometheus-0.46.0.tgz#c411a1e8a5266f9f3ddc44a088a538c3c1ee4830"
-  integrity sha512-AXcoCHG31K2PLGizlJJWcfQqZsGfUZkT7ik6C8VJu7U2Cenk0Xhvd3rO+vVNSSjP1+LHkP4MQtqEXpIZttw5cw==
+"@opentelemetry/exporter-prometheus@0.47.0":
+  version "0.47.0"
+  resolved "https://registry.yarnpkg.com/@opentelemetry/exporter-prometheus/-/exporter-prometheus-0.47.0.tgz#4166a18d3d0d394135c9788a1941423d8592fdbd"
+  integrity sha512-Rp2bN9BHy36JWlr1/a0fPJpqGxP77ZC4C7A0VllcwTRtAmrjYKMwqf9o0fbTyBXJsO80qPO0obG0EBQM+M9N3A==
   dependencies:
-    "@opentelemetry/core" "1.19.0"
-    "@opentelemetry/resources" "1.19.0"
-    "@opentelemetry/sdk-metrics" "1.19.0"
+    "@opentelemetry/core" "1.20.0"
+    "@opentelemetry/resources" "1.20.0"
+    "@opentelemetry/sdk-metrics" "1.20.0"
 
 "@opentelemetry/exporter-trace-otlp-grpc@0.46.0":
   version "0.46.0"
