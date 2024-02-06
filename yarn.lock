@@ -1368,15 +1368,15 @@
   resolved "https://registry.npmjs.org/@opentelemetry/api/-/api-1.7.0.tgz#b139c81999c23e3c8d3c0a7234480e945920fc40"
   integrity sha512-AdY5wvN0P2vXBi3b29hxZgSFvdhdxPB9+f0B6s//P9Q8nibRWeA3cHm8UmLpio9ABigkVHJ5NMPk+Mz8VCCyrw==
 
-"@opentelemetry/auto-instrumentations-node@0.41.0":
-  version "0.41.0"
-  resolved "https://registry.yarnpkg.com/@opentelemetry/auto-instrumentations-node/-/auto-instrumentations-node-0.41.0.tgz#0f41c053f07c0913477756a67fe5e409c9a1794f"
-  integrity sha512-CmVVzphp1eb6Aenrr4B6TDsCNuDvut8NQbosTSdJFfnEX4+3szVQuaJquaicGI5tLvVxrgVbZAv52C7bJgMHkg==
+"@opentelemetry/auto-instrumentations-node@0.41.1":
+  version "0.41.1"
+  resolved "https://registry.yarnpkg.com/@opentelemetry/auto-instrumentations-node/-/auto-instrumentations-node-0.41.1.tgz#6c54dc670edc7d6f8ece14ea7c3221d75d8dca52"
+  integrity sha512-gQG0mHlPVBQveuemqNYkrL4IB3T6v2e5sMiDI6FQzFWeLzzFrC04R4fY6AE1YmkhOyteCDpHL/U6CULP2mkt8w==
   dependencies:
     "@opentelemetry/instrumentation" "^0.48.0"
     "@opentelemetry/instrumentation-amqplib" "^0.34.0"
     "@opentelemetry/instrumentation-aws-lambda" "^0.38.0"
-    "@opentelemetry/instrumentation-aws-sdk" "^0.38.0"
+    "@opentelemetry/instrumentation-aws-sdk" "^0.38.1"
     "@opentelemetry/instrumentation-bunyan" "^0.35.0"
     "@opentelemetry/instrumentation-cassandra-driver" "^0.35.0"
     "@opentelemetry/instrumentation-connect" "^0.33.0"
@@ -1504,10 +1504,10 @@
     "@opentelemetry/semantic-conventions" "^1.0.0"
     "@types/aws-lambda" "8.10.122"
 
-"@opentelemetry/instrumentation-aws-sdk@^0.38.0":
-  version "0.38.0"
-  resolved "https://registry.yarnpkg.com/@opentelemetry/instrumentation-aws-sdk/-/instrumentation-aws-sdk-0.38.0.tgz#6954060f8d0f7aca2c22a90e92ad83d1c8fd84d4"
-  integrity sha512-q1R+evR1j8sqd5LG+I8fKqP5TAPJEEOmJTvtEDYCVCdtzukI0ABYN8SHEIgDgYZmGBDM0yvC6jH0GmoEwvYuMw==
+"@opentelemetry/instrumentation-aws-sdk@^0.38.1":
+  version "0.38.1"
+  resolved "https://registry.yarnpkg.com/@opentelemetry/instrumentation-aws-sdk/-/instrumentation-aws-sdk-0.38.1.tgz#a044301cae6bdd08384ea27084e0d3035d50b3f7"
+  integrity sha512-/Tupb4UfVVkmcopq2H2nr2D/pHLF0riVw2biQQUJ/jGIkfrOgUMMKbShi2RQE4Zy8NFv3xaDn4/pNxzodLBy3w==
   dependencies:
     "@opentelemetry/core" "^1.8.0"
     "@opentelemetry/instrumentation" "^0.48.0"
