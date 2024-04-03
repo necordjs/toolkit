@@ -1405,21 +1405,28 @@
   resolved "https://registry.yarnpkg.com/@opentelemetry/context-async-hooks/-/context-async-hooks-1.22.0.tgz#80c8037b0dc4ab0b0e9c27e8cc13aa563c35699f"
   integrity sha512-Nfdxyg8YtWqVWkyrCukkundAjPhUXi93JtVQmqDT1mZRVKqA7e2r7eJCrI+F651XUBMp0hsOJSGiFk3QSpaIJw==
 
-"@opentelemetry/core@1.22.0", "@opentelemetry/core@^1.0.0", "@opentelemetry/core@^1.1.0", "@opentelemetry/core@^1.8.0":
+"@opentelemetry/core@1.22.0":
   version "1.22.0"
   resolved "https://registry.yarnpkg.com/@opentelemetry/core/-/core-1.22.0.tgz#a9f33689acd4703ac780c6595497374e2113c7e5"
   integrity sha512-0VoAlT6x+Xzik1v9goJ3pZ2ppi6+xd3aUfg4brfrLkDBHRIVjMP0eBHrKrhB+NKcDyMAg8fAbGL3Npg/F6AwWA==
   dependencies:
     "@opentelemetry/semantic-conventions" "1.22.0"
 
-"@opentelemetry/exporter-prometheus@0.49.1":
-  version "0.49.1"
-  resolved "https://registry.yarnpkg.com/@opentelemetry/exporter-prometheus/-/exporter-prometheus-0.49.1.tgz#8d330854d7ba5066910606d6f0235e348740c954"
-  integrity sha512-FgzGl6OH22f+Wb1dh/TnoQSnZE2SCADhHx06nMqxivSqRJ9t3AhUdMsEOFt2IMjZClE705pcsLHk10BCJ79vsA==
+"@opentelemetry/core@1.23.0", "@opentelemetry/core@^1.0.0", "@opentelemetry/core@^1.1.0", "@opentelemetry/core@^1.8.0":
+  version "1.23.0"
+  resolved "https://registry.yarnpkg.com/@opentelemetry/core/-/core-1.23.0.tgz#f2e7ada7f35750f3c1674aef1e52c879005c0731"
+  integrity sha512-hdQ/a9TMzMQF/BO8Cz1juA43/L5YGtCSiKoOHmrTEf7VMDAZgy8ucpWx3eQTnQ3gBloRcWtzvcrMZABC3PTSKQ==
   dependencies:
-    "@opentelemetry/core" "1.22.0"
-    "@opentelemetry/resources" "1.22.0"
-    "@opentelemetry/sdk-metrics" "1.22.0"
+    "@opentelemetry/semantic-conventions" "1.23.0"
+
+"@opentelemetry/exporter-prometheus@0.50.0":
+  version "0.50.0"
+  resolved "https://registry.yarnpkg.com/@opentelemetry/exporter-prometheus/-/exporter-prometheus-0.50.0.tgz#fc5dfed6246a9d796020377361601fd7c5e1a1f7"
+  integrity sha512-6jBrGqzpU1b2gCPUWTSSW+G3ejbZRx9SYhhFg0MO6v8R51mcln9KH6oIdTDrA+3Ie3L18bpygKrIWA9VPWEifg==
+  dependencies:
+    "@opentelemetry/core" "1.23.0"
+    "@opentelemetry/resources" "1.23.0"
+    "@opentelemetry/sdk-metrics" "1.23.0"
 
 "@opentelemetry/exporter-trace-otlp-grpc@0.49.1":
   version "0.49.1"
@@ -1907,13 +1914,21 @@
     "@opentelemetry/semantic-conventions" "^1.0.0"
     gcp-metadata "^6.0.0"
 
-"@opentelemetry/resources@1.22.0", "@opentelemetry/resources@^1.0.0", "@opentelemetry/resources@^1.12.0", "@opentelemetry/resources@^1.8.0":
+"@opentelemetry/resources@1.22.0":
   version "1.22.0"
   resolved "https://registry.yarnpkg.com/@opentelemetry/resources/-/resources-1.22.0.tgz#5b597cdf9fb6e1cd22d7891bd8e72e487929a813"
   integrity sha512-+vNeIFPH2hfcNL0AJk/ykJXoUCtR1YaDUZM+p3wZNU4Hq98gzq+7b43xbkXjadD9VhWIUQqEwXyY64q6msPj6A==
   dependencies:
     "@opentelemetry/core" "1.22.0"
     "@opentelemetry/semantic-conventions" "1.22.0"
+
+"@opentelemetry/resources@1.23.0", "@opentelemetry/resources@^1.0.0", "@opentelemetry/resources@^1.12.0", "@opentelemetry/resources@^1.8.0":
+  version "1.23.0"
+  resolved "https://registry.yarnpkg.com/@opentelemetry/resources/-/resources-1.23.0.tgz#4c71430f3e20c4d88b67ef5629759fae108485e5"
+  integrity sha512-iPRLfVfcEQynYGo7e4Di+ti+YQTAY0h5mQEUJcHlU9JOqpb4x965O6PZ+wMcwYVY63G96KtdS86YCM1BF1vQZg==
+  dependencies:
+    "@opentelemetry/core" "1.23.0"
+    "@opentelemetry/semantic-conventions" "1.23.0"
 
 "@opentelemetry/sdk-logs@0.49.1":
   version "0.49.1"
@@ -1923,13 +1938,22 @@
     "@opentelemetry/core" "1.22.0"
     "@opentelemetry/resources" "1.22.0"
 
-"@opentelemetry/sdk-metrics@1.22.0", "@opentelemetry/sdk-metrics@^1.17.1", "@opentelemetry/sdk-metrics@^1.9.1":
+"@opentelemetry/sdk-metrics@1.22.0":
   version "1.22.0"
   resolved "https://registry.yarnpkg.com/@opentelemetry/sdk-metrics/-/sdk-metrics-1.22.0.tgz#b94c62403013e4c72b96dc747d71d786073efafc"
   integrity sha512-k6iIx6H3TZ+BVMr2z8M16ri2OxWaljg5h8ihGJxi/KQWcjign6FEaEzuigXt5bK9wVEhqAcWLCfarSftaNWkkg==
   dependencies:
     "@opentelemetry/core" "1.22.0"
     "@opentelemetry/resources" "1.22.0"
+    lodash.merge "^4.6.2"
+
+"@opentelemetry/sdk-metrics@1.23.0", "@opentelemetry/sdk-metrics@^1.17.1", "@opentelemetry/sdk-metrics@^1.9.1":
+  version "1.23.0"
+  resolved "https://registry.yarnpkg.com/@opentelemetry/sdk-metrics/-/sdk-metrics-1.23.0.tgz#b4cf3cc86b6dedf5c438c67c829df7399bf64be1"
+  integrity sha512-4OkvW6+wST4h6LFG23rXSTf6nmTf201h9dzq7bE0z5R9ESEVLERZz6WXwE7PSgg1gdjlaznm1jLJf8GttypFDg==
+  dependencies:
+    "@opentelemetry/core" "1.23.0"
+    "@opentelemetry/resources" "1.23.0"
     lodash.merge "^4.6.2"
 
 "@opentelemetry/sdk-node@0.49.1", "@opentelemetry/sdk-node@^0.49.1":
@@ -1976,6 +2000,11 @@
   version "1.22.0"
   resolved "https://registry.yarnpkg.com/@opentelemetry/semantic-conventions/-/semantic-conventions-1.22.0.tgz#d7502533a7c96e25baab86bac965468e0703a8b4"
   integrity sha512-CAOgFOKLybd02uj/GhCdEeeBjOS0yeoDeo/CA7ASBSmenpZHAKGB3iDm/rv3BQLcabb/OprDEsSQ1y0P8A7Siw==
+
+"@opentelemetry/semantic-conventions@1.23.0":
+  version "1.23.0"
+  resolved "https://registry.yarnpkg.com/@opentelemetry/semantic-conventions/-/semantic-conventions-1.23.0.tgz#627f2721b960fe586b7f72a07912cb7699f06eef"
+  integrity sha512-MiqFvfOzfR31t8cc74CTP1OZfz7MbqpAnLCra8NqQoaHJX6ncIRTdYOQYBDQ2uFISDq0WY8Y9dDTWvsgzzBYRg==
 
 "@opentelemetry/sql-common@^0.40.0":
   version "0.40.0"
