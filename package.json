@@ -42,7 +42,7 @@
 		"@nestjs/core": "10.3.9",
 		"@opentelemetry/api": "1.8.0",
 		"@opentelemetry/auto-instrumentations-node": "0.46.1",
-		"@opentelemetry/exporter-prometheus": "0.51.1",
+		"@opentelemetry/exporter-prometheus": "0.52.0",
 		"@opentelemetry/resources": "1.24.1",
 		"@opentelemetry/sdk-node": "0.51.1",
 		"@opentelemetry/semantic-conventions": "1.24.1",
