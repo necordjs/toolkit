@@ -1367,14 +1367,14 @@
   dependencies:
     "@opentelemetry/semantic-conventions" "1.25.1"
 
-"@opentelemetry/exporter-prometheus@0.52.0":
-  version "0.52.0"
-  resolved "https://registry.yarnpkg.com/@opentelemetry/exporter-prometheus/-/exporter-prometheus-0.52.0.tgz#16070fa0a42a574a411e41e01a6bda72bde512b9"
-  integrity sha512-DJoCAtm6J1/rAP9oAjd5q5iq9/IKeiPLCHWOw+2QhPkgHHFvwKeOHnUp3xTC7RvpiuV2GQAV8Hih0CRHjehHJQ==
+"@opentelemetry/exporter-prometheus@0.52.1":
+  version "0.52.1"
+  resolved "https://registry.yarnpkg.com/@opentelemetry/exporter-prometheus/-/exporter-prometheus-0.52.1.tgz#615021fffd511d4424edf9347b119d814cc94e89"
+  integrity sha512-hwK0QnjtqAxGpQAXMNUY+kTT5CnHyz1I0lBA8SFySvaFtExZm7yQg/Ua/i+RBqgun7WkUbkUVJzEi3lKpJ7WdA==
   dependencies:
-    "@opentelemetry/core" "1.25.0"
-    "@opentelemetry/resources" "1.25.0"
-    "@opentelemetry/sdk-metrics" "1.25.0"
+    "@opentelemetry/core" "1.25.1"
+    "@opentelemetry/resources" "1.25.1"
+    "@opentelemetry/sdk-metrics" "1.25.1"
 
 "@opentelemetry/exporter-trace-otlp-grpc@0.52.1":
   version "0.52.1"
@@ -1902,15 +1902,6 @@
     "@opentelemetry/api-logs" "0.52.1"
     "@opentelemetry/core" "1.25.1"
     "@opentelemetry/resources" "1.25.1"
-
-"@opentelemetry/sdk-metrics@1.25.0":
-  version "1.25.0"
-  resolved "https://registry.yarnpkg.com/@opentelemetry/sdk-metrics/-/sdk-metrics-1.25.0.tgz#0c954d580c17821ae4385d29447718df09e80b79"
-  integrity sha512-IF+Sv4VHgBr/BPMKabl+GouJIhEqAOexCHgXVTISdz3q9P9H/uA8ScCF+22gitQ69aFtESbdYOV+Fen5+avQng==
-  dependencies:
-    "@opentelemetry/core" "1.25.0"
-    "@opentelemetry/resources" "1.25.0"
-    lodash.merge "^4.6.2"
 
 "@opentelemetry/sdk-metrics@1.25.1", "@opentelemetry/sdk-metrics@^1.17.1", "@opentelemetry/sdk-metrics@^1.9.1":
   version "1.25.1"
