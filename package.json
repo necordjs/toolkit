@@ -58,7 +58,7 @@
 		"@commitlint/config-angular": "19.3.0",
 		"@favware/npm-deprecate": "1.0.7",
 		"@nestjs/cli": "10.4.0",
-		"@nestjs/schematics": "10.1.1",
+		"@nestjs/schematics": "10.1.2",
 		"@nestjs/testing": "10.3.10",
 		"@types/jest": "29.5.12",
 		"@types/node": "20.14.9",
