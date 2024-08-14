@@ -1049,10 +1049,10 @@
   resolved "https://registry.yarnpkg.com/@necord/pagination/-/pagination-1.2.3.tgz#6cf8cc44e9217a317eb3ff6da5d12afa05149bfa"
   integrity sha512-v1PvzTsfTTO1AM6nZACJ3bDV7Ts+jI7YNojewXuLiAxZNTNjWCV15sTMHLF7DuoAF9d4nDnnKGQ0W5Sq3wgHNQ==
 
-"@nestjs/axios@3.0.2":
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/@nestjs/axios/-/axios-3.0.2.tgz#0078c101a29fb46f5c566d68a4315fddabc083ed"
-  integrity sha512-Z6GuOUdNQjP7FX+OuV2Ybyamse+/e0BFdTWBX5JxpBDKA+YkdLynDgG6HTF04zy6e9zPa19UX0WA2VDoehwhXQ==
+"@nestjs/axios@3.0.3":
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/@nestjs/axios/-/axios-3.0.3.tgz#a663cb13cff07ea6b9a7107263de2ae472d41118"
+  integrity sha512-h6TCn3yJwD6OKqqqfmtRS5Zo4E46Ip2n+gK1sqwzNBC+qxQ9xpCu+ODVRFur6V3alHSCSBxb3nNtt73VEdluyA==
 
 "@nestjs/cli@10.4.4":
   version "10.4.4"
