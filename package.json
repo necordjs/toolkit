@@ -45,7 +45,7 @@
 		"@opentelemetry/exporter-prometheus": "0.53.0",
 		"@opentelemetry/resources": "1.25.1",
 		"@opentelemetry/sdk-node": "0.52.1",
-		"@opentelemetry/semantic-conventions": "1.26.0",
+		"@opentelemetry/semantic-conventions": "1.27.0",
 		"@sesamecare-oss/opentelemetry-node-metrics": "1.0.1",
 		"axios": "1.7.5",
 		"discord.js": "14.15.3",
