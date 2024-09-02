@@ -1044,10 +1044,10 @@
   resolved "https://registry.npmjs.org/@lukeed/csprng/-/csprng-1.1.0.tgz#1e3e4bd05c1cc7a0b2ddbd8a03f39f6e4b5e6cfe"
   integrity sha512-Z7C/xXCiGWsg0KuKsHTKJxbWhpI3Vs5GwLfOean7MGyVFGqdRgBbAjOCh6u4bbjPc/8MJ2pZmK/0DLdCbivLDA==
 
-"@necord/pagination@1.2.3":
-  version "1.2.3"
-  resolved "https://registry.yarnpkg.com/@necord/pagination/-/pagination-1.2.3.tgz#6cf8cc44e9217a317eb3ff6da5d12afa05149bfa"
-  integrity sha512-v1PvzTsfTTO1AM6nZACJ3bDV7Ts+jI7YNojewXuLiAxZNTNjWCV15sTMHLF7DuoAF9d4nDnnKGQ0W5Sq3wgHNQ==
+"@necord/pagination@1.3.0":
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/@necord/pagination/-/pagination-1.3.0.tgz#04f3768394c1c3fbf91226e586ad96be020010f6"
+  integrity sha512-+QS6/bvGsQzinZls43fVeLGbk8KJbnJ7/YKasR4fNQxh/UHcahlUEOozyd1Cmg3SzNcxITGL3iJ+xNeDG+cZrg==
 
 "@nestjs/axios@3.0.3":
   version "3.0.3"
