@@ -59,7 +59,7 @@
 		"@favware/npm-deprecate": "1.0.7",
 		"@nestjs/cli": "10.4.5",
 		"@nestjs/schematics": "10.1.4",
-		"@nestjs/testing": "10.4.1",
+		"@nestjs/testing": "10.4.2",
 		"@types/jest": "29.5.13",
 		"@types/node": "22.5.5",
 		"@typescript-eslint/eslint-plugin": "7.0.0",
