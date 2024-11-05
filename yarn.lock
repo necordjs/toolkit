@@ -1412,10 +1412,10 @@
     "@opentelemetry/sdk-logs" "0.54.1"
     "@opentelemetry/sdk-trace-base" "1.27.0"
 
-"@opentelemetry/exporter-prometheus@0.54.0":
-  version "0.54.0"
-  resolved "https://registry.yarnpkg.com/@opentelemetry/exporter-prometheus/-/exporter-prometheus-0.54.0.tgz#e09dc38958b6b53b3d30f906801e6c868a53de6b"
-  integrity sha512-httb+/c36hZvkIR9SqwXj+fLeE2XDdWfZqGO24MboNMHihmnvjE0/LN29I9CjsJqC2jEi8FErfQha/JeOfsFaA==
+"@opentelemetry/exporter-prometheus@0.54.1":
+  version "0.54.1"
+  resolved "https://registry.yarnpkg.com/@opentelemetry/exporter-prometheus/-/exporter-prometheus-0.54.1.tgz#496e5a1b54755ded9fca88ba4cddfeea68bd177a"
+  integrity sha512-TN4c0jPn205FEIOOF8D+4KG+GADegd3AqhVi/7iIvWdAPVOla2Ojdql/xJq+s4TLEDCjG54lP6jAqH4/4zHAdg==
   dependencies:
     "@opentelemetry/core" "1.27.0"
     "@opentelemetry/resources" "1.27.0"
