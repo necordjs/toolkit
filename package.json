@@ -44,7 +44,7 @@
 		"@opentelemetry/auto-instrumentations-node": "0.52.1",
 		"@opentelemetry/exporter-prometheus": "0.54.2",
 		"@opentelemetry/resources": "1.27.0",
-		"@opentelemetry/sdk-node": "0.54.2",
+		"@opentelemetry/sdk-node": "0.55.0",
 		"@opentelemetry/semantic-conventions": "1.27.0",
 		"@sesamecare-oss/opentelemetry-node-metrics": "1.1.0",
 		"axios": "1.7.7",
