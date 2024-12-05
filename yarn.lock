@@ -1459,14 +1459,14 @@
     "@opentelemetry/sdk-logs" "0.56.0"
     "@opentelemetry/sdk-trace-base" "1.29.0"
 
-"@opentelemetry/exporter-prometheus@0.55.0":
-  version "0.55.0"
-  resolved "https://registry.yarnpkg.com/@opentelemetry/exporter-prometheus/-/exporter-prometheus-0.55.0.tgz#9ea0bfcab1861b90692721a5d74a34fb07ad31be"
-  integrity sha512-huHo4Fw9W2jlMu67EKXTY1DMSzQepmEDTTElPBTJ/2qcdlrFFhuz+neJW9cQ7M7Db8qd7I5bpNdxObCn4ZEjnA==
+"@opentelemetry/exporter-prometheus@0.56.0":
+  version "0.56.0"
+  resolved "https://registry.yarnpkg.com/@opentelemetry/exporter-prometheus/-/exporter-prometheus-0.56.0.tgz#b989a14e4d824fc0b2478b77839b64e6c1ae9ae5"
+  integrity sha512-5kFcTumUveNREskg6n4aaXx2o3ADc9YxDkArGCIegzErlc3zfzreO4Y7HDc/fYBnV9aIhJUk5P8yotyVCuymkQ==
   dependencies:
-    "@opentelemetry/core" "1.28.0"
-    "@opentelemetry/resources" "1.28.0"
-    "@opentelemetry/sdk-metrics" "1.28.0"
+    "@opentelemetry/core" "1.29.0"
+    "@opentelemetry/resources" "1.29.0"
+    "@opentelemetry/sdk-metrics" "1.29.0"
 
 "@opentelemetry/exporter-trace-otlp-grpc@0.55.0":
   version "0.55.0"
@@ -2095,7 +2095,7 @@
     "@opentelemetry/core" "1.29.0"
     "@opentelemetry/resources" "1.29.0"
 
-"@opentelemetry/sdk-metrics@1.28.0", "@opentelemetry/sdk-metrics@^1.26.0":
+"@opentelemetry/sdk-metrics@1.28.0":
   version "1.28.0"
   resolved "https://registry.yarnpkg.com/@opentelemetry/sdk-metrics/-/sdk-metrics-1.28.0.tgz#257b5295bbe9de1ad31c5e8cb43a660c25911d20"
   integrity sha512-43tqMK/0BcKTyOvm15/WQ3HLr0Vu/ucAl/D84NO7iSlv6O4eOprxSHa3sUtmYkaZWHqdDJV0AHVz/R6u4JALVQ==
@@ -2103,7 +2103,7 @@
     "@opentelemetry/core" "1.28.0"
     "@opentelemetry/resources" "1.28.0"
 
-"@opentelemetry/sdk-metrics@1.29.0":
+"@opentelemetry/sdk-metrics@1.29.0", "@opentelemetry/sdk-metrics@^1.26.0":
   version "1.29.0"
   resolved "https://registry.yarnpkg.com/@opentelemetry/sdk-metrics/-/sdk-metrics-1.29.0.tgz#26b9891e47715c0caaaa4d4e8b536685e1937a06"
   integrity sha512-MkVtuzDjXZaUJSuJlHn6BSXjcQlMvHcsDV7LjY4P6AJeffMa4+kIGDjzsCf6DkAh6Vqlwag5EWEam3KZOX5Drw==
