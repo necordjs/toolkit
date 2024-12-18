@@ -1363,10 +1363,17 @@
   resolved "https://registry.yarnpkg.com/@opentelemetry/context-async-hooks/-/context-async-hooks-1.29.0.tgz#3b3836c913834afa7720fdcf9687620f49b2cf37"
   integrity sha512-TKT91jcFXgHyIDF1lgJF3BHGIakn6x0Xp7Tq3zoS3TMPzT9IlP0xEavWP8C1zGjU9UmZP2VR1tJhW9Az1A3w8Q==
 
-"@opentelemetry/core@1.29.0", "@opentelemetry/core@^1.0.0", "@opentelemetry/core@^1.1.0", "@opentelemetry/core@^1.25.0", "@opentelemetry/core@^1.25.1", "@opentelemetry/core@^1.26.0", "@opentelemetry/core@^1.8.0":
+"@opentelemetry/core@1.29.0":
   version "1.29.0"
   resolved "https://registry.yarnpkg.com/@opentelemetry/core/-/core-1.29.0.tgz#a9397dfd9a8b37b2435b5e44be16d39ec1c82bd9"
   integrity sha512-gmT7vAreXl0DTHD2rVZcw3+l2g84+5XiHIqdBUxXbExymPCvSsGOpiwMmn8nkiJur28STV31wnhIDrzWDPzjfA==
+  dependencies:
+    "@opentelemetry/semantic-conventions" "1.28.0"
+
+"@opentelemetry/core@1.30.0", "@opentelemetry/core@^1.0.0", "@opentelemetry/core@^1.1.0", "@opentelemetry/core@^1.25.0", "@opentelemetry/core@^1.25.1", "@opentelemetry/core@^1.26.0", "@opentelemetry/core@^1.8.0":
+  version "1.30.0"
+  resolved "https://registry.yarnpkg.com/@opentelemetry/core/-/core-1.30.0.tgz#ef959e11e137d72466e566e375ecc5a82e922b86"
+  integrity sha512-Q/3u/K73KUjTCnFUP97ZY+pBjQ1kPEgjOfXj/bJl8zW7GbXdkw6cwuyZk6ZTXkVgCBsYRYUzx4fvYK1jxdb9MA==
   dependencies:
     "@opentelemetry/semantic-conventions" "1.28.0"
 
@@ -1906,12 +1913,20 @@
     "@opentelemetry/semantic-conventions" "^1.27.0"
     gcp-metadata "^6.0.0"
 
-"@opentelemetry/resources@1.29.0", "@opentelemetry/resources@^1.10.0", "@opentelemetry/resources@^1.10.1", "@opentelemetry/resources@^1.24.0":
+"@opentelemetry/resources@1.29.0":
   version "1.29.0"
   resolved "https://registry.yarnpkg.com/@opentelemetry/resources/-/resources-1.29.0.tgz#d170f39b2ac93d61b53d13dfcd96795181bdc372"
   integrity sha512-s7mLXuHZE7RQr1wwweGcaRp3Q4UJJ0wazeGlc/N5/XSe6UyXfsh1UQGMADYeg7YwD+cEdMtU1yJAUXdnFzYzyQ==
   dependencies:
     "@opentelemetry/core" "1.29.0"
+    "@opentelemetry/semantic-conventions" "1.28.0"
+
+"@opentelemetry/resources@1.30.0", "@opentelemetry/resources@^1.10.0", "@opentelemetry/resources@^1.10.1", "@opentelemetry/resources@^1.24.0":
+  version "1.30.0"
+  resolved "https://registry.yarnpkg.com/@opentelemetry/resources/-/resources-1.30.0.tgz#87604359e6195c017075b7d294a949ad018e692d"
+  integrity sha512-5mGMjL0Uld/99t7/pcd7CuVtJbkARckLVuiOX84nO8RtLtIz0/J6EOHM2TGvPZ6F4K+XjUq13gMx14w80SVCQg==
+  dependencies:
+    "@opentelemetry/core" "1.30.0"
     "@opentelemetry/semantic-conventions" "1.28.0"
 
 "@opentelemetry/sdk-logs@0.56.0":
