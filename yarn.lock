@@ -1496,15 +1496,6 @@
     "@opentelemetry/resources" "1.30.0"
     "@opentelemetry/sdk-metrics" "1.30.0"
 
-"@opentelemetry/exporter-prometheus@0.56.0":
-  version "0.56.0"
-  resolved "https://registry.yarnpkg.com/@opentelemetry/exporter-prometheus/-/exporter-prometheus-0.56.0.tgz#b989a14e4d824fc0b2478b77839b64e6c1ae9ae5"
-  integrity sha512-5kFcTumUveNREskg6n4aaXx2o3ADc9YxDkArGCIegzErlc3zfzreO4Y7HDc/fYBnV9aIhJUk5P8yotyVCuymkQ==
-  dependencies:
-    "@opentelemetry/core" "1.29.0"
-    "@opentelemetry/resources" "1.29.0"
-    "@opentelemetry/sdk-metrics" "1.29.0"
-
 "@opentelemetry/exporter-prometheus@0.57.0":
   version "0.57.0"
   resolved "https://registry.yarnpkg.com/@opentelemetry/exporter-prometheus/-/exporter-prometheus-0.57.0.tgz#02b4220ce7210f6922de05cfba3085fd00c3dcd3"
@@ -2141,7 +2132,7 @@
     "@opentelemetry/core" "1.30.0"
     "@opentelemetry/resources" "1.30.0"
 
-"@opentelemetry/sdk-metrics@1.29.0", "@opentelemetry/sdk-metrics@^1.26.0":
+"@opentelemetry/sdk-metrics@1.29.0":
   version "1.29.0"
   resolved "https://registry.yarnpkg.com/@opentelemetry/sdk-metrics/-/sdk-metrics-1.29.0.tgz#26b9891e47715c0caaaa4d4e8b536685e1937a06"
   integrity sha512-MkVtuzDjXZaUJSuJlHn6BSXjcQlMvHcsDV7LjY4P6AJeffMa4+kIGDjzsCf6DkAh6Vqlwag5EWEam3KZOX5Drw==
@@ -2149,7 +2140,7 @@
     "@opentelemetry/core" "1.29.0"
     "@opentelemetry/resources" "1.29.0"
 
-"@opentelemetry/sdk-metrics@1.30.0":
+"@opentelemetry/sdk-metrics@1.30.0", "@opentelemetry/sdk-metrics@^1.26.0":
   version "1.30.0"
   resolved "https://registry.yarnpkg.com/@opentelemetry/sdk-metrics/-/sdk-metrics-1.30.0.tgz#2a2aaa5d3a67cad5dbbfcf34cf7d990d11d109df"
   integrity sha512-5kcj6APyRMvv6dEIP5plz2qfJAD4OMipBRT11u/pa1a68rHKI2Ln+iXVkAGKgx8o7CXbD7FdPypTUY88ZQgP4Q==
