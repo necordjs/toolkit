@@ -1420,10 +1420,10 @@
   resolved "https://registry.yarnpkg.com/@opentelemetry/api/-/api-1.9.0.tgz#d03eba68273dc0f7509e2a3d5cba21eae10379fe"
   integrity sha512-3giAOQvZiH5F9bMlMiv8+GSPMeqg0dbaeo58/0SlA9sxSqZhnUtxzX9/2FzyhS9sWQf5S0GJE0AKBrFqjpeYcg==
 
-"@opentelemetry/auto-instrumentations-node@0.55.0":
-  version "0.55.0"
-  resolved "https://registry.yarnpkg.com/@opentelemetry/auto-instrumentations-node/-/auto-instrumentations-node-0.55.0.tgz#243891ee807f881f67cb78f31a8d0d0c5e7d64b0"
-  integrity sha512-AeNaxx1tN9uIKXQi71JdKMo9gHbID6w/ffpxwa9Xa9ZvFMrpG6h9698JlKclWiTAqYf4rTaJqd6ygkqEQi+c7w==
+"@opentelemetry/auto-instrumentations-node@0.55.1":
+  version "0.55.1"
+  resolved "https://registry.yarnpkg.com/@opentelemetry/auto-instrumentations-node/-/auto-instrumentations-node-0.55.1.tgz#f0995817dacf63661b2f40b1fb23176d32bc4ccf"
+  integrity sha512-h8PCuKi53jRhDJPV5JjxE3oZorMYv5VW8v2B/U4ll6idKQSB0QiRkvrQrY91bCdaQzW8DLgqkTDBSkX8fCoD8g==
   dependencies:
     "@opentelemetry/instrumentation" "^0.57.0"
     "@opentelemetry/instrumentation-amqplib" "^0.46.0"
@@ -1441,7 +1441,7 @@
     "@opentelemetry/instrumentation-generic-pool" "^0.43.0"
     "@opentelemetry/instrumentation-graphql" "^0.47.0"
     "@opentelemetry/instrumentation-grpc" "^0.57.0"
-    "@opentelemetry/instrumentation-hapi" "^0.45.0"
+    "@opentelemetry/instrumentation-hapi" "^0.45.1"
     "@opentelemetry/instrumentation-http" "^0.57.0"
     "@opentelemetry/instrumentation-ioredis" "^0.47.0"
     "@opentelemetry/instrumentation-kafkajs" "^0.7.0"
@@ -1735,10 +1735,10 @@
     "@opentelemetry/instrumentation" "0.57.0"
     "@opentelemetry/semantic-conventions" "1.28.0"
 
-"@opentelemetry/instrumentation-hapi@^0.45.0":
-  version "0.45.0"
-  resolved "https://registry.yarnpkg.com/@opentelemetry/instrumentation-hapi/-/instrumentation-hapi-0.45.0.tgz#219834d9be1142ed476bfdf33580ebff49591601"
-  integrity sha512-7UjiNme7wio0vaXGll2qNK611dQVqV0d5PYQods7v+bbGfxiIhnDkTTt3pNPdsAgbZWzNbRUAIgnuMn0RGY/2g==
+"@opentelemetry/instrumentation-hapi@^0.45.1":
+  version "0.45.1"
+  resolved "https://registry.yarnpkg.com/@opentelemetry/instrumentation-hapi/-/instrumentation-hapi-0.45.1.tgz#5edf982549070d95e20152d568279548ad44d662"
+  integrity sha512-VH6mU3YqAKTePPfUPwfq4/xr049774qWtfTuJqVHoVspCLiT3bW+fCQ1toZxt6cxRPYASoYaBsMA3CWo8B8rcw==
   dependencies:
     "@opentelemetry/core" "^1.8.0"
     "@opentelemetry/instrumentation" "^0.57.0"
