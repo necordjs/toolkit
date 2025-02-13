@@ -63,7 +63,7 @@
 		"@nestjs/schematics": "11.0.0",
 		"@nestjs/testing": "10.4.15",
 		"@types/jest": "29.5.14",
-		"@types/node": "22.13.1",
+		"@types/node": "22.13.2",
 		"eslint": "^9.20.1",
 		"eslint-config-prettier": "10.0.1",
 		"eslint-plugin-import": "^2.31.0",
