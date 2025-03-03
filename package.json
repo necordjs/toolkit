@@ -8,8 +8,7 @@
 		"format": "prettier --write \"src/**/*.ts\"",
 		"lint": "eslint --ignore-pattern .gitignore src/**/*.ts",
 		"start": "nest start",
-		"start:dev": "nest start --watch",
-		"sentry:sourcemaps": "sentry-cli sourcemaps inject --org necord --project toolkit ./dist && sentry-cli sourcemaps upload --org necord --project toolkit ./dist"
+		"start:dev": "nest start --watch"
 	},
 	"lint-staged": {
 		"*.ts": "npm run format"

@@ -32,8 +32,15 @@ jobs:
       - name: Build source maps
         run: npm run build
 
-      - name: Upload source maps
-        run: npm run sentry:sourcemaps
+      - name: Create Sentry release
+        uses: getsentry/action-release@v3
+        env:
+          SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
+          SENTRY_ORG: ${{ secrets.SENTRY_ORG }}
+          SENTRY_PROJECT: ${{ secrets.SENTRY_PROJECT }}
+        with:
+          environment: production
+          sourcemaps: "./dist"
 
   build-and-push-image:
     name: Publish Docker Image

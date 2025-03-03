@@ -11,7 +11,6 @@ import { metrics } from '@opentelemetry/api';
 import { setupNodeMetrics } from '@sesamecare-oss/opentelemetry-node-metrics';
 import * as Sentry from '@sentry/nestjs';
 import { nodeProfilingIntegration } from '@sentry/profiling-node';
-import { NodeTracerProvider } from '@opentelemetry/sdk-trace-node';
 import { SentryPropagator, SentrySampler, SentrySpanProcessor } from '@sentry/opentelemetry';
 
 const logger = new Logger('OpenTelemetry');
