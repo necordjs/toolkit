@@ -9,8 +9,35 @@ import { Resource } from '@opentelemetry/resources';
 import { SemanticResourceAttributes } from '@opentelemetry/semantic-conventions';
 import { metrics } from '@opentelemetry/api';
 import { setupNodeMetrics } from '@sesamecare-oss/opentelemetry-node-metrics';
+import * as Sentry from '@sentry/nestjs';
+import { nodeProfilingIntegration } from '@sentry/profiling-node';
+import { NodeTracerProvider } from '@opentelemetry/sdk-trace-node';
+import { SentryPropagator, SentrySampler, SentrySpanProcessor } from '@sentry/opentelemetry';
 
 const logger = new Logger('OpenTelemetry');
+const version = process.env.npm_package_version;
+
+const sentryClient = Sentry.init({
+	dsn: process.env.SENTRY_DSN,
+	release: `toolkit@${version}`,
+	skipOpenTelemetrySetup: true,
+	integrations: [
+		// Add our Profiling integration
+		nodeProfilingIntegration(),
+		Sentry.httpIntegration(),
+		Sentry.nestIntegration(),
+		Sentry.onUncaughtExceptionIntegration(),
+		Sentry.onUnhandledRejectionIntegration()
+	],
+
+	// Add Tracing by setting tracesSampleRate
+	// We recommend adjusting this value in production
+	tracesSampleRate: 1.0,
+
+	// Set sampling rate for profiling
+	// This is relative to tracesSampleRate
+	profilesSampleRate: 1.0
+});
 
 const metricReader = new PrometheusExporter({ port: 8081 }, () =>
 	logger.log('Prometheus scrape endpoint started on port 8081')
@@ -19,7 +46,7 @@ const metricReader = new PrometheusExporter({ port: 8081 }, () =>
 const resource = new Resource({
 	[SemanticResourceAttributes.SERVICE_NAME]: 'toolkit',
 	[SemanticResourceAttributes.SERVICE_NAMESPACE]: 'necord',
-	[SemanticResourceAttributes.SERVICE_VERSION]: '1.0.0'
+	[SemanticResourceAttributes.SERVICE_VERSION]: version
 });
 
 const instrumentations = [getNodeAutoInstrumentations()];
@@ -28,8 +55,14 @@ export const otelSDK = new NodeSDK({
 	resource,
 	metricReader,
 	instrumentations,
-	resourceDetectors: getResourceDetectors()
+	resourceDetectors: getResourceDetectors(),
+	sampler: sentryClient ? new SentrySampler(sentryClient) : undefined,
+	spanProcessors: [new SentrySpanProcessor()],
+	textMapPropagator: new SentryPropagator(),
+	contextManager: new Sentry.SentryContextManager()
 });
+
+Sentry.validateOpenTelemetrySetup();
 
 setImmediate(() => {
 	const meterProvider = metrics.getMeterProvider();

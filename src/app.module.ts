@@ -7,12 +7,16 @@ import { GeneralModule } from './general/general.module';
 import { AppService } from './app.service';
 import { TagsModule } from './tags/tags.module';
 import { ChangelogModule } from './changelog/changelog.module';
+import { SentryGlobalFilter, SentryModule } from '@sentry/nestjs/setup';
+import { APP_FILTER } from '@nestjs/core';
+import { NecordSentryExceptionFilter } from './common';
 
 @Module({
 	imports: [
 		ConfigModule.forRoot({
 			isGlobal: true
 		}),
+		SentryModule.forRoot(),
 		NecordModule.forRootAsync({
 			useFactory: (configService: ConfigService) => ({
 				token: configService.get('DISCORD_TOKEN'),
@@ -31,6 +35,12 @@ import { ChangelogModule } from './changelog/changelog.module';
 		GeneralModule,
 		TagsModule
 	],
-	providers: [AppService]
+	providers: [
+		AppService,
+		{
+			provide: APP_FILTER,
+			useClass: NecordSentryExceptionFilter
+		}
+	]
 })
 export class AppModule {}

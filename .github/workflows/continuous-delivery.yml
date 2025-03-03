@@ -16,6 +16,25 @@ env:
   ORGANIZATION: ${{ github.repository_owner }}
 
 jobs:
+  build-and-push-sourcemaps:
+    name: Build and Push Source Maps
+    permissions:
+      contents: read
+      packages: write
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build source maps
+        run: npm run build
+
+      - name: Upload source maps
+        run: npm run sentry:sourcemaps
+
   build-and-push-image:
     name: Publish Docker Image
     permissions:

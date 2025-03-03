@@ -8,7 +8,8 @@
 		"format": "prettier --write \"src/**/*.ts\"",
 		"lint": "eslint --ignore-pattern .gitignore src/**/*.ts",
 		"start": "nest start",
-		"start:dev": "nest start --watch"
+		"start:dev": "nest start --watch",
+		"sentry:sourcemaps": "sentry-cli sourcemaps inject --org necord --project toolkit ./dist && sentry-cli sourcemaps upload --org necord --project toolkit ./dist"
 	},
 	"lint-staged": {
 		"*.ts": "npm run format"
@@ -45,7 +46,12 @@
 		"@opentelemetry/exporter-prometheus": "0.57.2",
 		"@opentelemetry/resources": "1.30.1",
 		"@opentelemetry/sdk-node": "0.57.2",
+		"@opentelemetry/sdk-trace-node": "^1.30.1",
 		"@opentelemetry/semantic-conventions": "1.30.0",
+		"@sentry/cli": "^2.42.2",
+		"@sentry/nestjs": "^9.3.0",
+		"@sentry/opentelemetry": "^9.3.0",
+		"@sentry/profiling-node": "^9.3.0",
 		"@sesamecare-oss/opentelemetry-node-metrics": "1.1.0",
 		"axios": "1.8.1",
 		"discord.js": "14.18.0",

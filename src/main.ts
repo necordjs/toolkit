@@ -1,4 +1,4 @@
-import { otelSDK } from './tracing';
+import { otelSDK } from './instrument';
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 
@@ -9,4 +9,4 @@ async function bootstrap() {
 	return app.init();
 }
 
-bootstrap();
+void bootstrap();
