@@ -54,7 +54,10 @@ jobs:
         with:
           environment: production
           sourcemaps: "./dist"
-          version: ${{ secrets.SENTRY_PROJECT }}@${{ steps.version.outputs.version }}
+          version: ${{ steps.version.outputs.version }}
+          projects:
+            - ${{ secrets.SENTRY_PROJECT }}
+
 
   build-and-push-image:
     name: Publish Docker Image
