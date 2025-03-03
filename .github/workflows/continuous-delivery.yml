@@ -17,7 +17,7 @@ env:
 
 jobs:
   build-and-push-sourcemaps:
-    name: Build and Push Source Maps
+    name: Publish Source Maps
     permissions:
       contents: read
       packages: write
@@ -25,12 +25,21 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install Node v20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: yarn
+          cache-dependency-path: yarn.lock
 
       - name: Install dependencies
-        run: npm install
+        run: yarn install --frozen-lockfile
 
       - name: Build source maps
-        run: npm run build
+        run: yarn build
 
       - name: Create Sentry release
         uses: getsentry/action-release@v3
