@@ -7,3 +7,4 @@ services:
     image: 'ghcr.io/necordjs/toolkit:latest'
     environment:
       DISCORD_TOKEN: 'your-token'
+      SENTRY_DSN: 'your-dsn'
