@@ -8,7 +8,8 @@
 		"format": "prettier --write \"src/**/*.ts\"",
 		"lint": "eslint --ignore-pattern .gitignore src/**/*.ts",
 		"start": "nest start",
-		"start:dev": "nest start --watch"
+		"start:dev": "nest start --watch",
+		"publish": "release-it"
 	},
 	"lint-staged": {
 		"*.ts": "npm run format"
@@ -78,7 +79,7 @@
 		"lint-staged": "15.4.3",
 		"prettier": "3.5.3",
 		"reflect-metadata": "0.2.2",
-		"release-it": "18.1.2",
+		"release-it": "^18.1.2",
 		"rimraf": "6.0.1",
 		"rxjs": "7.8.2",
 		"ts-jest": "29.2.6",
