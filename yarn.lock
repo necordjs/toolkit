@@ -2656,14 +2656,14 @@
     "@sentry/opentelemetry" "9.5.0"
     import-in-the-middle "^1.13.0"
 
-"@sentry/opentelemetry@9.4.0", "@sentry/opentelemetry@^9.4.0":
+"@sentry/opentelemetry@9.4.0":
   version "9.4.0"
   resolved "https://registry.yarnpkg.com/@sentry/opentelemetry/-/opentelemetry-9.4.0.tgz#3fa7e3471c03fcc27817458993a853cb0cfc67dc"
   integrity sha512-utayMpcdgohSdET1PPsqOfS26XpVEuNkDYwNFqM8mciXsqqox1DgHQ985jicnziNcowGsSYjR6SazVPFauQkBw==
   dependencies:
     "@sentry/core" "9.4.0"
 
-"@sentry/opentelemetry@9.5.0":
+"@sentry/opentelemetry@9.5.0", "@sentry/opentelemetry@^9.5.0":
   version "9.5.0"
   resolved "https://registry.yarnpkg.com/@sentry/opentelemetry/-/opentelemetry-9.5.0.tgz#cb0ee677c29eb489f1f7e60e37d026937386ea76"
   integrity sha512-Df6S44rnDC5mE1l5D0zNlvNbDawE5nfs2inOPqLMCynTpFas9exAfz77A3TPZX76c5eCy9c1Jd+RDKT1YWiJGg==
