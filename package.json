@@ -50,7 +50,7 @@
 		"@opentelemetry/semantic-conventions": "1.30.0",
 		"@sentry/cli": "^2.42.3",
 		"@sentry/nestjs": "^9.6.0",
-		"@sentry/opentelemetry": "^9.5.0",
+		"@sentry/opentelemetry": "^9.6.0",
 		"@sentry/profiling-node": "^9.5.0",
 		"@sesamecare-oss/opentelemetry-node-metrics": "1.1.0",
 		"axios": "1.8.3",
