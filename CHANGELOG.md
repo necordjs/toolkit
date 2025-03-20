@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.4.1](https://github.com/necordjs/toolkit/compare/v1.4.0...v1.4.1) (2025-03-20)
+
+### Bug Fixes
+
+* change name of metric name ([0a4560a](https://github.com/necordjs/toolkit/commit/0a4560aacdf2fd3cf775916263e5b3a6084d3af3))
+
 ## [1.4.0](https://github.com/necordjs/toolkit/compare/v1.3.0...v1.4.0) (2025-03-20)
 
 ### Features
