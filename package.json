@@ -48,7 +48,7 @@
 		"@opentelemetry/instrumentation-nestjs-core": "^0.45.0",
 		"@opentelemetry/sdk-node": "0.200.0",
 		"@sentry/cli": "^2.42.4",
-		"@sentry/nestjs": "^9.6.1",
+		"@sentry/nestjs": "^9.7.0",
 		"@sentry/opentelemetry": "^9.6.1",
 		"@sentry/profiling-node": "^9.6.1",
 		"@sesamecare-oss/opentelemetry-node-metrics": "1.1.0",
