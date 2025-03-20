@@ -8,8 +8,9 @@ import { AppService } from './app.service';
 import { TagsModule } from './tags/tags.module';
 import { ChangelogModule } from './changelog/changelog.module';
 import { SentryGlobalFilter, SentryModule } from '@sentry/nestjs/setup';
-import { APP_FILTER } from '@nestjs/core';
-import { NecordSentryExceptionFilter } from './common';
+import { APP_FILTER, APP_INTERCEPTOR } from '@nestjs/core';
+import { CommandMetricsInterceptor, NecordSentryExceptionFilter } from './common';
+import { OpenTelemetryModule } from 'nestjs-otel';
 
 @Module({
 	imports: [
@@ -17,6 +18,11 @@ import { NecordSentryExceptionFilter } from './common';
 			isGlobal: true
 		}),
 		SentryModule.forRoot(),
+		OpenTelemetryModule.forRoot({
+			metrics: {
+				hostMetrics: true
+			}
+		}),
 		NecordModule.forRootAsync({
 			useFactory: (configService: ConfigService) => ({
 				token: configService.get('DISCORD_TOKEN'),
@@ -40,6 +46,10 @@ import { NecordSentryExceptionFilter } from './common';
 		{
 			provide: APP_FILTER,
 			useClass: NecordSentryExceptionFilter
+		},
+		{
+			provide: APP_INTERCEPTOR,
+			useClass: CommandMetricsInterceptor
 		}
 	]
 })
