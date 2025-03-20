@@ -8,14 +8,14 @@ export class CommandMetricsInterceptor implements NestInterceptor {
 	private readonly logger: Logger = new Logger(CommandMetricsInterceptor.name);
 
 	private readonly commandExecutionCounter = this.metricService.getCounter(
-		'toolkit_bot_command_execution_total',
+		'discord_command_execution_total',
 		{
 			description: 'Total number of commands executions'
 		}
 	);
 
 	private readonly commandExecutionDuration = this.metricService.getCounter(
-		'toolkit_bot_command_execution_duration',
+		'discord_command_execution_duration',
 		{
 			description: 'Total duration of commands executions'
 		}

@@ -7,11 +7,11 @@ import { Client } from 'discord.js';
 export class AppService {
 	private readonly logger = new Logger(AppService.name);
 
-	private readonly guildsCounter = this.metricService.getCounter('toolkit_bot_guilds_total', {
+	private readonly guildsCounter = this.metricService.getCounter('discord_guilds_total', {
 		description: 'Total number of guilds the bot is in'
 	});
 
-	private readonly pingGauge = this.metricService.getObservableGauge('toolkit_bot_ping', {
+	private readonly pingGauge = this.metricService.getObservableGauge('discord_ping', {
 		description: 'Bot ping in milliseconds'
 	});
 

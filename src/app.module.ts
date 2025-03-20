@@ -7,10 +7,11 @@ import { GeneralModule } from './general/general.module';
 import { AppService } from './app.service';
 import { TagsModule } from './tags/tags.module';
 import { ChangelogModule } from './changelog/changelog.module';
-import { SentryGlobalFilter, SentryModule } from '@sentry/nestjs/setup';
+import { SentryModule } from '@sentry/nestjs/setup';
 import { APP_FILTER, APP_INTERCEPTOR } from '@nestjs/core';
 import { CommandMetricsInterceptor, NecordSentryExceptionFilter } from './common';
 import { OpenTelemetryModule } from 'nestjs-otel';
+import { attributes } from './instrument';
 
 @Module({
 	imports: [
@@ -20,7 +21,10 @@ import { OpenTelemetryModule } from 'nestjs-otel';
 		SentryModule.forRoot(),
 		OpenTelemetryModule.forRoot({
 			metrics: {
-				hostMetrics: true
+				hostMetrics: true,
+				apiMetrics: {
+					defaultAttributes: attributes
+				}
 			}
 		}),
 		NecordModule.forRootAsync({
