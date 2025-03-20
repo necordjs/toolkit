@@ -42,13 +42,11 @@ const metricReader = new PrometheusExporter({ port: 8081 }, () =>
 	logger.log('Prometheus scrape endpoint started on port 8081')
 );
 
-export const attributes: Record<string, string> = {
+const resource = resourceFromAttributes({
 	[ATTR_SERVICE_NAME]: 'toolkit',
 	'service.namespace': 'necord',
 	[ATTR_SERVICE_VERSION]: version
-};
-
-const resource = resourceFromAttributes(attributes);
+});
 
 const instrumentations = [getNodeAutoInstrumentations()];
 

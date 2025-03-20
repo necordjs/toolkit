@@ -11,7 +11,6 @@ import { SentryModule } from '@sentry/nestjs/setup';
 import { APP_FILTER, APP_INTERCEPTOR } from '@nestjs/core';
 import { CommandMetricsInterceptor, NecordSentryExceptionFilter } from './common';
 import { OpenTelemetryModule } from 'nestjs-otel';
-import { attributes } from './instrument';
 
 @Module({
 	imports: [
@@ -21,10 +20,7 @@ import { attributes } from './instrument';
 		SentryModule.forRoot(),
 		OpenTelemetryModule.forRoot({
 			metrics: {
-				hostMetrics: true,
-				apiMetrics: {
-					defaultAttributes: attributes
-				}
+				hostMetrics: true
 			}
 		}),
 		NecordModule.forRootAsync({
