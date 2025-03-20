@@ -5,8 +5,12 @@ import {
 	getResourceDetectors
 } from '@opentelemetry/auto-instrumentations-node';
 import { Logger } from '@nestjs/common';
-import { Resource } from '@opentelemetry/resources';
-import { SemanticResourceAttributes } from '@opentelemetry/semantic-conventions';
+import { resourceFromAttributes } from '@opentelemetry/resources';
+import {
+	ATTR_SERVICE_NAME,
+	ATTR_SERVICE_VERSION,
+	ATTR_SERVICE_
+} from '@opentelemetry/semantic-conventions';
 import { metrics } from '@opentelemetry/api';
 import { setupNodeMetrics } from '@sesamecare-oss/opentelemetry-node-metrics';
 import * as Sentry from '@sentry/nestjs';
@@ -42,10 +46,9 @@ const metricReader = new PrometheusExporter({ port: 8081 }, () =>
 	logger.log('Prometheus scrape endpoint started on port 8081')
 );
 
-const resource = new Resource({
-	[SemanticResourceAttributes.SERVICE_NAME]: 'toolkit',
-	[SemanticResourceAttributes.SERVICE_NAMESPACE]: 'necord',
-	[SemanticResourceAttributes.SERVICE_VERSION]: version
+const resource = resourceFromAttributes({
+	[ATTR_SERVICE_NAME]: '@necordjs/toolkit',
+	[ATTR_SERVICE_VERSION]: version
 });
 
 const instrumentations = [getNodeAutoInstrumentations()];
