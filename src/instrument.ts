@@ -6,11 +6,7 @@ import {
 } from '@opentelemetry/auto-instrumentations-node';
 import { Logger } from '@nestjs/common';
 import { resourceFromAttributes } from '@opentelemetry/resources';
-import {
-	ATTR_SERVICE_NAME,
-	ATTR_SERVICE_VERSION,
-	ATTR_SERVICE_
-} from '@opentelemetry/semantic-conventions';
+import { ATTR_SERVICE_NAME, ATTR_SERVICE_VERSION } from '@opentelemetry/semantic-conventions';
 import { metrics } from '@opentelemetry/api';
 import { setupNodeMetrics } from '@sesamecare-oss/opentelemetry-node-metrics';
 import * as Sentry from '@sentry/nestjs';
@@ -47,7 +43,8 @@ const metricReader = new PrometheusExporter({ port: 8081 }, () =>
 );
 
 const resource = resourceFromAttributes({
-	[ATTR_SERVICE_NAME]: '@necordjs/toolkit',
+	[ATTR_SERVICE_NAME]: 'toolkit',
+	'service.namespace': 'necord',
 	[ATTR_SERVICE_VERSION]: version
 });
 
