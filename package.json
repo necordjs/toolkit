@@ -47,7 +47,7 @@
 		"@opentelemetry/exporter-prometheus": "0.200.0",
 		"@opentelemetry/instrumentation-nestjs-core": "^0.45.0",
 		"@opentelemetry/sdk-node": "0.200.0",
-		"@sentry/cli": "^2.42.5",
+		"@sentry/cli": "^2.43.0",
 		"@sentry/nestjs": "^9.9.0",
 		"@sentry/opentelemetry": "^9.9.0",
 		"@sentry/profiling-node": "^9.9.0",
