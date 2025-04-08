@@ -49,7 +49,7 @@
 		"@opentelemetry/sdk-node": "0.200.0",
 		"@sentry/cli": "^2.43.0",
 		"@sentry/nestjs": "^9.11.0",
-		"@sentry/opentelemetry": "^9.11.0",
+		"@sentry/opentelemetry": "^9.12.0",
 		"@sentry/profiling-node": "^9.11.0",
 		"@sesamecare-oss/opentelemetry-node-metrics": "1.1.0",
 		"axios": "1.8.4",
