@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.5.0](https://github.com/necordjs/toolkit/compare/v1.4.1...v1.5.0) (2025-04-21)
+
+### Features
+
+* add users and guilds metrics ([a8ffdc4](https://github.com/necordjs/toolkit/commit/a8ffdc4be3d3d1800bfc2b5dca181e356d0a8299))
+
 ## [1.4.1](https://github.com/necordjs/toolkit/compare/v1.4.0...v1.4.1) (2025-03-20)
 
 ### Bug Fixes

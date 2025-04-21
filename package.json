@@ -1,7 +1,7 @@
 {
 	"name": "necordjs-toolkit",
 	"description": "🤖 Source code of Toolkit bot",
-	"version": "1.4.1",
+	"version": "1.5.0",
 	"scripts": {
 		"build": "nest build",
 		"prepare": "husky",
