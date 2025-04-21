@@ -7,8 +7,12 @@ import { Client } from 'discord.js';
 export class AppService {
 	private readonly logger = new Logger(AppService.name);
 
-	private readonly guildsCounter = this.metricService.getCounter('discord_guilds_total', {
+	private readonly guildsGauge = this.metricService.getObservableGauge('discord_guilds_total', {
 		description: 'Total number of guilds the bot is in'
+	});
+
+	private readonly usersGauge = this.metricService.getObservableGauge('discord_users_total', {
+		description: 'Total number of users the bot is in'
 	});
 
 	private readonly pingGauge = this.metricService.getObservableGauge('discord_ping', {
@@ -24,6 +28,8 @@ export class AppService {
 	public onReady(@Context() [client]: ContextOf<'ready'>) {
 		this.logger.log(`Logged in as ${client.user.tag}!`);
 		this.pingGauge.addCallback(result => result.observe(this.client.ws.ping));
+		this.guildsGauge.addCallback(result => result.observe(this.client.guilds.cache.size));
+		this.usersGauge.addCallback(result => result.observe(this.client.users.cache.size));
 	}
 
 	@On('warn')
@@ -43,13 +49,11 @@ export class AppService {
 
 	@On('guildCreate')
 	public onGuildCreate(@Context() [guild]: ContextOf<'guildCreate'>) {
-		this.guildsCounter.add(1);
 		this.logger.log(`Joined guild: ${guild.name}`);
 	}
 
 	@On('guildDelete')
 	public onGuildDelete(@Context() [guild]: ContextOf<'guildDelete'>) {
-		this.guildsCounter.add(-1);
 		this.logger.log(`Left guild: ${guild.name}`);
 	}
 }
