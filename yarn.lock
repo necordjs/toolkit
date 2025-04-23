@@ -1436,10 +1436,10 @@
     dotenv-expand "12.0.1"
     lodash "4.17.21"
 
-"@nestjs/core@11.0.20":
-  version "11.0.20"
-  resolved "https://registry.yarnpkg.com/@nestjs/core/-/core-11.0.20.tgz#1a053474d0128b4ba8d2edd136add6854bb09f4c"
-  integrity sha512-yUkEzBGiRNSEThVl6vMCXgoA9sDGWoRbJsTLdYdCC7lg7PE1iXBnna1FiBfQjT995pm0fjyM1e3WsXmyWeJXbw==
+"@nestjs/core@11.1.0":
+  version "11.1.0"
+  resolved "https://registry.yarnpkg.com/@nestjs/core/-/core-11.1.0.tgz#d587cc5d83cd31dca989641e85d547d916491873"
+  integrity sha512-IeXbTRPrr6xAVbETlDE+miSkNmYf/cPhCa9GU9gFtPO6pVNuAeG/dNrjLVc23mJtUlT/ibdsoW35TlSyHLkzEA==
   dependencies:
     uid "2.0.2"
     "@nuxt/opencollective" "0.4.1"

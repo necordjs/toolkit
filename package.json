@@ -41,7 +41,7 @@
 		"@nestjs/axios": "4.0.0",
 		"@nestjs/common": "11.1.0",
 		"@nestjs/config": "4.0.2",
-		"@nestjs/core": "11.0.20",
+		"@nestjs/core": "11.1.0",
 		"@opentelemetry/api": "1.9.0",
 		"@opentelemetry/auto-instrumentations-node": "0.57.0",
 		"@opentelemetry/exporter-prometheus": "0.200.0",
