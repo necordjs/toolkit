@@ -10,7 +10,11 @@
 		"start": "nest start",
 		"start:dev": "nest start --watch",
 		"publish": "release-it",
-		"publish:git": "release-it"
+		"publish:git": "release-it",
+		"test": "jest",
+		"test:watch": "jest --watch",
+		"test:cov": "jest --coverage",
+		"test:ci": "jest --ci --passWithNoTests --coverage"
 	},
 	"lint-staged": {
 		"*.ts": "npm run format"
