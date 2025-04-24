@@ -28,10 +28,10 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Install Node v20
+      - name: Install Node v22
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: yarn
           cache-dependency-path: yarn.lock
 
