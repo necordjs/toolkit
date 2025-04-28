@@ -7335,10 +7335,10 @@ natural-compare@^1.4.0:
   resolved "https://registry.npmjs.org/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
   integrity sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==
 
-necord@6.8.8:
-  version "6.8.8"
-  resolved "https://registry.yarnpkg.com/necord/-/necord-6.8.8.tgz#7a5f4e914705938c60acb6ffa280f6458e18f729"
-  integrity sha512-IDJ/wedWZlc6ksXmLSAHx1F5V6jXtbJzpyQ1makTVgZ/OzC93ik7Y6tpXmqpIuIWH+jBdPLRDPAbh3QQFhvMMQ==
+necord@6.8.9:
+  version "6.8.9"
+  resolved "https://registry.yarnpkg.com/necord/-/necord-6.8.9.tgz#d40eeca07a9c999f62241c421eb8f4fe6af7b6d0"
+  integrity sha512-aOPTynSNQP0/4ae8kikgiKPtL9tm8HBB0br940iB1E+kXh2/n8NrUOheFfXkB2AZjroPKZ2ixPRObHelPBG32Q==
   dependencies:
     path-to-regexp "8.2.0"
 
