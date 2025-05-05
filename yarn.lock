@@ -613,10 +613,10 @@
   dependencies:
     "@jridgewell/trace-mapping" "0.3.9"
 
-"@discordjs/builders@^1.11.1":
-  version "1.11.1"
-  resolved "https://registry.yarnpkg.com/@discordjs/builders/-/builders-1.11.1.tgz#29eec7e801cb638ae3045478abd1f66d90608858"
-  integrity sha512-2zDAVuoeAkdv0YQzYKO8vZfaDfB+1KZ60ymBKtD7QDpsh6lzAnQSUBLqeRkhlons6BT9+yRctOh9fPy94w6kDA==
+"@discordjs/builders@^1.11.2":
+  version "1.11.2"
+  resolved "https://registry.yarnpkg.com/@discordjs/builders/-/builders-1.11.2.tgz#b96185d05d22f9d6bde89aada2decf45a5c982ce"
+  integrity sha512-F1WTABdd8/R9D1icJzajC4IuLyyS8f3rTOz66JsSI3pKvpCAtsMBweu8cyNYsIyvcrKAVn9EPK+Psoymq+XC0A==
   dependencies:
     "@discordjs/formatters" "^0.6.1"
     "@discordjs/util" "^1.1.1"
@@ -726,10 +726,15 @@
     minimatch "^3.1.2"
     strip-json-comments "^3.1.1"
 
-"@eslint/js@9.25.1", "@eslint/js@^9.25.0":
+"@eslint/js@9.25.1":
   version "9.25.1"
   resolved "https://registry.yarnpkg.com/@eslint/js/-/js-9.25.1.tgz#25f5c930c2b68b5ebe7ac857f754cbd61ef6d117"
   integrity sha512-dEIwmjntEx8u3Uvv+kr3PDeeArL8Hw07H9kyYxCjnM9pBjfEhk6uLXSchxxzgiwtRhhzVzqmUSDFBOi1TuZ7qg==
+
+"@eslint/js@^9.26.0":
+  version "9.26.0"
+  resolved "https://registry.yarnpkg.com/@eslint/js/-/js-9.26.0.tgz#1e13126b67a3db15111d2dcc61f69a2acff70bd5"
+  integrity sha512-I9XlJawFdSMvWjDt6wksMCrgns5ggLNfFwFvnShsleWruvXM514Qxk8V246efTw+eo9JABvVz+u3q2RiAowKxQ==
 
 "@eslint/object-schema@^2.1.6":
   version "2.1.6"
@@ -987,7 +992,7 @@
     "@inquirer/search" "^3.0.9"
     "@inquirer/select" "^4.0.9"
 
-"@inquirer/prompts@7.4.1", "@inquirer/prompts@^7.4.1":
+"@inquirer/prompts@7.4.1":
   version "7.4.1"
   resolved "https://registry.yarnpkg.com/@inquirer/prompts/-/prompts-7.4.1.tgz#b9bfbba7384305f1d632aca1b800b2b3c22fbcbf"
   integrity sha512-UlmM5FVOZF0gpoe1PT/jN4vk8JmpIWBlMvTL8M+hlvPmzN89K6z03+IFmyeu/oFCenwdwHDr2gky7nIGSEVvlA==
@@ -1002,6 +1007,22 @@
     "@inquirer/rawlist" "^4.0.12"
     "@inquirer/search" "^3.0.12"
     "@inquirer/select" "^4.1.1"
+
+"@inquirer/prompts@^7.5.0":
+  version "7.5.0"
+  resolved "https://registry.yarnpkg.com/@inquirer/prompts/-/prompts-7.5.0.tgz#e4cdfd1ce0cb63592968b5de92d3a35f9b7c1b6e"
+  integrity sha512-tk8Bx7l5AX/CR0sVfGj3Xg6v7cYlFBkEahH+EgBB+cZib6Fc83dwerTbzj7f2+qKckjIUGsviWRI1d7lx6nqQA==
+  dependencies:
+    "@inquirer/checkbox" "^4.1.5"
+    "@inquirer/confirm" "^5.1.9"
+    "@inquirer/editor" "^4.2.10"
+    "@inquirer/expand" "^4.0.12"
+    "@inquirer/input" "^4.1.9"
+    "@inquirer/number" "^3.0.12"
+    "@inquirer/password" "^4.0.12"
+    "@inquirer/rawlist" "^4.1.0"
+    "@inquirer/search" "^3.0.12"
+    "@inquirer/select" "^4.2.0"
 
 "@inquirer/rawlist@^4.0.12":
   version "4.0.12"
@@ -1019,6 +1040,15 @@
   dependencies:
     "@inquirer/core" "^10.1.7"
     "@inquirer/type" "^3.0.4"
+    yoctocolors-cjs "^2.1.2"
+
+"@inquirer/rawlist@^4.1.0":
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/@inquirer/rawlist/-/rawlist-4.1.0.tgz#bb08a0a50663fda7359777e042e8821b0ac5b18f"
+  integrity sha512-6ob45Oh9pXmfprKqUiEeMz/tjtVTFQTgDDz1xAMKMrIvyrYjAmRbQZjMJfsictlL4phgjLhdLu27IkHNnNjB7g==
+  dependencies:
+    "@inquirer/core" "^10.1.10"
+    "@inquirer/type" "^3.0.6"
     yoctocolors-cjs "^2.1.2"
 
 "@inquirer/search@^3.0.12":
@@ -1056,6 +1086,17 @@
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/@inquirer/select/-/select-4.1.1.tgz#0496b913514149171cf6351f0acb6d4243a39fdf"
   integrity sha512-IUXzzTKVdiVNMA+2yUvPxWsSgOG4kfX93jOM4Zb5FgujeInotv5SPIJVeXQ+fO4xu7tW8VowFhdG5JRmmCyQ1Q==
+  dependencies:
+    "@inquirer/core" "^10.1.10"
+    "@inquirer/figures" "^1.0.11"
+    "@inquirer/type" "^3.0.6"
+    ansi-escapes "^4.3.2"
+    yoctocolors-cjs "^2.1.2"
+
+"@inquirer/select@^4.2.0":
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/@inquirer/select/-/select-4.2.0.tgz#42c66977c8992bd025f5d2f4124bee390cb16a98"
+  integrity sha512-KkXQ4aSySWimpV4V/TUJWdB3tdfENZUU765GjOIZ0uPwdbGIG6jrxD4dDf1w68uP+DVtfNhr1A92B+0mbTZ8FA==
   dependencies:
     "@inquirer/core" "^10.1.10"
     "@inquirer/figures" "^1.0.11"
@@ -2659,10 +2700,10 @@
   dependencies:
     "@opentelemetry/core" "^2.0.0"
 
-"@phun-ky/typeof@1.2.5":
-  version "1.2.5"
-  resolved "https://registry.yarnpkg.com/@phun-ky/typeof/-/typeof-1.2.5.tgz#6a2f218a940d681042cfa98240fbce3c5b84e93f"
-  integrity sha512-hlymcHDbmYiRGutF/xWd3tpB57O3XfIbr9J4Blvqhb2rIJ1bfzn4CIS2gT1zy+QUm2Z+tgGkX6qNy1K+yFLd1g==
+"@phun-ky/typeof@1.2.8":
+  version "1.2.8"
+  resolved "https://registry.yarnpkg.com/@phun-ky/typeof/-/typeof-1.2.8.tgz#9e8e29a2c6958dacd3d9c950a1bdaadfa2c9ab55"
+  integrity sha512-7J6ca1tK0duM2BgVB+CuFMh3idlIVASOP2QvOCbNWDc6JnvjtKa9nufPoJQQ4xrwBonwgT1TIhRRcEtzdVgWsA==
 
 "@pkgjs/parseargs@^0.11.0":
   version "0.11.0"
@@ -2798,50 +2839,50 @@
     detect-libc "^2.0.3"
     node-abi "^3.73.0"
 
-"@sentry/cli-darwin@2.43.1":
-  version "2.43.1"
-  resolved "https://registry.yarnpkg.com/@sentry/cli-darwin/-/cli-darwin-2.43.1.tgz#356ea4d334a373a87927393f1ff9b047dee99185"
-  integrity sha512-622g/UyhTi1zC0Nnnbto75gNkExwwjv1cnRA4ERwfPgiOI3UK0/j+m4CcosqrfdTK55pv+SiifOlmvDPZnMIZw==
+"@sentry/cli-darwin@2.44.0":
+  version "2.44.0"
+  resolved "https://registry.yarnpkg.com/@sentry/cli-darwin/-/cli-darwin-2.44.0.tgz#90326bbf887160b98df09a9da155f268100a5117"
+  integrity sha512-avkaxMCjXPGQ9/6W7gbBaU5rDqu6ZsY1guMZiyB27BJWofRaWsLje3d589LjTFjRXmYwytoiKsv3fLUQZQbGuQ==
 
-"@sentry/cli-linux-arm64@2.43.1":
-  version "2.43.1"
-  resolved "https://registry.yarnpkg.com/@sentry/cli-linux-arm64/-/cli-linux-arm64-2.43.1.tgz#02918f83d962a9af279dbce0eab6bd2fa57ac033"
-  integrity sha512-c1P7eZqdDwRlePBSQSgWYUi80W5ywvG/XxZFVecjdHDEYlo2BJTRirqZTqzKzI/Ekk8x5hOxNuBbP+m9FluDMw==
+"@sentry/cli-linux-arm64@2.44.0":
+  version "2.44.0"
+  resolved "https://registry.yarnpkg.com/@sentry/cli-linux-arm64/-/cli-linux-arm64-2.44.0.tgz#4ad1751948ed269c36dff5941f1ab35d11548e06"
+  integrity sha512-SSyBF81a79Z0JqtzyYyjCDAXAuh2bDJRGEpoSI/4DZvZVAOsoF3H2ZN6WtUQjFq6LWUyke5s4Usxmn3V6knPZw==
 
-"@sentry/cli-linux-arm@2.43.1":
-  version "2.43.1"
-  resolved "https://registry.yarnpkg.com/@sentry/cli-linux-arm/-/cli-linux-arm-2.43.1.tgz#e7bf2c71b6f376581b08034f7d410b3492314c52"
-  integrity sha512-eQKcfqMR9bg8HKR9UCwm8x3lGBMUu1wCQow2BwEX4NbY1GzniSHNH4MBY2ERpOsfCA0LM5xEWQk/QFXexz1Dhw==
+"@sentry/cli-linux-arm@2.44.0":
+  version "2.44.0"
+  resolved "https://registry.yarnpkg.com/@sentry/cli-linux-arm/-/cli-linux-arm-2.44.0.tgz#244600741ff0c3f0b8842a9c3619ae84f7760eb9"
+  integrity sha512-Y+y6sJpFlLTO795s8iZILVB0inkhEd/wHKTmagj2JgPrGgC0sWdzRlurIGDJBBIA4R2X3CNuBB6/3nFKHZ5xWA==
 
-"@sentry/cli-linux-i686@2.43.1":
-  version "2.43.1"
-  resolved "https://registry.yarnpkg.com/@sentry/cli-linux-i686/-/cli-linux-i686-2.43.1.tgz#ae495afe985f2b9738ec8277cf84361d6ead1501"
-  integrity sha512-VRhzmEOeA/nsQHkf3Jt8mbgZmdbAWURM18Y1uXVRI/mQzZaz6YAZ+IzQ6gANpUk+UfTdf1q0unZSAIOUuu19gA==
+"@sentry/cli-linux-i686@2.44.0":
+  version "2.44.0"
+  resolved "https://registry.yarnpkg.com/@sentry/cli-linux-i686/-/cli-linux-i686-2.44.0.tgz#fdb97c225c30304950fcf8d6a9f0ccf2e9cf1b28"
+  integrity sha512-YP42/jd7aTOZi/p4zPkZ/i/g7PnnJJkU43i+pc2s+GtooV2HWHu2uVu8TOazjZAYT/HU+t5W+xVrvnHGUNf0rA==
 
-"@sentry/cli-linux-x64@2.43.1":
-  version "2.43.1"
-  resolved "https://registry.yarnpkg.com/@sentry/cli-linux-x64/-/cli-linux-x64-2.43.1.tgz#05a245a995387197f327251674069c553a3f53b6"
-  integrity sha512-c8G4zdzxzdPOz+tV1LNwUz5UsPNnhEE13kMPesF81liawwznnBsDfeKf6t/87Eem4BgAPdsFlnqnffi4BdqkZQ==
+"@sentry/cli-linux-x64@2.44.0":
+  version "2.44.0"
+  resolved "https://registry.yarnpkg.com/@sentry/cli-linux-x64/-/cli-linux-x64-2.44.0.tgz#d119f8631ec736f45bb611cd00660650ed4dfe0e"
+  integrity sha512-+BcxpBhgOI2Fz6ppszs46AepvS2izcA/KjDbJMld7Hr9GjigUoZ+oR1+4rctIGkotj0nm+gPHrKoZeZbWS5kQw==
 
-"@sentry/cli-win32-arm64@2.43.1":
-  version "2.43.1"
-  resolved "https://registry.yarnpkg.com/@sentry/cli-win32-arm64/-/cli-win32-arm64-2.43.1.tgz#5fdea8285998e6915a0588ebceed87a0afb2a05c"
-  integrity sha512-K+9td351lzUn51R/oHotyEkq7nzKWBm2ffhVAe4HXNh72MjhyIvonAhQUrGawIjn/aLHO+hq9iNaEXbCu6Hulg==
+"@sentry/cli-win32-arm64@2.44.0":
+  version "2.44.0"
+  resolved "https://registry.yarnpkg.com/@sentry/cli-win32-arm64/-/cli-win32-arm64-2.44.0.tgz#d1940dda354fff25be7828428a0a3e1374085048"
+  integrity sha512-nIhhlClqKg4e2gboHTMIgM89e94xOe6SDYh3ympsNvE668kpEjqCBWKsG3rW3haX30FADl18Gd+V7mvqSk+nzg==
 
-"@sentry/cli-win32-i686@2.43.1":
-  version "2.43.1"
-  resolved "https://registry.yarnpkg.com/@sentry/cli-win32-i686/-/cli-win32-i686-2.43.1.tgz#42907778a1352a87ebe7f1de8d098cb82a7a447f"
-  integrity sha512-Co7kj0o16xcUZRZY+VwMgpdDvOY2xAbR5Xg5NXv73nXdALgGWf+G5bntFz3baNmaSOYWKJjvZT7a+YLwe/DihQ==
+"@sentry/cli-win32-i686@2.44.0":
+  version "2.44.0"
+  resolved "https://registry.yarnpkg.com/@sentry/cli-win32-i686/-/cli-win32-i686-2.44.0.tgz#b79ab09ee6713383bd86fb0ead7266235fb37797"
+  integrity sha512-m9ltCk1ybTbWujARW1Ry7hK2GFryqsdQtr5n6CUcuBXCMIf+VuJqGvVxxdLpGnh9CEY5AbDRNtRnyxi0+8/XGg==
 
-"@sentry/cli-win32-x64@2.43.1":
-  version "2.43.1"
-  resolved "https://registry.yarnpkg.com/@sentry/cli-win32-x64/-/cli-win32-x64-2.43.1.tgz#a26e161e2ce3e3b7e262e4da197c3905b6f291c9"
-  integrity sha512-uH7l4FXc6s0GoJeriU6kQOYzREqDGB7b16XbTKY+lnhMNvBgP2aaOUQ9yRLbEHeSSg/112SQeolCnF2GwTmoKw==
+"@sentry/cli-win32-x64@2.44.0":
+  version "2.44.0"
+  resolved "https://registry.yarnpkg.com/@sentry/cli-win32-x64/-/cli-win32-x64-2.44.0.tgz#9138b3df11a871db90a76485b634226c38596047"
+  integrity sha512-tFhMQPSXzfH3/9lFNngLcIusfqiXjOwK3xp1EHJNAnOYdNuzcRCbQ9i5IHWRh+VOixp7FEnPsrl/LJErbLgSzg==
 
-"@sentry/cli@^2.43.1":
-  version "2.43.1"
-  resolved "https://registry.yarnpkg.com/@sentry/cli/-/cli-2.43.1.tgz#8b34d2b24d661aef55395a40ac72413a813a626d"
-  integrity sha512-5jg8cy4LlPnmgI6FkxClDRB5hFWzmlq7VZqj5o6Zdm5KRywzCn2s18GXyC1LPf6MFHw3AZ/K2h5pUZmJdWUBFQ==
+"@sentry/cli@^2.44.0":
+  version "2.44.0"
+  resolved "https://registry.yarnpkg.com/@sentry/cli/-/cli-2.44.0.tgz#23d319634a8ab01fa83081382aec5e2230b4d7c2"
+  integrity sha512-WTWRJb5OD/bqNq66QFWRzNt/S79aCrcXg6ELJFhz1aDdXaQZu9AyElQGu3a+WVNOY0ntTFmatw3HV875qNdJTQ==
   dependencies:
     https-proxy-agent "^5.0.0"
     node-fetch "^2.6.7"
@@ -2849,14 +2890,14 @@
     proxy-from-env "^1.1.0"
     which "^2.0.2"
   optionalDependencies:
-    "@sentry/cli-darwin" "2.43.1"
-    "@sentry/cli-linux-arm" "2.43.1"
-    "@sentry/cli-linux-arm64" "2.43.1"
-    "@sentry/cli-linux-i686" "2.43.1"
-    "@sentry/cli-linux-x64" "2.43.1"
-    "@sentry/cli-win32-arm64" "2.43.1"
-    "@sentry/cli-win32-i686" "2.43.1"
-    "@sentry/cli-win32-x64" "2.43.1"
+    "@sentry/cli-darwin" "2.44.0"
+    "@sentry/cli-linux-arm" "2.44.0"
+    "@sentry/cli-linux-arm64" "2.44.0"
+    "@sentry/cli-linux-i686" "2.44.0"
+    "@sentry/cli-linux-x64" "2.44.0"
+    "@sentry/cli-win32-arm64" "2.44.0"
+    "@sentry/cli-win32-i686" "2.44.0"
+    "@sentry/cli-win32-x64" "2.44.0"
 
 "@sentry/core@9.15.0":
   version "9.15.0"
@@ -4645,12 +4686,12 @@ discord-api-types@^0.38.1:
   resolved "https://registry.yarnpkg.com/discord-api-types/-/discord-api-types-0.38.1.tgz#2148f42141871945495efdb39303715e3dc19cc0"
   integrity sha512-vsjsqjAuxsPhiwbPjTBeGQaDPlizFmSkU0mTzFGMgRxqCDIRBR7iTY74HacpzrDV0QtERHRKQEk1tq7drZUtHg==
 
-discord.js@14.19.2:
-  version "14.19.2"
-  resolved "https://registry.yarnpkg.com/discord.js/-/discord.js-14.19.2.tgz#34e7d849bcba2b91a98daeb599428976b06a2974"
-  integrity sha512-L/ivhVefzzRcChHJSaGYsgA4Uqx6or2sst5JZ/ft9OBwrj8OJIzrrcutlkHnm/hlI0Hrm3es62TRVksU8VUqrg==
+discord.js@14.19.3:
+  version "14.19.3"
+  resolved "https://registry.yarnpkg.com/discord.js/-/discord.js-14.19.3.tgz#ed08c61ad300efc3033ecf2b70f28a68d95b138a"
+  integrity sha512-lncTRk0k+8Q5D3nThnODBR8fR8x2fM798o8Vsr40Krx0DjPwpZCuxxTcFMrXMQVOqM1QB9wqWgaXPg3TbmlHqA==
   dependencies:
-    "@discordjs/builders" "^1.11.1"
+    "@discordjs/builders" "^1.11.2"
     "@discordjs/collection" "1.5.3"
     "@discordjs/formatters" "^0.6.1"
     "@discordjs/rest" "^2.5.0"
@@ -5245,7 +5286,7 @@ fb-watchman@^2.0.0:
   dependencies:
     bser "2.1.1"
 
-fdir@^6.4.3:
+fdir@^6.4.4:
   version "6.4.4"
   resolved "https://registry.yarnpkg.com/fdir/-/fdir-6.4.4.tgz#1cfcf86f875a883e19a8fab53622cfe992e8d2f9"
   integrity sha512-1NZP+GK4GfuAv3PqKvxQRDMjdSRZjnkq7KfhlNrCNNlZ0ygQFpebfrnfnq/W7fpUnAv9aGWmY1zKx7FYL3gwhg==
@@ -5934,13 +5975,13 @@ ini@4.1.1:
   resolved "https://registry.yarnpkg.com/ini/-/ini-4.1.1.tgz#d95b3d843b1e906e56d6747d5447904ff50ce7a1"
   integrity sha512-QQnnxNyfvmHFIsj7gkPcYymR8Jdw/o7mp5ZFihxn6h8Ci6fh3Dx4E1gPjpQEpIuPo9XVNY/ZUwh4BPMjGyL01g==
 
-inquirer@12.5.2:
-  version "12.5.2"
-  resolved "https://registry.yarnpkg.com/inquirer/-/inquirer-12.5.2.tgz#8ef07eb4a9fee6c9f4ac701275308d3d30ae599c"
-  integrity sha512-qoDk/vdSTIaXNXAoNnlg7ubexpJfUo7t8GT2vylxvE49BrLhToFuPPdMViidG2boHV7+AcP1TCkJs/+PPoF2QQ==
+inquirer@12.6.0:
+  version "12.6.0"
+  resolved "https://registry.yarnpkg.com/inquirer/-/inquirer-12.6.0.tgz#523bd0043aed5a0494edd95ef2cd8f213a11a7c5"
+  integrity sha512-3zmmccQd/8o65nPOZJZ+2wqt76Ghw3+LaMrmc6JE/IzcvQhJ1st+QLCOo/iLS85/tILU0myG31a2TAZX0ysAvg==
   dependencies:
     "@inquirer/core" "^10.1.10"
-    "@inquirer/prompts" "^7.4.1"
+    "@inquirer/prompts" "^7.5.0"
     "@inquirer/type" "^3.0.6"
     ansi-escapes "^4.3.2"
     mute-stream "^2.0.0"
@@ -7583,10 +7624,10 @@ onetime@^7.0.0:
   dependencies:
     mimic-function "^5.0.0"
 
-open@10.1.1:
-  version "10.1.1"
-  resolved "https://registry.yarnpkg.com/open/-/open-10.1.1.tgz#5fd814699e47ae3e1a09962d39f4f4441cae6c22"
-  integrity sha512-zy1wx4+P3PfhXSEPJNtZmJXfhkkIaxU1VauWIrDZw1O7uJRDRJtKr9n3Ic4NgbA16KyOxOXO2ng9gYwCdXuSXA==
+open@10.1.2:
+  version "10.1.2"
+  resolved "https://registry.yarnpkg.com/open/-/open-10.1.2.tgz#d5df40984755c9a9c3c93df8156a12467e882925"
+  integrity sha512-cxN6aIDPz6rm8hbebcP7vrQNhvRcveZoJU72Y7vskh4oIm+BZwBECnx5nTmrlres1Qapvx27Qo1Auukpf8PKXw==
   dependencies:
     default-browser "^5.2.1"
     define-lazy-prop "^3.0.0"
@@ -8204,32 +8245,32 @@ regexp.prototype.flags@^1.5.3:
     gopd "^1.2.0"
     set-function-name "^2.0.2"
 
-release-it@^19.0.1:
-  version "19.0.1"
-  resolved "https://registry.yarnpkg.com/release-it/-/release-it-19.0.1.tgz#5847cb11f5e9d1b9c603b28b627bd349f93d8a69"
-  integrity sha512-n+ZgPmyaEigl+oZguu4fwxIGGE+ydiFSzxuUZWDsQ822qbaCah5CC4EwSDqMT/bRT+ekYnb2Qyf2nV8vjK+Xdg==
+release-it@^19.0.2:
+  version "19.0.2"
+  resolved "https://registry.yarnpkg.com/release-it/-/release-it-19.0.2.tgz#97f2b96d5114572125fbadc11d2fec6e73fa07a1"
+  integrity sha512-tGRCcKeXNOMrK9Qe+ZIgQiMlQgjV8PLxZjTq1XGlCk5u1qPgx+Pps0i8HIt667FDt0wLjFtvn5o9ItpitKnVUA==
   dependencies:
     "@nodeutils/defaults-deep" "1.1.0"
     "@octokit/rest" "21.1.1"
-    "@phun-ky/typeof" "1.2.5"
+    "@phun-ky/typeof" "1.2.8"
     async-retry "1.3.3"
     c12 "3.0.3"
     ci-info "^4.2.0"
     eta "3.5.0"
     git-url-parse "16.1.0"
-    inquirer "12.5.2"
+    inquirer "12.6.0"
     issue-parser "7.0.1"
     lodash.get "4.4.2"
     lodash.merge "4.6.2"
     mime-types "3.0.1"
     new-github-release-url "2.0.0"
-    open "10.1.1"
+    open "10.1.2"
     ora "8.2.0"
     os-name "6.0.0"
     proxy-agent "6.5.0"
     semver "7.7.1"
     tinyexec "1.0.1"
-    tinyglobby "0.2.12"
+    tinyglobby "0.2.13"
     undici "6.21.2"
     url-join "5.0.0"
     wildcard-match "5.1.4"
@@ -8980,12 +9021,12 @@ tinyexec@^0.3.0, tinyexec@^0.3.2:
   resolved "https://registry.yarnpkg.com/tinyexec/-/tinyexec-0.3.2.tgz#941794e657a85e496577995c6eef66f53f42b3d2"
   integrity sha512-KQQR9yN7R5+OSwaK0XQoj22pwHoTlgYqmUscPYoknOoWCWfj/5/ABTMRi69FrKU5ffPVh5QcFikpWJI/P1ocHA==
 
-tinyglobby@0.2.12:
-  version "0.2.12"
-  resolved "https://registry.yarnpkg.com/tinyglobby/-/tinyglobby-0.2.12.tgz#ac941a42e0c5773bd0b5d08f32de82e74a1a61b5"
-  integrity sha512-qkf4trmKSIiMTs/E63cxH+ojC2unam7rJ0WrauAzpT3ECNTxGRMlaXxVbfxMUC/w0LaYk6jQ4y/nGR9uBO3tww==
+tinyglobby@0.2.13:
+  version "0.2.13"
+  resolved "https://registry.yarnpkg.com/tinyglobby/-/tinyglobby-0.2.13.tgz#a0e46515ce6cbcd65331537e57484af5a7b2ff7e"
+  integrity sha512-mEwzpUgrLySlveBwEVDMKk5B57bhLPYovRfPAXD5gA/98Opn0rCDj3GtLwFvCvH5RK9uPCExUROW5NjDwvqkxw==
   dependencies:
-    fdir "^6.4.3"
+    fdir "^6.4.4"
     picomatch "^4.0.2"
 
 tmp@^0.0.33:
