@@ -1449,10 +1449,10 @@
     zod "^3.23.8"
     zod-to-json-schema "^3.24.1"
 
-"@necord/pagination@2.0.4":
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/@necord/pagination/-/pagination-2.0.4.tgz#cd586b46169983be724bcb592cfdaa77222bf299"
-  integrity sha512-6gsPi1KBbcMCWr+uWHDedb2qGhBSquXEhJQGrI+aSqb0GmsqoB3sMgIAXkGIzyVBk/4LnPP/5e1IxOEioheZnQ==
+"@necord/pagination@2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@necord/pagination/-/pagination-2.1.0.tgz#483e4ff47e3f2fe773c64fb223aaf4d6238230cc"
+  integrity sha512-AfwDZ36lr6llvkwMc72H4zS0geQeC4NDR9yOHY14YqGAs8t7gveiDf87PSz4Jaq6kMZHSp1RtoRgzLKmudgTJg==
 
 "@nestjs/axios@4.0.0":
   version "4.0.0"
