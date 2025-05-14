@@ -760,6 +760,16 @@
     "@opentelemetry/instrumentation" "^0.200.0"
     "@opentelemetry/semantic-conventions" "^1.28.0"
 
+"@fastify/otel@github:getsentry/fastify-otel#otel-v1":
+  version "0.8.0"
+  uid d6bb1756c3db3d00d4d82c39c93ee3316e06d305
+  resolved "https://codeload.github.com/getsentry/fastify-otel/tar.gz/d6bb1756c3db3d00d4d82c39c93ee3316e06d305"
+  dependencies:
+    "@opentelemetry/core" "^1.30.1"
+    "@opentelemetry/instrumentation" "^0.57.2"
+    "@opentelemetry/semantic-conventions" "^1.28.0"
+    minimatch "^9"
+
 "@favware/npm-deprecate@2.0.0":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@favware/npm-deprecate/-/npm-deprecate-2.0.0.tgz#adb1581f0af2ff3468d45e2b1caa906e48beae40"
@@ -2927,18 +2937,18 @@
   resolved "https://registry.yarnpkg.com/@sentry/core/-/core-9.18.0.tgz#3ab58bf2dcdd8338e101aeb86034abf4924a67aa"
   integrity sha512-kRVH8BqMiaU2FTHYa68zNlAloS43jl4XtIEHkLKVH/7gUtwRmM4Gqj8P7RTrZdO1Lo7ksYnGj+AG05Z09CRbOw==
 
-"@sentry/nestjs@^9.17.0":
-  version "9.17.0"
-  resolved "https://registry.yarnpkg.com/@sentry/nestjs/-/nestjs-9.17.0.tgz#e38ce568df127b9a36ce38f02eb22b52de99edfb"
-  integrity sha512-1EOcWaaWchm9yp0ivmg5jxWsYYbpNnGh2o0imNiluLyslFqOlhb5PRO7su3EGhATxyUFAYJJTu2Z/DCGp2DVUA==
+"@sentry/nestjs@^9.18.0":
+  version "9.18.0"
+  resolved "https://registry.yarnpkg.com/@sentry/nestjs/-/nestjs-9.18.0.tgz#91a8191b07aeffef14553f424c95af243a100742"
+  integrity sha512-QQdhH68c3crZQYZ1Cw1yYBRFQtyHSQCrWm3EA2JnkznmERGVRjtG61kkCWrcPhENpzz8QQnv1zp97atcZKyIEg==
   dependencies:
     "@opentelemetry/api" "^1.9.0"
     "@opentelemetry/core" "^1.30.1"
     "@opentelemetry/instrumentation" "0.57.2"
     "@opentelemetry/instrumentation-nestjs-core" "0.44.1"
     "@opentelemetry/semantic-conventions" "^1.30.0"
-    "@sentry/core" "9.17.0"
-    "@sentry/node" "9.17.0"
+    "@sentry/core" "9.18.0"
+    "@sentry/node" "9.18.0"
 
 "@sentry/node@9.17.0":
   version "9.17.0"
@@ -2980,6 +2990,46 @@
     "@sentry/opentelemetry" "9.17.0"
     import-in-the-middle "^1.13.0"
 
+"@sentry/node@9.18.0":
+  version "9.18.0"
+  resolved "https://registry.yarnpkg.com/@sentry/node/-/node-9.18.0.tgz#682ad11030548eb0e0674ff091afc65319da6d8d"
+  integrity sha512-n0H13YVfynZJnKQLHoTlyBK2P960X8+B08za9VaRnJ4zikDx23Xk2Owtj006ZUItUKtKLFi70NyQGGDp7gVAyw==
+  dependencies:
+    "@fastify/otel" "github:getsentry/fastify-otel#otel-v1"
+    "@opentelemetry/api" "^1.9.0"
+    "@opentelemetry/context-async-hooks" "^1.30.1"
+    "@opentelemetry/core" "^1.30.1"
+    "@opentelemetry/instrumentation" "^0.57.2"
+    "@opentelemetry/instrumentation-amqplib" "^0.46.1"
+    "@opentelemetry/instrumentation-connect" "0.43.1"
+    "@opentelemetry/instrumentation-dataloader" "0.16.1"
+    "@opentelemetry/instrumentation-express" "0.47.1"
+    "@opentelemetry/instrumentation-fs" "0.19.1"
+    "@opentelemetry/instrumentation-generic-pool" "0.43.1"
+    "@opentelemetry/instrumentation-graphql" "0.47.1"
+    "@opentelemetry/instrumentation-hapi" "0.45.2"
+    "@opentelemetry/instrumentation-http" "0.57.2"
+    "@opentelemetry/instrumentation-ioredis" "0.47.1"
+    "@opentelemetry/instrumentation-kafkajs" "0.7.1"
+    "@opentelemetry/instrumentation-knex" "0.44.1"
+    "@opentelemetry/instrumentation-koa" "0.47.1"
+    "@opentelemetry/instrumentation-lru-memoizer" "0.44.1"
+    "@opentelemetry/instrumentation-mongodb" "0.52.0"
+    "@opentelemetry/instrumentation-mongoose" "0.46.1"
+    "@opentelemetry/instrumentation-mysql" "0.45.1"
+    "@opentelemetry/instrumentation-mysql2" "0.45.2"
+    "@opentelemetry/instrumentation-pg" "0.51.1"
+    "@opentelemetry/instrumentation-redis-4" "0.46.1"
+    "@opentelemetry/instrumentation-tedious" "0.18.1"
+    "@opentelemetry/instrumentation-undici" "0.10.1"
+    "@opentelemetry/resources" "^1.30.1"
+    "@opentelemetry/sdk-trace-base" "^1.30.1"
+    "@opentelemetry/semantic-conventions" "^1.30.0"
+    "@prisma/instrumentation" "6.7.0"
+    "@sentry/core" "9.18.0"
+    "@sentry/opentelemetry" "9.18.0"
+    import-in-the-middle "^1.13.1"
+
 "@sentry/opentelemetry@9.17.0":
   version "9.17.0"
   resolved "https://registry.yarnpkg.com/@sentry/opentelemetry/-/opentelemetry-9.17.0.tgz#7d0c22fd4c1b8a79a9720ad764c08599d716d5a2"
@@ -2987,7 +3037,7 @@
   dependencies:
     "@sentry/core" "9.17.0"
 
-"@sentry/opentelemetry@^9.18.0":
+"@sentry/opentelemetry@9.18.0", "@sentry/opentelemetry@^9.18.0":
   version "9.18.0"
   resolved "https://registry.yarnpkg.com/@sentry/opentelemetry/-/opentelemetry-9.18.0.tgz#7c8e2aafb1b262513a8e76564dd0431010a15d32"
   integrity sha512-983AvD9uJvT/yDdDDidILgu2kzgZudGv9ne6ThfsqVN+CNb8z+LnNgWTpDng+mlI4JqUvPOfk2hIm4l5X8wptg==
@@ -6122,6 +6172,16 @@ import-in-the-middle@^1.13.0:
     cjs-module-lexer "^1.2.2"
     module-details-from-path "^1.0.3"
 
+import-in-the-middle@^1.13.1:
+  version "1.13.2"
+  resolved "https://registry.yarnpkg.com/import-in-the-middle/-/import-in-the-middle-1.13.2.tgz#b8d873708ab121996da6842fa7740ac5cd437f9e"
+  integrity sha512-Yjp9X7s2eHSXvZYQ0aye6UvwYPrVB5C2k47fuXjFKnYinAByaDZjh4t9MT2wEga9775n6WaIqyHnQhBxYtX2mg==
+  dependencies:
+    acorn "^8.14.0"
+    acorn-import-attributes "^1.9.5"
+    cjs-module-lexer "^1.2.2"
+    module-details-from-path "^1.0.3"
+
 import-in-the-middle@^1.8.1:
   version "1.8.1"
   resolved "https://registry.yarnpkg.com/import-in-the-middle/-/import-in-the-middle-1.8.1.tgz#8b51c2cc631b64e53e958d7048d2d9463ce628f8"
@@ -7488,7 +7548,7 @@ minimatch@^5.0.1:
   dependencies:
     brace-expansion "^2.0.1"
 
-minimatch@^9.0.4:
+minimatch@^9, minimatch@^9.0.4:
   version "9.0.5"
   resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-9.0.5.tgz#d74f9dd6b57d83d8e98cfb82133b03978bc929e5"
   integrity sha512-G6T0ZX48xgozx7587koeX9Ys2NYy6Gmv//P89sEte9V9whIapMNF4idKxnW2QtCcLiTWlb/wfCabAtAFWhhBow==
