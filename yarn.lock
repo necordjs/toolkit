@@ -2945,6 +2945,11 @@
   resolved "https://registry.yarnpkg.com/@opentelemetry/semantic-conventions/-/semantic-conventions-1.34.0.tgz#8b6a46681b38a4d5947214033ac48128328c1738"
   integrity sha512-aKcOkyrorBGlajjRdVoJWHTxfxO1vCNHLJVlSDaRHDIdjU+pX8IYQPvPDkYiujKLbRnWU+1TBwEt0QRgSm4SGA==
 
+"@opentelemetry/semantic-conventions@^1.34.0":
+  version "1.34.0"
+  resolved "https://registry.yarnpkg.com/@opentelemetry/semantic-conventions/-/semantic-conventions-1.34.0.tgz#8b6a46681b38a4d5947214033ac48128328c1738"
+  integrity sha512-aKcOkyrorBGlajjRdVoJWHTxfxO1vCNHLJVlSDaRHDIdjU+pX8IYQPvPDkYiujKLbRnWU+1TBwEt0QRgSm4SGA==
+
 "@opentelemetry/sql-common@^0.40.1":
   version "0.40.1"
   resolved "https://registry.yarnpkg.com/@opentelemetry/sql-common/-/sql-common-0.40.1.tgz#93fbc48d8017449f5b3c3274f2268a08af2b83b6"
@@ -3282,14 +3287,14 @@
   dependencies:
     "@sentry/core" "9.23.0"
 
-"@sentry/profiling-node@^9.22.0":
-  version "9.22.0"
-  resolved "https://registry.yarnpkg.com/@sentry/profiling-node/-/profiling-node-9.22.0.tgz#5d7590ac5a2032e67fa20fdddb6950f1701913ed"
-  integrity sha512-a4sDnS3NmCgnk29/C790pN4F0z32m98VdowdTBzgU+1HFfQgcE18R6sFKU2y+VScVm7BD9xn7x94ich5+CsFtw==
+"@sentry/profiling-node@^9.23.0":
+  version "9.23.0"
+  resolved "https://registry.yarnpkg.com/@sentry/profiling-node/-/profiling-node-9.23.0.tgz#d88cdeeeb5138e6fb805e50324cd5084fdf942f2"
+  integrity sha512-iHByUPH3BcUNc76eVapYM3Nrjqzru2/WMWF9dcrNkFk0a8w6uKl9W21+DgnT/dKo/2fZFwnxlHheRkcerXZzgA==
   dependencies:
     "@sentry-internal/node-cpu-profiler" "^2.2.0"
-    "@sentry/core" "9.22.0"
-    "@sentry/node" "9.22.0"
+    "@sentry/core" "9.23.0"
+    "@sentry/node" "9.23.0"
 
 "@sesamecare-oss/opentelemetry-node-metrics@1.1.0":
   version "1.1.0"
