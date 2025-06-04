@@ -3252,68 +3252,23 @@
     "@sentry/cli-win32-i686" "2.46.0"
     "@sentry/cli-win32-x64" "2.46.0"
 
-"@sentry/core@9.25.1":
-  version "9.25.1"
-  resolved "https://registry.yarnpkg.com/@sentry/core/-/core-9.25.1.tgz#310408844aaefb18ef45a50fc70d9248ea560878"
-  integrity sha512-c87MOAJ7nAdysQgMFCnQXoKgWx30poLTJRsK+N72ZQhGiLIzp25xuIhCsTLuftxR852tZShd9X11yU0NuolmkA==
-
 "@sentry/core@9.26.0":
   version "9.26.0"
   resolved "https://registry.yarnpkg.com/@sentry/core/-/core-9.26.0.tgz#0096ea6f4986cfbcd46eaa715cf07f1477dd3c52"
   integrity sha512-XTFSqOPn6wsZgF3NLRVY/FjYCkFahZoR46BtLVmBliD60QZLChpya81slD3M8BgLQpjsA2q6N1xrQor1Rc29gg==
 
-"@sentry/nestjs@^9.25.1":
-  version "9.25.1"
-  resolved "https://registry.yarnpkg.com/@sentry/nestjs/-/nestjs-9.25.1.tgz#76fcf933966991379d6444bbeaacff3ca0e34d7d"
-  integrity sha512-JlfyRq0hg+MotkkgUpa31MU5BPSodtcqHVOKgWE9JD1QoUkkVPQmMuTUD7MRow59QttjFHPabavv+q9LvD4LaQ==
+"@sentry/nestjs@^9.26.0":
+  version "9.26.0"
+  resolved "https://registry.yarnpkg.com/@sentry/nestjs/-/nestjs-9.26.0.tgz#c3c91c25a1fbb34f383a5cf66e1d6fffa94ec181"
+  integrity sha512-74F7FyXsoyRwe3kLXuT9U7rurs6tePbCCtlJMhRLkq/oP4JkkVcWfnt0SQMxkeNKXzczGn9WoIXXUoxgpztKaw==
   dependencies:
     "@opentelemetry/api" "^1.9.0"
     "@opentelemetry/core" "^1.30.1"
     "@opentelemetry/instrumentation" "0.57.2"
     "@opentelemetry/instrumentation-nestjs-core" "0.44.1"
     "@opentelemetry/semantic-conventions" "^1.34.0"
-    "@sentry/core" "9.25.1"
-    "@sentry/node" "9.25.1"
-
-"@sentry/node@9.25.1":
-  version "9.25.1"
-  resolved "https://registry.yarnpkg.com/@sentry/node/-/node-9.25.1.tgz#32afa2099a45334058f90ae7f2d90257c1070559"
-  integrity sha512-GJPMjZugHk0zgBfeyczWXLHu1kIbYmfL2gyQZ/gTwlNiPdtjECtW54zhIh7itrl1spet+XI8On7H/rN7TULKyg==
-  dependencies:
-    "@opentelemetry/api" "^1.9.0"
-    "@opentelemetry/context-async-hooks" "^1.30.1"
-    "@opentelemetry/core" "^1.30.1"
-    "@opentelemetry/instrumentation" "^0.57.2"
-    "@opentelemetry/instrumentation-amqplib" "^0.46.1"
-    "@opentelemetry/instrumentation-connect" "0.43.1"
-    "@opentelemetry/instrumentation-dataloader" "0.16.1"
-    "@opentelemetry/instrumentation-express" "0.47.1"
-    "@opentelemetry/instrumentation-fs" "0.19.1"
-    "@opentelemetry/instrumentation-generic-pool" "0.43.1"
-    "@opentelemetry/instrumentation-graphql" "0.47.1"
-    "@opentelemetry/instrumentation-hapi" "0.45.2"
-    "@opentelemetry/instrumentation-http" "0.57.2"
-    "@opentelemetry/instrumentation-ioredis" "0.47.1"
-    "@opentelemetry/instrumentation-kafkajs" "0.7.1"
-    "@opentelemetry/instrumentation-knex" "0.44.1"
-    "@opentelemetry/instrumentation-koa" "0.47.1"
-    "@opentelemetry/instrumentation-lru-memoizer" "0.44.1"
-    "@opentelemetry/instrumentation-mongodb" "0.52.0"
-    "@opentelemetry/instrumentation-mongoose" "0.46.1"
-    "@opentelemetry/instrumentation-mysql" "0.45.1"
-    "@opentelemetry/instrumentation-mysql2" "0.45.2"
-    "@opentelemetry/instrumentation-pg" "0.51.1"
-    "@opentelemetry/instrumentation-redis-4" "0.46.1"
-    "@opentelemetry/instrumentation-tedious" "0.18.1"
-    "@opentelemetry/instrumentation-undici" "0.10.1"
-    "@opentelemetry/resources" "^1.30.1"
-    "@opentelemetry/sdk-trace-base" "^1.30.1"
-    "@opentelemetry/semantic-conventions" "^1.34.0"
-    "@prisma/instrumentation" "6.8.2"
-    "@sentry/core" "9.25.1"
-    "@sentry/opentelemetry" "9.25.1"
-    import-in-the-middle "^1.13.1"
-    minimatch "^9.0.0"
+    "@sentry/core" "9.26.0"
+    "@sentry/node" "9.26.0"
 
 "@sentry/node@9.26.0":
   version "9.26.0"
@@ -3354,13 +3309,6 @@
     "@sentry/opentelemetry" "9.26.0"
     import-in-the-middle "^1.13.1"
     minimatch "^9.0.0"
-
-"@sentry/opentelemetry@9.25.1":
-  version "9.25.1"
-  resolved "https://registry.yarnpkg.com/@sentry/opentelemetry/-/opentelemetry-9.25.1.tgz#ee19e35e598e7f694a93e6e5fee108c1474b7a39"
-  integrity sha512-8U6H6xSvTPVSGXbn8phJ02NQPq0FcLLr25h9Mnpefh5NasFQakd5lQhbbvpTHkz2hta8JU5Lv8Ek0wkSdcoi+w==
-  dependencies:
-    "@sentry/core" "9.25.1"
 
 "@sentry/opentelemetry@9.26.0", "@sentry/opentelemetry@^9.26.0":
   version "9.26.0"
