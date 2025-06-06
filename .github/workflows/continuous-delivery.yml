@@ -46,7 +46,7 @@ jobs:
         run: echo "version=$(cat package.json | jq -r '.version')" >> $GITHUB_OUTPUT
 
       - name: Create Sentry release
-        if: ${{ steps.version.outputs.version != '' && steps.version.outputs.version != 'undefined' }}
+        if: startsWith(github.ref, 'refs/tags/') && steps.version.outputs.version != '' && steps.version.outputs.version != 'undefined'
         uses: getsentry/action-release@v3
         env:
           SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
