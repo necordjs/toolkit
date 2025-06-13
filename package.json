@@ -54,7 +54,7 @@
 		"@sentry/cli": "^2.46.0",
 		"@sentry/nestjs": "^9.29.0",
 		"@sentry/opentelemetry": "^9.29.0",
-		"@sentry/profiling-node": "^9.28.1",
+		"@sentry/profiling-node": "^9.29.0",
 		"@sesamecare-oss/opentelemetry-node-metrics": "1.1.0",
 		"axios": "1.9.0",
 		"discord.js": "14.19.3",

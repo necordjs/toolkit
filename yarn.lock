@@ -3628,14 +3628,14 @@
   dependencies:
     "@sentry/core" "9.29.0"
 
-"@sentry/profiling-node@^9.28.1":
-  version "9.28.1"
-  resolved "https://registry.yarnpkg.com/@sentry/profiling-node/-/profiling-node-9.28.1.tgz#94c4b24391692831a5d95cb17a52bb7a55c068d5"
-  integrity sha512-3MOpejNzvbvsNzKYVdDTLAMGg3o6oqNnljPaXrKs+61k7FcBoJoZcnr1KTa3Z3q6ra95BWL89t2W5bFRIji0Tg==
+"@sentry/profiling-node@^9.29.0":
+  version "9.29.0"
+  resolved "https://registry.yarnpkg.com/@sentry/profiling-node/-/profiling-node-9.29.0.tgz#6db62e5efc77b7c952b8c8cabaa32b0baef77e42"
+  integrity sha512-DNB8j2q+o9rsD8PoIt4yK80HbIMUWp4qU8+rt90kxMBX+VDdjoJe5KWfixzV5zpmOfGR8KEaIW5W+Kl+ormf4Q==
   dependencies:
     "@sentry-internal/node-cpu-profiler" "^2.2.0"
-    "@sentry/core" "9.28.1"
-    "@sentry/node" "9.28.1"
+    "@sentry/core" "9.29.0"
+    "@sentry/node" "9.29.0"
 
 "@sesamecare-oss/opentelemetry-node-metrics@1.1.0":
   version "1.1.0"
