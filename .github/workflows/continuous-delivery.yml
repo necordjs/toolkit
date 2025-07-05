@@ -117,9 +117,9 @@ jobs:
             type=ref,event=pr
             type=semver,pattern={{version}}
             type=semver,pattern={{major}}.{{minor}}
-            type=sha
             type=raw,value=latest,enable={{is_default_branch}}
             type=raw,value=${{steps.environment.outputs.name}}
+            type=sha
 
       - name: Build and push
         uses: docker/build-push-action@v6
