@@ -1,11 +1,15 @@
 name: Continuous Delivery
 
 on:
+  workflow_dispatch:
   push:
     branches:
-      - master
+      - 'master'
     tags:
-      - '*.*.*'
+      - 'v*.*.*'
+  pull_request:
+    branches:
+      - 'master'
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.head_ref || github.ref }}
@@ -14,6 +18,7 @@ concurrency:
 env:
   REGISTRY: ghcr.io
   ORGANIZATION: ${{ github.repository_owner }}
+  SERVICE: ${{ github.event.repository.name }}
 
 jobs:
   build-and-push-sourcemaps:
@@ -87,21 +92,46 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-buildx-
 
+      - name: Get Environment
+        id: environment
+        run: |
+          if [[ ${{ github.ref }} == refs/tags/* ]]; then
+            echo "name=production" >> $GITHUB_OUTPUT
+          else
+            echo "name=staging" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Set lowercase organization and service names
+        run: |
+          echo "ORGANIZATION_LC=$(echo '${{ env.ORGANIZATION }}' | tr '[:upper:]' '[:lower:]')" >> $GITHUB_ENV
+          echo "SERVICE_LC=$(echo '${{ env.SERVICE }}' | tr '[:upper:]' '[:lower:]')" >> $GITHUB_ENV
+
       - name: Extract metadata (tags, labels) for Docker
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: ${{ env.REGISTRY }}/${{ env.ORGANIZATION }}/toolkit
+          images: ${{ env.REGISTRY }}/${{ env.ORGANIZATION_LC }}/${{ env.SERVICE_LC }}
+          tags: |
+            type=ref,event=branch
+            type=ref,event=tag
+            type=ref,event=pr
+            type=semver,pattern={{version}}
+            type=semver,pattern={{major}}.{{minor}}
+            type=sha
+            type=raw,value=latest,enable={{is_default_branch}}
+            type=raw,value=${{steps.environment.outputs.name}}
 
       - name: Build and push
         uses: docker/build-push-action@v6
         with:
           context: .
           file: ./Dockerfile
-          push: true
+          push: ${{ github.event_name != 'pull_request' }}
           builder: ${{ steps.buildx.outputs.name }}
-          tags: ${{ steps.meta.outputs.tags }}, ${{ env.REGISTRY }}/${{ env.ORGANIZATION }}/toolkit
+          tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache
           target: ${{ steps.environment.outputs.name }}
+          build-args:
+            ENVIRONMENT=${{ steps.environment.outputs.name }}
