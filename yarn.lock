@@ -2814,10 +2814,10 @@
     "@opentelemetry/instrumentation" "^0.200.0"
     "@opentelemetry/semantic-conventions" "^1.27.0"
 
-"@opentelemetry/instrumentation-nestjs-core@^0.48.0":
-  version "0.48.0"
-  resolved "https://registry.yarnpkg.com/@opentelemetry/instrumentation-nestjs-core/-/instrumentation-nestjs-core-0.48.0.tgz#86f1d1af48a6654adc8497a8fccd31eb234a6357"
-  integrity sha512-ytK4ABSkWcD9vyMU8GpinvodAGaRxBFuxybP/m7sgLtEboXMJjdWnEHb7lH/CX1ICiVKRXWdYg9npdu6yBCW5Q==
+"@opentelemetry/instrumentation-nestjs-core@^0.48.1":
+  version "0.48.1"
+  resolved "https://registry.yarnpkg.com/@opentelemetry/instrumentation-nestjs-core/-/instrumentation-nestjs-core-0.48.1.tgz#117f416992570e643c83f02fc51eb54f869eb1b2"
+  integrity sha512-rH0IUQRf9wjxEkiPfltM17DVqgSe/rgeIlg1CKRDAhuxWkbXlcHwdOnBfngGKhJNGOlGUo6HzZesavPAlmm3Fw==
   dependencies:
     "@opentelemetry/instrumentation" "^0.202.0"
     "@opentelemetry/semantic-conventions" "^1.30.0"
