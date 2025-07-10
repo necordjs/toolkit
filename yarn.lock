@@ -2317,15 +2317,6 @@
     "@opentelemetry/resources" "2.0.0"
     "@opentelemetry/sdk-metrics" "2.0.0"
 
-"@opentelemetry/exporter-prometheus@0.202.0":
-  version "0.202.0"
-  resolved "https://registry.yarnpkg.com/@opentelemetry/exporter-prometheus/-/exporter-prometheus-0.202.0.tgz#3f769b3ab1ca4e950e9d08236d31762bbc8ffe71"
-  integrity sha512-6RvQqZHAPFiwL1OKRJe4ta6SgJx/g8or41B+OovVVEie3HeCDhDGL9S1VJNkBozUz6wTY8a47fQwdMrCOUdMhQ==
-  dependencies:
-    "@opentelemetry/core" "2.0.1"
-    "@opentelemetry/resources" "2.0.1"
-    "@opentelemetry/sdk-metrics" "2.0.1"
-
 "@opentelemetry/exporter-prometheus@0.203.0":
   version "0.203.0"
   resolved "https://registry.yarnpkg.com/@opentelemetry/exporter-prometheus/-/exporter-prometheus-0.203.0.tgz#300e3d8e237f4293a49447ad4c1f0bffd14f1e78"
@@ -3675,14 +3666,14 @@
     import-in-the-middle "^1.14.2"
     minimatch "^9.0.0"
 
-"@sentry/opentelemetry@9.35.0", "@sentry/opentelemetry@^9.35.0":
+"@sentry/opentelemetry@9.35.0":
   version "9.35.0"
   resolved "https://registry.yarnpkg.com/@sentry/opentelemetry/-/opentelemetry-9.35.0.tgz#227bba61853ef4661ece672bef9a6884bdc13bf3"
   integrity sha512-XJmSC71KaN+qwYf5EEobLDyWum4FijpIjnpTVTYOrq037uUCpxJEGtgQHq0X+DE/ycVUX/Og2PiAgTeCQEYfDg==
   dependencies:
     "@sentry/core" "9.35.0"
 
-"@sentry/opentelemetry@9.36.0":
+"@sentry/opentelemetry@9.36.0", "@sentry/opentelemetry@^9.36.0":
   version "9.36.0"
   resolved "https://registry.yarnpkg.com/@sentry/opentelemetry/-/opentelemetry-9.36.0.tgz#1ee7e8caed6e66b0655101ca2976f3b37efaa35d"
   integrity sha512-1J3deP+QKekKv03EUj3GZRN8o3l+4o5wnAzaa1/5KqW7y+16eywYsIQsb6Mj7cGZ3Mjcg9ltSm5iDEpiqnuS4Q==
