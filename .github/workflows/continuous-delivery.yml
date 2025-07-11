@@ -3,12 +3,14 @@ name: Continuous Delivery
 on:
   workflow_dispatch:
   push:
+    paths-ignore: ['.github/**']
     branches:
       - 'master'
     tags:
       - 'v*.*.*'
       - '*.*.*'
   pull_request:
+    paths-ignore: ['.github/**']
     branches:
       - 'master'
 
