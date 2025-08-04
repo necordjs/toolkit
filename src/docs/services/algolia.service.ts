@@ -9,69 +9,63 @@ import { ConfigService } from '@nestjs/config';
 export class AlgoliaService {
 	private static readonly API_BASE_ALGOLIA = 'algolia.net';
 
-	public static readonly ALGOLIA_APPS: Record<AlgoliaApps, Algolia.App> = {
-		[AlgoliaApps.Necord]: {
-			appId: 'U7YH0EPYI9',
-			apiKey: 'c41976c1ed280e75acc3e9efd4aaaf00',
-			index: 'necord'
-		},
-
-		[AlgoliaApps.NestJS]: {
-			appId: 'SDCBYAN96J',
-			apiKey: '6d1869890dab96592b191e63a8deb5b5',
-			index: 'nestjs'
-		},
-
-		[AlgoliaApps.TypeScript]: {
-			appId: 'BGCDYOIYZ5',
-			apiKey: '37ee06fa68db6aef451a490df6df7c60',
-			index: 'typescriptlang'
-		},
-
-		[AlgoliaApps.Discord]: {
-			appId: '7TYOYF10Z2',
-			apiKey: '786517d17e19e9d306758dd276bc6574',
-			index: 'discord'
-		},
-
-		[AlgoliaApps.DiscordJSGuide]: {
-			appId: '8XSLZMKC5R',
-			apiKey: 'a2edfe9f29fe917013b23d5767ae569a',
-			index: 'discordjs'
-		},
-
-		[AlgoliaApps.Ogma]: {
-			appId: 'U5N45YQUS6',
-			apiKey: 'dad79a1521426f184d0fac2ce3575149',
-			index: 'ogma'
-		},
-
-		[AlgoliaApps.NestCommander]: {
-			appId: '9O0K4CXI15',
-			apiKey: '9689faf6550ca3133e69be1d9861ea92',
-			index: 'nest-commander'
-		},
-
-		[AlgoliaApps.Express]: {
-			appId: 'BH4D9OD16A',
-			apiKey: '7164e33055faa6ecddefd9e08fc59f5d',
-			index: 'expressjs'
-		},
-
-		[AlgoliaApps.Fastify]: {
-			appId: 'DMPMC33PLU',
-			apiKey: '12d46b3bfeee6511031cfe00778f3e45',
-			index: 'fastify'
-		}
-	};
-
 	public constructor(
 		private readonly httpService: HttpService,
 		private readonly configService: ConfigService
 	) {}
 
+	public get algoliaApps(): Record<AlgoliaApps, Algolia.App> {
+		return {
+			[AlgoliaApps.Necord]: {
+				appId: this.configService.getOrThrow<string>('ALGOLIA_NECORD_APP_ID'),
+				apiKey: this.configService.getOrThrow<string>('ALGOLIA_NECORD_API_KEY'),
+				index: 'necord'
+			},
+			[AlgoliaApps.NestJS]: {
+				appId: this.configService.getOrThrow<string>('ALGOLIA_NESTJS_APP_ID'),
+				apiKey: this.configService.getOrThrow<string>('ALGOLIA_NESTJS_API_KEY'),
+				index: 'nestjs'
+			},
+			[AlgoliaApps.TypeScript]: {
+				appId: this.configService.getOrThrow<string>('ALGOLIA_TYPESCRIPT_APP_ID'),
+				apiKey: this.configService.getOrThrow<string>('ALGOLIA_TYPESCRIPT_API_KEY'),
+				index: 'typescriptlang'
+			},
+			[AlgoliaApps.Discord]: {
+				appId: this.configService.getOrThrow<string>('ALGOLIA_DISCORD_APP_ID'),
+				apiKey: this.configService.getOrThrow<string>('ALGOLIA_DISCORD_API_KEY'),
+				index: 'discord'
+			},
+			[AlgoliaApps.DiscordJSGuide]: {
+				appId: this.configService.getOrThrow<string>('ALGOLIA_DISCORDJS_APP_ID'),
+				apiKey: this.configService.getOrThrow<string>('ALGOLIA_DISCORDJS_API_KEY'),
+				index: 'discordjs'
+			},
+			[AlgoliaApps.Ogma]: {
+				appId: this.configService.getOrThrow<string>('ALGOLIA_OGMA_APP_ID'),
+				apiKey: this.configService.getOrThrow<string>('ALGOLIA_OGMA_API_KEY'),
+				index: 'ogma'
+			},
+			[AlgoliaApps.NestCommander]: {
+				appId: this.configService.getOrThrow<string>('ALGOLIA_NESTCOMMANDER_APP_ID'),
+				apiKey: this.configService.getOrThrow<string>('ALGOLIA_NESTCOMMANDER_API_KEY'),
+				index: 'nest-commander'
+			},
+			[AlgoliaApps.Express]: {
+				appId: this.configService.getOrThrow<string>('ALGOLIA_EXPRESS_APP_ID'),
+				apiKey: this.configService.getOrThrow<string>('ALGOLIA_EXPRESS_API_KEY'),
+				index: 'expressjs'
+			},
+			[AlgoliaApps.Fastify]: {
+				appId: this.configService.getOrThrow<string>('ALGOLIA_FASTIFY_APP_ID'),
+				apiKey: this.configService.getOrThrow<string>('ALGOLIA_FASTIFY_API_KEY'),
+				index: 'fastify'
+			}
+		};
+	}
+
 	public async search(query: string, appType: AlgoliaApps): Promise<Algolia.Search.Response> {
-		const app = AlgoliaService.ALGOLIA_APPS[appType];
+		const app = this.algoliaApps[appType];
 		const url = `https://${app.appId}.${AlgoliaService.API_BASE_ALGOLIA}/1/indexes/${app.index}/query`;
 
 		return this.httpService
@@ -99,7 +93,7 @@ export class AlgoliaService {
 	}
 
 	public async getObject(objectID: string, appType: AlgoliaApps): Promise<Algolia.Hit> {
-		const app = AlgoliaService.ALGOLIA_APPS[appType];
+		const app = this.algoliaApps[appType];
 		const url = `https://${app.appId}.${AlgoliaService.API_BASE_ALGOLIA}/1/indexes/${
 			app.index
 		}/${encodeURIComponent(objectID)}`;
