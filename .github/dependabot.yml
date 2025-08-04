@@ -1,11 +1,17 @@
 version: 2
 updates:
   - package-ecosystem: github-actions
+    rebase-strategy: "auto"
     directory: "/"
     schedule:
       interval: daily
   - package-ecosystem: npm
+    rebase-strategy: "auto"
     directory: "/"
     schedule:
       interval: daily
     open-pull-requests-limit: 10
+  - package-ecosystem: docker
+    directory: "/"
+    schedule:
+      interval: daily

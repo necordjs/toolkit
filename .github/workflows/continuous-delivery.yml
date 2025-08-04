@@ -3,14 +3,14 @@ name: Continuous Delivery
 on:
   workflow_dispatch:
   push:
-    paths-ignore: ['.github/**']
+    paths-ignore: [ '.github/**' ]
     branches:
       - 'master'
     tags:
       - 'v*.*.*'
       - '*.*.*'
   pull_request:
-    paths-ignore: ['.github/**']
+    paths-ignore: [ '.github/**' ]
     branches:
       - 'master'
 
@@ -67,11 +67,17 @@ jobs:
 
 
   build-and-push-image:
+    if: ${{ !(github.actor == 'dependabot[bot]' && github.repository_visibility == 'private') }}
     name: Publish Docker Image
+    strategy:
+      max-parallel: 4
+      fail-fast: true
+      matrix:
+        os: [ ubuntu-latest ]
     permissions:
       contents: read
       packages: write
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -106,14 +112,17 @@ jobs:
 
       - name: Set lowercase organization and service names
         run: |
-          echo "ORGANIZATION_LC=$(echo '${{ env.ORGANIZATION }}' | tr '[:upper:]' '[:lower:]')" >> $GITHUB_ENV
-          echo "SERVICE_LC=$(echo '${{ env.SERVICE }}' | tr '[:upper:]' '[:lower:]')" >> $GITHUB_ENV
+          ORGANIZATION_LC=$(echo '${{ env.ORGANIZATION }}' | tr '[:upper:]' '[:lower:]')
+          SERVICE_LC=$(echo '${{ env.SERVICE }}' | tr '[:upper:]' '[:lower:]')
+
+          echo "Setting environment variables for Docker image naming..."
+          echo "IMAGE_NAME=$ORGANIZATION_LC/$SERVICE_LC" >> $GITHUB_ENV
 
       - name: Extract metadata (tags, labels) for Docker
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: ${{ env.REGISTRY }}/${{ env.ORGANIZATION_LC }}/${{ env.SERVICE_LC }}
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           tags: |
             type=ref,event=branch
             type=ref,event=tag
@@ -124,12 +133,13 @@ jobs:
             type=raw,value=${{steps.environment.outputs.name}}
             type=sha
 
-      - name: Build and push
+      - name: Build and push Docker image
         uses: docker/build-push-action@v6
         with:
           context: .
           file: ./Dockerfile
-          push: ${{ github.event_name != 'pull_request' }}
+          push: ${{ github.event_name != 'pull_request' }} # Push to registry for production/staging, not for PRs
+          load: ${{ github.event_name == 'pull_request' }} # Load to local Docker for Trivy scan
           builder: ${{ steps.buildx.outputs.name }}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
@@ -138,3 +148,19 @@ jobs:
           target: ${{ steps.environment.outputs.name }}
           build-args:
             ENVIRONMENT=${{ steps.environment.outputs.name }}
+
+      - name: Inspect Docker Image
+        run: |
+          echo "Inspecting Docker image..."
+          docker buildx imagetools inspect ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ steps.meta.outputs.version }} || true
+
+      - name: Run Trivy vulnerability scanner
+        if: ${{ github.event_name == 'pull_request' }} # Only run Trivy on pull requests
+        uses: aquasecurity/trivy-action@0.32.0
+        with:
+          image-ref: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ steps.meta.outputs.version }}
+          format: 'table'
+          exit-code: 1
+          ignore-unfixed: true
+          vuln-type: 'os,library'
+          severity: 'CRITICAL,HIGH'
