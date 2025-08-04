@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.5.1](https://github.com/necordjs/toolkit/compare/v1.5.0...v1.5.1) (2025-08-04)
+
+### Features
+
+* add dockerignore ([7bfd4ea](https://github.com/necordjs/toolkit/commit/7bfd4ea5d19fab2398a58ecccaa3282682548e1c))
+
+### Bug Fixes
+
+* truffle algolia keys to env ([1dc645b](https://github.com/necordjs/toolkit/commit/1dc645ba1b65e45b7550d3dcedad0694e0f3b2b7))
+
 ## [1.5.0](https://github.com/necordjs/toolkit/compare/v1.4.1...v1.5.0) (2025-04-21)
 
 ### Features
