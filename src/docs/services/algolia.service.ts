@@ -3,6 +3,7 @@ import { HttpService } from '@nestjs/axios';
 import { Algolia } from '../interfaces';
 import { catchError, map } from 'rxjs';
 import { AlgoliaApps } from '../enums';
+import { ConfigService } from '@nestjs/config';
 
 @Injectable()
 export class AlgoliaService {
@@ -64,7 +65,10 @@ export class AlgoliaService {
 		}
 	};
 
-	public constructor(private readonly httpService: HttpService) {}
+	public constructor(
+		private readonly httpService: HttpService,
+		private readonly configService: ConfigService
+	) {}
 
 	public async search(query: string, appType: AlgoliaApps): Promise<Algolia.Search.Response> {
 		const app = AlgoliaService.ALGOLIA_APPS[appType];

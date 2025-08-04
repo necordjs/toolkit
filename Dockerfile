@@ -36,7 +36,9 @@ COPY --from=builder /sources/dist ./dist
 
 ENV NODE_ENV=production
 
-RUN yarn install --frozen-lockfile --production
+RUN yarn install --frozen-lockfile --production && \
+	yarn cache clean --force && \
+	rm -rf /tmp/* /var/tmp/* /var/cache/*
 
 EXPOSE 8080
 
