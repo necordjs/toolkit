@@ -2854,18 +2854,18 @@
   resolved "https://registry.yarnpkg.com/@sentry/core/-/core-10.2.0.tgz#854f036914c718c664fbd54eef6dfdc9db0f44d1"
   integrity sha512-2QOuo2B26oReum9CxizK+c96FlV5oI6nsNjKgIYfrT+BTAAR3OlD/pzfJtxo3ydYzfU33Zdtu9XTWvhEAlHeZQ==
 
-"@sentry/nestjs@^10.1.0":
-  version "10.1.0"
-  resolved "https://registry.yarnpkg.com/@sentry/nestjs/-/nestjs-10.1.0.tgz#f54671434f5fd0e122fca16e087880eafce9772e"
-  integrity sha512-WR4SvaIddvuTxTHfbjhQvNqXslHImmLGr9VsnCXj9IRnhM6xrlb+vElEAqRGFwMp97Lt/+DPleInN8Ji09JWuQ==
+"@sentry/nestjs@^10.2.0":
+  version "10.2.0"
+  resolved "https://registry.yarnpkg.com/@sentry/nestjs/-/nestjs-10.2.0.tgz#6e8ffaf18fd856443c05dcd82b0e996391ac6e5f"
+  integrity sha512-Zbm+KJYLoqcIKLNZu6YzKDZLtezgAqQ/xflg1YjRm6OgHFtQpDTtReFDWJoFcdmryZ8ahz+SpuExUlEdnOCzGw==
   dependencies:
     "@opentelemetry/api" "^1.9.0"
     "@opentelemetry/core" "^2.0.0"
     "@opentelemetry/instrumentation" "^0.203.0"
     "@opentelemetry/instrumentation-nestjs-core" "0.49.0"
     "@opentelemetry/semantic-conventions" "^1.34.0"
-    "@sentry/core" "10.1.0"
-    "@sentry/node" "10.1.0"
+    "@sentry/core" "10.2.0"
+    "@sentry/node" "10.2.0"
 
 "@sentry/node-core@10.1.0":
   version "10.1.0"
