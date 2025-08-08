@@ -7675,10 +7675,10 @@ neo-async@^2.6.2:
   resolved "https://registry.npmjs.org/neo-async/-/neo-async-2.6.2.tgz#b4aafb93e3aeb2d8174ca53cf163ab7d7308305f"
   integrity sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==
 
-nestjs-otel@^7.0.0:
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/nestjs-otel/-/nestjs-otel-7.0.0.tgz#03f4164f1c6a9ab74041832eea3529b2ddefb05a"
-  integrity sha512-BjuzY+fJrlbooIZds15XOHvdv2LrtUiVjIBcV3DMw/VrIXK9szWe+njjMZS6Pqft9hV78M8lJE+Ux2ZowDQ/Hw==
+nestjs-otel@^7.0.1:
+  version "7.0.1"
+  resolved "https://registry.yarnpkg.com/nestjs-otel/-/nestjs-otel-7.0.1.tgz#b06f9547a2e05cd3ea01bcf0cf2258e80a7a6efc"
+  integrity sha512-NKce9aAJ263rcqaj3etHmv5KE+VALBqjGkPmZYvaesIb7AT7WBA3YXiEXmkJdKsnF2ZwmNFUJXCQWPn91Hrc8A==
   dependencies:
     "@opentelemetry/api" "^1.9.0"
     "@opentelemetry/host-metrics" "^0.36.0"
