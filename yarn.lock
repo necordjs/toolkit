@@ -2842,11 +2842,6 @@
     "@sentry/cli-win32-i686" "2.51.1"
     "@sentry/cli-win32-x64" "2.51.1"
 
-"@sentry/core@10.3.0":
-  version "10.3.0"
-  resolved "https://registry.yarnpkg.com/@sentry/core/-/core-10.3.0.tgz#3e5162bc29d1f2af513e40b8be215c2254a1d234"
-  integrity sha512-FEFCqiGkzJrm6TNJvhyjhc4rpC1Kmo/abYOACRd6MLvm8GBz41eFFKxsNxGZAUA3Fk1tR2mPfXIHOJzS0ulVww==
-
 "@sentry/core@10.4.0":
   version "10.4.0"
   resolved "https://registry.yarnpkg.com/@sentry/core/-/core-10.4.0.tgz#34cfcfbe6c6626d4c14d30cccc6e2215d3b8e3b5"
@@ -2915,19 +2910,12 @@
     import-in-the-middle "^1.14.2"
     minimatch "^9.0.0"
 
-"@sentry/opentelemetry@10.4.0":
+"@sentry/opentelemetry@10.4.0", "@sentry/opentelemetry@^10.4.0":
   version "10.4.0"
   resolved "https://registry.yarnpkg.com/@sentry/opentelemetry/-/opentelemetry-10.4.0.tgz#c3f86c1851873064101bbe8352c73ca689b32a10"
   integrity sha512-vquqWm+mhS/yZArZ7BbJ6rixUAZWfn3JUxWgRe/T1tdSqaRChwdYaKNN2KId1hR5tY80h3TrlBi6+cvUUkeGIA==
   dependencies:
     "@sentry/core" "10.4.0"
-
-"@sentry/opentelemetry@^10.3.0":
-  version "10.3.0"
-  resolved "https://registry.yarnpkg.com/@sentry/opentelemetry/-/opentelemetry-10.3.0.tgz#d0fd51b9d214ec741fdb619e1a4e76d6892bcc0c"
-  integrity sha512-tjXcKLnGycfcSgN4juVyOUGL1t21io3sDROnnAPCCLSHXu+/yqS4Ff1zNYxhxSfUYpoM8Cf2O1kwl4H0+DKvNQ==
-  dependencies:
-    "@sentry/core" "10.3.0"
 
 "@sentry/profiling-node@^10.4.0":
   version "10.4.0"
