@@ -2842,18 +2842,23 @@
   resolved "https://registry.yarnpkg.com/@sentry/core/-/core-10.4.0.tgz#34cfcfbe6c6626d4c14d30cccc6e2215d3b8e3b5"
   integrity sha512-QJRDUwnMe0QckGFzq42R/ulUEdN7iGvpDGNQD1Tho/0zkCz9vwBvskXj3MVFzhXMdLnqdAz8ximFdz/zdufjsA==
 
-"@sentry/nestjs@^10.4.0":
-  version "10.4.0"
-  resolved "https://registry.yarnpkg.com/@sentry/nestjs/-/nestjs-10.4.0.tgz#52cc1fff9831b65957349f6daccab6d8d85b80c2"
-  integrity sha512-YGxWJJHvw0nCheaMNs+2vflTNBB4ELD49M7WP7vmTzb3q1xEUSc1tgMEjn9w4K0NJoE7MOCfJepBHdGMk3IK8g==
+"@sentry/core@10.5.0":
+  version "10.5.0"
+  resolved "https://registry.yarnpkg.com/@sentry/core/-/core-10.5.0.tgz#191fa6f08020858903496dfad188d48c7cd55061"
+  integrity sha512-jTJ8NhZSKB2yj3QTVRXfCCngQzAOLThQUxCl9A7Mv+XF10tP7xbH/88MVQ5WiOr2IzcmrB9r2nmUe36BnMlLjA==
+
+"@sentry/nestjs@^10.5.0":
+  version "10.5.0"
+  resolved "https://registry.yarnpkg.com/@sentry/nestjs/-/nestjs-10.5.0.tgz#74c56506c621d3317aa046ba456aeb5e5e95c889"
+  integrity sha512-7+KwmLrAuFcN5UCMNwjWZRNvKSRjSz+bVm+rhMoBfmxI3zCJtdzrOMLkse/atPee2HW+sU+8mGVPbcPYG6C42A==
   dependencies:
     "@opentelemetry/api" "^1.9.0"
     "@opentelemetry/core" "^2.0.0"
     "@opentelemetry/instrumentation" "^0.203.0"
     "@opentelemetry/instrumentation-nestjs-core" "0.49.0"
     "@opentelemetry/semantic-conventions" "^1.34.0"
-    "@sentry/core" "10.4.0"
-    "@sentry/node" "10.4.0"
+    "@sentry/core" "10.5.0"
+    "@sentry/node" "10.5.0"
 
 "@sentry/node-core@10.4.0":
   version "10.4.0"
@@ -2862,6 +2867,15 @@
   dependencies:
     "@sentry/core" "10.4.0"
     "@sentry/opentelemetry" "10.4.0"
+    import-in-the-middle "^1.14.2"
+
+"@sentry/node-core@10.5.0":
+  version "10.5.0"
+  resolved "https://registry.yarnpkg.com/@sentry/node-core/-/node-core-10.5.0.tgz#ce21099f50733999bb087644e3953cd7b0b1148e"
+  integrity sha512-VC4FCKMvvbUT32apTE0exfI/WigqKskzQA+VdFz61Y+T7mTCADngNrOjG3ilVYPBU7R9KEEziEd/oKgencqkmQ==
+  dependencies:
+    "@sentry/core" "10.5.0"
+    "@sentry/opentelemetry" "10.5.0"
     import-in-the-middle "^1.14.2"
 
 "@sentry/node@10.4.0":
@@ -2905,12 +2919,60 @@
     import-in-the-middle "^1.14.2"
     minimatch "^9.0.0"
 
+"@sentry/node@10.5.0":
+  version "10.5.0"
+  resolved "https://registry.yarnpkg.com/@sentry/node/-/node-10.5.0.tgz#b7a037de5e70c15e363faea04a4ae72da997937e"
+  integrity sha512-GqTkOc7tkWqRTKNjipysElh/bzIkhfLsvNGwH6+zel5kU15IdOCFtAqIri85ZLo9vbaIVtjQELXOzfo/5MMAFQ==
+  dependencies:
+    "@opentelemetry/api" "^1.9.0"
+    "@opentelemetry/context-async-hooks" "^2.0.0"
+    "@opentelemetry/core" "^2.0.0"
+    "@opentelemetry/instrumentation" "^0.203.0"
+    "@opentelemetry/instrumentation-amqplib" "0.50.0"
+    "@opentelemetry/instrumentation-connect" "0.47.0"
+    "@opentelemetry/instrumentation-dataloader" "0.21.0"
+    "@opentelemetry/instrumentation-express" "0.52.0"
+    "@opentelemetry/instrumentation-fs" "0.23.0"
+    "@opentelemetry/instrumentation-generic-pool" "0.47.0"
+    "@opentelemetry/instrumentation-graphql" "0.51.0"
+    "@opentelemetry/instrumentation-hapi" "0.50.0"
+    "@opentelemetry/instrumentation-http" "0.203.0"
+    "@opentelemetry/instrumentation-ioredis" "0.51.0"
+    "@opentelemetry/instrumentation-kafkajs" "0.12.0"
+    "@opentelemetry/instrumentation-knex" "0.48.0"
+    "@opentelemetry/instrumentation-koa" "0.51.0"
+    "@opentelemetry/instrumentation-lru-memoizer" "0.48.0"
+    "@opentelemetry/instrumentation-mongodb" "0.56.0"
+    "@opentelemetry/instrumentation-mongoose" "0.50.0"
+    "@opentelemetry/instrumentation-mysql" "0.49.0"
+    "@opentelemetry/instrumentation-mysql2" "0.49.0"
+    "@opentelemetry/instrumentation-pg" "0.55.0"
+    "@opentelemetry/instrumentation-redis" "0.51.0"
+    "@opentelemetry/instrumentation-tedious" "0.22.0"
+    "@opentelemetry/instrumentation-undici" "0.14.0"
+    "@opentelemetry/resources" "^2.0.0"
+    "@opentelemetry/sdk-trace-base" "^2.0.0"
+    "@opentelemetry/semantic-conventions" "^1.34.0"
+    "@prisma/instrumentation" "6.13.0"
+    "@sentry/core" "10.5.0"
+    "@sentry/node-core" "10.5.0"
+    "@sentry/opentelemetry" "10.5.0"
+    import-in-the-middle "^1.14.2"
+    minimatch "^9.0.0"
+
 "@sentry/opentelemetry@10.4.0", "@sentry/opentelemetry@^10.4.0":
   version "10.4.0"
   resolved "https://registry.yarnpkg.com/@sentry/opentelemetry/-/opentelemetry-10.4.0.tgz#c3f86c1851873064101bbe8352c73ca689b32a10"
   integrity sha512-vquqWm+mhS/yZArZ7BbJ6rixUAZWfn3JUxWgRe/T1tdSqaRChwdYaKNN2KId1hR5tY80h3TrlBi6+cvUUkeGIA==
   dependencies:
     "@sentry/core" "10.4.0"
+
+"@sentry/opentelemetry@10.5.0":
+  version "10.5.0"
+  resolved "https://registry.yarnpkg.com/@sentry/opentelemetry/-/opentelemetry-10.5.0.tgz#6ef4709bd4a68f6a0268950a8f07f0e7a12ae8c7"
+  integrity sha512-/Qva5vngtuh79YUUBA8kbbrD6w/A+u1vy1jnLoPMKDxWTfNPqT4tCiOOmWYotnITaE3QO0UtXK/j7LMX8FhtUA==
+  dependencies:
+    "@sentry/core" "10.5.0"
 
 "@sentry/profiling-node@^10.4.0":
   version "10.4.0"
