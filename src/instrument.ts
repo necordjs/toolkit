@@ -26,8 +26,10 @@ const sentryClient = Sentry.init({
 		Sentry.httpIntegration(),
 		Sentry.nestIntegration(),
 		Sentry.onUncaughtExceptionIntegration(),
-		Sentry.onUnhandledRejectionIntegration()
+		Sentry.onUnhandledRejectionIntegration(),
+		Sentry.consoleLoggingIntegration({ levels: ['log', 'warn', 'error'] })
 	],
+	enableLogs: true,
 
 	// Add Tracing by setting tracesSampleRate
 	// We recommend adjusting this value in production
