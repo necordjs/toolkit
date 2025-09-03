@@ -63,7 +63,7 @@ jobs:
         with:
           environment: production
           sourcemaps: "./dist"
-          version: ${{ secrets.SENTRY_PROJECT }}@${{ steps.version.outputs.version }}
+          release: ${{ secrets.SENTRY_PROJECT }}@${{ steps.version.outputs.version }}
 
 
   build-and-push-image:
