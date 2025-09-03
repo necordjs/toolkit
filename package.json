@@ -6,7 +6,7 @@
 		"build": "nest build",
 		"prepare": "husky",
 		"format": "prettier --write \"src/**/*.ts\"",
-		"lint": "eslint --ignore-pattern .gitignore src/**/*.ts",
+		"lint": "eslint --ignore-pattern .gitignore \"{src,apps,libs,test}/**/*.ts\"",
 		"start": "nest start",
 		"start:dev": "nest start --watch",
 		"publish": "release-it",
