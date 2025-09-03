@@ -49,8 +49,7 @@ export class CommandMetricsInterceptor implements NestInterceptor {
 			.join(' ');
 
 		const metadata = {
-			command: commandName,
-			type: interaction.channel.isDMBased() ? 'dm' : 'guild'
+			command: commandName
 		};
 
 		this.commandExecutionCounter.add(1, metadata);
