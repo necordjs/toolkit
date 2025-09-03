@@ -23,6 +23,10 @@
 		"lib": "src",
 		"test": "test"
 	},
+	"funding": {
+		"type": "opencollective",
+		"url": "https://opencollective.com/necord"
+	},
 	"keywords": [
 		"toolkit",
 		"nestjs",
