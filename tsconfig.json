@@ -1,7 +1,39 @@
 {
-	"extends": "./tsconfig.build.json",
-	"include": [
-		"src/**/*",
-		"**/*.spec.ts"
+	"compilerOptions": {
+		"module": "commonjs",
+		"declaration": true,
+		"noImplicitAny": false,
+		"noUnusedLocals": false,
+		"resolveJsonModule": true,
+		"noUncheckedIndexedAccess": true,
+		"removeComments": true,
+		"noLib": false,
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		"target": "ES2021",
+		"sourceMap": true,
+		"inlineSources": true,
+		"baseUrl": ".",
+		"outDir": "./dist",
+		"sourceRoot": "/",
+		"skipLibCheck": true,
+		"allowSyntheticDefaultImports": true,
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"strictPropertyInitialization": false,
+		"paths": {
+			"@src/*": [
+				"src/*"
+			],
+			"@common/*": [
+				"src/common/*"
+			],
+			"@shared/*": [
+				"src/shared/*"
+			]
+		}
+	},
+	"exclude": [
+		"node_modules"
 	]
 }

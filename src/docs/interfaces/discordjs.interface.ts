@@ -1,5 +1,5 @@
-import { Doc, DocElement } from 'discordjs-docs-parser';
-import { bold, underscore } from 'discord.js';
+import { Doc, DocElement, DocTypes } from 'discordjs-docs-parser';
+import { bold, underline } from 'discord.js';
 
 export namespace DiscordJS {
 	const extractGenericTypeInfill = (type: string): string => {
@@ -21,7 +21,7 @@ export namespace DiscordJS {
 		const parts = [];
 
 		switch (element.docType) {
-			case 'event':
+			case DocTypes.Event:
 				parts.push(`${bold('(event)')} `);
 				break;
 		}
@@ -30,7 +30,7 @@ export namespace DiscordJS {
 			parts.push(`${bold('(static)')} `);
 		}
 
-		parts.push(bold(underscore(element.link)));
+		parts.push(bold(underline(element.link)));
 
 		if (element.extends) {
 			parts.push(formatInheritance('extends', element.extends, doc));
