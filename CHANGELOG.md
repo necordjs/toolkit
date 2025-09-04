@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.3](https://github.com/necordjs/toolkit/compare/v1.5.2...v1.5.3) (2025-09-04)
+
+### Bug Fixes
+
+* move from ready to client ready event ([12dd984](https://github.com/necordjs/toolkit/commit/12dd984ae45bc9385baad717365aa3aa5ebcf19e))
+* remove guild id for tags command ([8fa96b2](https://github.com/necordjs/toolkit/commit/8fa96b274f6a048f695a997560c240a21c906b40))
+
 ## [1.5.2](https://github.com/necordjs/toolkit/compare/v1.5.1...v1.5.2) (2025-09-03)
 
 ### Features
