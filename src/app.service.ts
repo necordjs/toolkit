@@ -24,8 +24,8 @@ export class AppService {
 		private readonly metricService: MetricService
 	) {}
 
-	@Once('ready')
-	public onReady(@Context() [client]: ContextOf<'ready'>) {
+	@Once('clientReady')
+	public onReady(@Context() [client]: ContextOf<'clientReady'>) {
 		this.logger.log(`Logged in as ${client.user.tag}!`);
 		this.pingGauge.addCallback(result => result.observe(this.client.ws.ping));
 		this.guildsGauge.addCallback(result => result.observe(this.client.guilds.cache.size));
