@@ -37,7 +37,8 @@ const sentryClient = Sentry.init({
 
 	// Set sampling rate for profiling
 	// This is relative to tracesSampleRate
-	profilesSampleRate: 1.0
+	profileSessionSampleRate: 1.0,
+	profileLifecycle: 'manual'
 });
 
 const metricReader = new PrometheusExporter({ port: 8081 }, () =>
