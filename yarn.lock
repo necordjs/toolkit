@@ -2857,6 +2857,11 @@
   resolved "https://registry.yarnpkg.com/@sentry/core/-/core-10.8.0.tgz#71f71f8ecb5a06c41a426f5ccee2d9767b7d7cfd"
   integrity sha512-scYzM/UOItu4PjEq6CpHLdArpXjIS0laHYxE4YjkIbYIH6VMcXGQbD/FSBClsnCr1wXRnlXfXBzj0hrQAFyw+Q==
 
+"@sentry/core@10.9.0":
+  version "10.9.0"
+  resolved "https://registry.yarnpkg.com/@sentry/core/-/core-10.9.0.tgz#d3db841695a80aab732b68ec492f49b8fe97e277"
+  integrity sha512-beuwWUTk7yKPNTIntG6aMye+7FIslWrdd2DJ9tnl3jwHvUk1k3IZ0B4NrDuLQr2xqvqL8q2NStUD6yXg0/nLyw==
+
 "@sentry/nestjs@^10.8.0":
   version "10.8.0"
   resolved "https://registry.yarnpkg.com/@sentry/nestjs/-/nestjs-10.8.0.tgz#6741dd59720434a0f6e11709d9ea004c3f1e5279"
@@ -2920,12 +2925,19 @@
     import-in-the-middle "^1.14.2"
     minimatch "^9.0.0"
 
-"@sentry/opentelemetry@10.8.0", "@sentry/opentelemetry@^10.8.0":
+"@sentry/opentelemetry@10.8.0":
   version "10.8.0"
   resolved "https://registry.yarnpkg.com/@sentry/opentelemetry/-/opentelemetry-10.8.0.tgz#dabf51c51b07126ab72d806e0ba93f128fef7ce6"
   integrity sha512-62R/RPwTYVaiZ5lVcxcjHCAGwgCyfn8Q3kaQld8/LPm8FRizZeUJmmtrI80KaYCvPJhSB/Pvfma4X3w+aN5Q3A==
   dependencies:
     "@sentry/core" "10.8.0"
+
+"@sentry/opentelemetry@^10.9.0":
+  version "10.9.0"
+  resolved "https://registry.yarnpkg.com/@sentry/opentelemetry/-/opentelemetry-10.9.0.tgz#690994d77a486d7baaccbfbca1bc2c21a67aab0e"
+  integrity sha512-vmkuhMdZF40oebN0vhp1sIVL9qWTri9EyYylM9biT1p8nvW21vnPC/i3K5F9S035jM8QkhmkC8aCTKg70G+6UA==
+  dependencies:
+    "@sentry/core" "10.9.0"
 
 "@sentry/profiling-node@^10.8.0":
   version "10.8.0"
