@@ -1998,6 +1998,15 @@
     "@opentelemetry/resources" "2.1.0"
     "@opentelemetry/sdk-metrics" "2.1.0"
 
+"@opentelemetry/exporter-prometheus@0.205.0":
+  version "0.205.0"
+  resolved "https://registry.yarnpkg.com/@opentelemetry/exporter-prometheus/-/exporter-prometheus-0.205.0.tgz#e3862ea409cfb4557bd1ee546e9cba6a60eb3f85"
+  integrity sha512-xsot/Qm9VLDTag4GEwAunD1XR1U8eBHTLAgO7IZNo2JuD/c/vL7xmDP7mQIUr6Lk3gtj/yGGIR2h3vhTeVzv4w==
+  dependencies:
+    "@opentelemetry/core" "2.1.0"
+    "@opentelemetry/resources" "2.1.0"
+    "@opentelemetry/sdk-metrics" "2.1.0"
+
 "@opentelemetry/exporter-trace-otlp-grpc@0.204.0":
   version "0.204.0"
   resolved "https://registry.yarnpkg.com/@opentelemetry/exporter-trace-otlp-grpc/-/exporter-trace-otlp-grpc-0.204.0.tgz#4b7f1ea22dd2fe8d62f3553c3682df391b502920"
