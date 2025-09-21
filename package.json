@@ -5,7 +5,7 @@
 	"scripts": {
 		"build": "nest build",
 		"prepare": "husky",
-		"format": "prettier --write \"src/**/*.ts\"",
+		"format": "prettier --write \"{src,apps,libs,test}/**/*.ts\"",
 		"lint": "eslint --ignore-pattern .gitignore \"{src,apps,libs,test}/**/*.ts\"",
 		"start": "nest start",
 		"start:dev": "nest start --watch",
