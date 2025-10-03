@@ -1,13 +1,15 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, Logger } from '@nestjs/common';
 import { HttpService } from '@nestjs/axios';
 import { Algolia } from '../interfaces';
-import { catchError, map } from 'rxjs';
+import { catchError, map, tap } from 'rxjs';
 import { AlgoliaApps } from '../enums';
 import { ConfigService } from '@nestjs/config';
 
 @Injectable()
 export class AlgoliaService {
 	private static readonly API_BASE_ALGOLIA = 'algolia.net';
+
+	private readonly logger = new Logger(AlgoliaService.name);
 
 	public constructor(
 		private readonly httpService: HttpService,
@@ -67,15 +69,13 @@ export class AlgoliaService {
 	public async search(query: string, appType: AlgoliaApps): Promise<Algolia.Search.Response> {
 		const app = this.algoliaApps[appType];
 		const url = `https://${app.appId}.${AlgoliaService.API_BASE_ALGOLIA}/1/indexes/${app.index}/query`;
+		const params = new URLSearchParams({ query }).toString();
 
 		return this.httpService
 			.post(
 				url,
 				{
-					params: new URLSearchParams({
-						query,
-						facetFilters: JSON.stringify(['lang:en'])
-					}).toString()
+					params
 				},
 				{
 					headers: {
@@ -86,8 +86,12 @@ export class AlgoliaService {
 				}
 			)
 			.pipe(
+				tap(() => this.logger.log(`Algolia search performed for app: ${appType}`)),
 				map(response => response.data),
-				catchError(() => [])
+				catchError(() => {
+					this.logger.warn(`Algolia search failed for app: ${appType}`);
+					return [];
+				})
 			)
 			.toPromise();
 	}
