@@ -1,4 +1,4 @@
-FROM node:24-alpine AS builder
+FROM node:25-alpine AS builder
 
 WORKDIR /sources
 
@@ -10,7 +10,7 @@ COPY . .
 
 RUN npm run build
 
-FROM node:24-alpine AS staging
+FROM node:25-alpine AS staging
 
 WORKDIR /app
 
@@ -26,7 +26,7 @@ EXPOSE 8080
 
 CMD ["node", "./dist/main.js"]
 
-FROM node:24-alpine AS production
+FROM node:25-alpine AS production
 
 WORKDIR /app
 
