@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.5.5](https://github.com/necordjs/toolkit/compare/v1.5.4...v1.5.5) (2025-10-21)
+
+### Bug Fixes
+
+* remove face filter for autocomplete algolia ([eb18aba](https://github.com/necordjs/toolkit/commit/eb18aba97e9b9803560b5ff41bea399543468b7b))
+
 ## [1.5.4](https://github.com/necordjs/toolkit/compare/v1.5.3...v1.5.4) (2025-09-08)
 
 ## [1.5.3](https://github.com/necordjs/toolkit/compare/v1.5.2...v1.5.3) (2025-09-04)
