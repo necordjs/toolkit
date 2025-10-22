@@ -1,5 +1,7 @@
 # Changelog
 
+## [1.5.6](https://github.com/necordjs/toolkit/compare/v1.5.5...v1.5.6) (2025-10-22)
+
 ## [1.5.5](https://github.com/necordjs/toolkit/compare/v1.5.4...v1.5.5) (2025-10-21)
 
 ### Bug Fixes
