@@ -4522,10 +4522,10 @@ discord-api-types@^0.38.1, discord-api-types@^0.38.16, discord-api-types@^0.38.3
   resolved "https://registry.yarnpkg.com/discord-api-types/-/discord-api-types-0.38.31.tgz#023c7f18662dc4a44a22798300f44e4b148cafb1"
   integrity sha512-kC94ANsk8ackj8ENTuO8joTNEL0KtymVhHy9dyEC/s4QAZ7GCx40dYEzQaadyo8w+oP0X8QydE/nzAWRylTGtQ==
 
-discord.js@14.24.1:
-  version "14.24.1"
-  resolved "https://registry.yarnpkg.com/discord.js/-/discord.js-14.24.1.tgz#b2d088fbc1e43940a611ec9d5b38e6f864407ea3"
-  integrity sha512-LzL+MTGxB9mBwD8FjvkMwcIL4UtgG04e713U3+euqPCvOphhoVEoPpUNTvBPw4iJOas2uiuuh3JcveYSxIn8Tg==
+discord.js@14.24.2:
+  version "14.24.2"
+  resolved "https://registry.yarnpkg.com/discord.js/-/discord.js-14.24.2.tgz#070519dd401cd2cf1f30f86a20d227999b13f610"
+  integrity sha512-VMEDbmguRdX/EeMaTsf9Mb0IQA90WdYF2cn4QDfslQFXgQ6LFtmlPn0FSotnS0kcFbFp+JBSIxtnF+bnAHG/hQ==
   dependencies:
     "@discordjs/builders" "^1.13.0"
     "@discordjs/collection" "1.5.3"
