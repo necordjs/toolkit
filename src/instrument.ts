@@ -12,6 +12,7 @@ import { setupNodeMetrics } from '@sesamecare-oss/opentelemetry-node-metrics';
 import * as Sentry from '@sentry/nestjs';
 import { nodeProfilingIntegration } from '@sentry/profiling-node';
 import { SentryPropagator, SentrySampler, SentrySpanProcessor } from '@sentry/opentelemetry';
+import { RuntimeNodeInstrumentation } from '@opentelemetry/instrumentation-runtime-node';
 
 const logger = new Logger('OpenTelemetry');
 const version = process.env.npm_package_version;
@@ -51,7 +52,12 @@ const resource = resourceFromAttributes({
 	[ATTR_SERVICE_VERSION]: version
 });
 
-const instrumentations = [getNodeAutoInstrumentations()];
+const instrumentations = [
+	getNodeAutoInstrumentations(),
+	new RuntimeNodeInstrumentation({
+		monitoringPrecision: 5000
+	})
+];
 
 export const otelSDK = new NodeSDK({
 	resource,
