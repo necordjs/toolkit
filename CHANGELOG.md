@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.6.0](https://github.com/necordjs/toolkit/compare/v1.5.6...v1.6.0) (2025-11-01)
+
+### Features
+
+* add runtime node metrics ([af86cbe](https://github.com/necordjs/toolkit/commit/af86cbec6f5068efe55bda3cca2b857db8ab9720))
+
 ## [1.5.6](https://github.com/necordjs/toolkit/compare/v1.5.5...v1.5.6) (2025-10-22)
 
 ## [1.5.5](https://github.com/necordjs/toolkit/compare/v1.5.4...v1.5.5) (2025-10-21)
