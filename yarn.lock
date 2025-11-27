@@ -1592,14 +1592,14 @@
   resolved "https://registry.yarnpkg.com/@opentelemetry/api/-/api-1.9.0.tgz#d03eba68273dc0f7509e2a3d5cba21eae10379fe"
   integrity sha512-3giAOQvZiH5F9bMlMiv8+GSPMeqg0dbaeo58/0SlA9sxSqZhnUtxzX9/2FzyhS9sWQf5S0GJE0AKBrFqjpeYcg==
 
-"@opentelemetry/auto-instrumentations-node@0.67.1":
-  version "0.67.1"
-  resolved "https://registry.yarnpkg.com/@opentelemetry/auto-instrumentations-node/-/auto-instrumentations-node-0.67.1.tgz#31d231aee2c6500616392fae0fd178989944c133"
-  integrity sha512-Rj7hwoq8pogneB8KfiFpDhr2q55LxqJIjcfx42x2m0xRwuTQQ4wuWGPMslQ+EY9nh688T3edzao/Jx3YNjAMAQ==
+"@opentelemetry/auto-instrumentations-node@0.67.2":
+  version "0.67.2"
+  resolved "https://registry.yarnpkg.com/@opentelemetry/auto-instrumentations-node/-/auto-instrumentations-node-0.67.2.tgz#d8c217f9294125b623b1db06f91a73662e6aa796"
+  integrity sha512-kAuv1SVIA9YfmKLJG5fN4ps1z1E2j0cy6dnb/pDri0gcczWAQdt4iCh3ZOyBn2KwfooQohGa81iQSiZgswxyXw==
   dependencies:
     "@opentelemetry/instrumentation" "^0.208.0"
     "@opentelemetry/instrumentation-amqplib" "^0.55.0"
-    "@opentelemetry/instrumentation-aws-lambda" "^0.60.1"
+    "@opentelemetry/instrumentation-aws-lambda" "^0.61.0"
     "@opentelemetry/instrumentation-aws-sdk" "^0.64.0"
     "@opentelemetry/instrumentation-bunyan" "^0.54.0"
     "@opentelemetry/instrumentation-cassandra-driver" "^0.54.0"
@@ -1808,10 +1808,10 @@
     "@opentelemetry/core" "^2.0.0"
     "@opentelemetry/instrumentation" "^0.208.0"
 
-"@opentelemetry/instrumentation-aws-lambda@^0.60.1":
-  version "0.60.1"
-  resolved "https://registry.yarnpkg.com/@opentelemetry/instrumentation-aws-lambda/-/instrumentation-aws-lambda-0.60.1.tgz#b2618a7654a032d512f76c080f095236d8c179e1"
-  integrity sha512-yW1TV6e0p0UZk/hfn+sndC1NXJIF23UvUcvzjcmnh+T/4BXhps7B20sYTcXvH43yw1mWNGL0KAwGoHzCI53RWw==
+"@opentelemetry/instrumentation-aws-lambda@^0.61.0":
+  version "0.61.0"
+  resolved "https://registry.yarnpkg.com/@opentelemetry/instrumentation-aws-lambda/-/instrumentation-aws-lambda-0.61.0.tgz#08aecce3fab0e771cdf9c807fb2d65627b319e0c"
+  integrity sha512-yS7lzFhPL37CsGHolNSGA4UnEgiyyO/to1hHXcQ54JCOc4dVHxI319v5/A/UkVlcY7kF85RzqtKyBUZh7XxQWQ==
   dependencies:
     "@opentelemetry/instrumentation" "^0.208.0"
     "@opentelemetry/semantic-conventions" "^1.27.0"
