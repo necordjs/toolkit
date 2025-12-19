@@ -2686,38 +2686,38 @@
     "@sentry/cli-win32-i686" "3.0.1"
     "@sentry/cli-win32-x64" "3.0.1"
 
-"@sentry/core@10.32.0":
-  version "10.32.0"
-  resolved "https://registry.yarnpkg.com/@sentry/core/-/core-10.32.0.tgz#6367c2f79318e6886778caba0631b5200e69f609"
-  integrity sha512-E+ihb8+5PBfYMamnXHalgsmxkcG2YQqhRdgYf3yWJ5dJvi4njh1VWK3kNVj1GvsU6ktaielAx4Rg5dwEFMnbZg==
+"@sentry/core@10.32.1":
+  version "10.32.1"
+  resolved "https://registry.yarnpkg.com/@sentry/core/-/core-10.32.1.tgz#2a5c245b5e16063456cf44c7fe926c6ffb6116dd"
+  integrity sha512-PH2ldpSJlhqsMj2vCTyU0BI2Fx1oIDhm7Izo5xFALvjVCS0gmlqHt1udu6YlKn8BtpGH6bGzssvv5APrk+OdPQ==
 
-"@sentry/nestjs@^10.32.0":
-  version "10.32.0"
-  resolved "https://registry.yarnpkg.com/@sentry/nestjs/-/nestjs-10.32.0.tgz#1d729f822b965ad82680281800cb9a3e65a03532"
-  integrity sha512-4FVh7+CNS11z6Wm4c0DOLj6GwEOL4GP9HmXax8EZkGSlfooMv0y4/ztcDCc/6BA5iPe62WXvyJ2QBZgjGwxTJA==
+"@sentry/nestjs@^10.32.1":
+  version "10.32.1"
+  resolved "https://registry.yarnpkg.com/@sentry/nestjs/-/nestjs-10.32.1.tgz#931052d6068fd81572e1ff898960c21b00920a6b"
+  integrity sha512-StgRg8AojiCbH+Q7uhO/9DOhfpjw6SxtsTWwNoioLfHIx968btdQPhALrHji0xXR8DYDBf+bk99P1KdqgDDh/w==
   dependencies:
     "@opentelemetry/api" "^1.9.0"
     "@opentelemetry/core" "^2.2.0"
     "@opentelemetry/instrumentation" "^0.208.0"
     "@opentelemetry/instrumentation-nestjs-core" "0.55.0"
     "@opentelemetry/semantic-conventions" "^1.37.0"
-    "@sentry/core" "10.32.0"
-    "@sentry/node" "10.32.0"
+    "@sentry/core" "10.32.1"
+    "@sentry/node" "10.32.1"
 
-"@sentry/node-core@10.32.0":
-  version "10.32.0"
-  resolved "https://registry.yarnpkg.com/@sentry/node-core/-/node-core-10.32.0.tgz#9c3102de6bc6645e5cdef751224d95b59410c7e3"
-  integrity sha512-O+TVuF1fO0j37W6IzdHCpTIr4uUkFzcSKgxNmH9ihYpRzkQgfLDZJWVxtov+H8/1pC5lkvl2VZhWmY+SWj2kHA==
+"@sentry/node-core@10.32.1":
+  version "10.32.1"
+  resolved "https://registry.yarnpkg.com/@sentry/node-core/-/node-core-10.32.1.tgz#252f327aa091db6924d4c5fdadfd21367df99ad9"
+  integrity sha512-w56rxdBanBKc832zuwnE+zNzUQ19fPxfHEtOhK8JGPu3aSwQYcIxwz9z52lOx3HN7k/8Fj5694qlT3x/PokhRw==
   dependencies:
     "@apm-js-collab/tracing-hooks" "^0.3.1"
-    "@sentry/core" "10.32.0"
-    "@sentry/opentelemetry" "10.32.0"
+    "@sentry/core" "10.32.1"
+    "@sentry/opentelemetry" "10.32.1"
     import-in-the-middle "^2"
 
-"@sentry/node@10.32.0":
-  version "10.32.0"
-  resolved "https://registry.yarnpkg.com/@sentry/node/-/node-10.32.0.tgz#020a3c796e4e341d27a59c97e49e5547c6d64d2e"
-  integrity sha512-KENGLH34gUlrNd9QVJFp37w64DZmorWarm67sFJ2J+VmBII0JMkbIJy1SdHyHxGtgitbokotMTjjf9isVnWwlw==
+"@sentry/node@10.32.1":
+  version "10.32.1"
+  resolved "https://registry.yarnpkg.com/@sentry/node/-/node-10.32.1.tgz#0d402f9c2ccd5e969a56d325645acd1acfb46b22"
+  integrity sha512-oxlybzt8QW0lx/QaEj1DcvZDRXkgouewFelu/10dyUwv5So3YvipfvWInda+yMLmn25OggbloDQ0gyScA2jU3g==
   dependencies:
     "@opentelemetry/api" "^1.9.0"
     "@opentelemetry/context-async-hooks" "^2.2.0"
@@ -2749,27 +2749,27 @@
     "@opentelemetry/sdk-trace-base" "^2.2.0"
     "@opentelemetry/semantic-conventions" "^1.37.0"
     "@prisma/instrumentation" "6.19.0"
-    "@sentry/core" "10.32.0"
-    "@sentry/node-core" "10.32.0"
-    "@sentry/opentelemetry" "10.32.0"
+    "@sentry/core" "10.32.1"
+    "@sentry/node-core" "10.32.1"
+    "@sentry/opentelemetry" "10.32.1"
     import-in-the-middle "^2"
     minimatch "^9.0.0"
 
-"@sentry/opentelemetry@10.32.0", "@sentry/opentelemetry@^10.32.0":
-  version "10.32.0"
-  resolved "https://registry.yarnpkg.com/@sentry/opentelemetry/-/opentelemetry-10.32.0.tgz#58874462efefe217a6a359b050f714b222486f73"
-  integrity sha512-owGL94JAgbwxgaeUNLktJWMShZPo04ZKTaQhhLz3YmVDJFj8VFOQXdWBMqv1Gv6T6/fCuTlwzJ3rvpSOImxXUQ==
+"@sentry/opentelemetry@10.32.1", "@sentry/opentelemetry@^10.32.1":
+  version "10.32.1"
+  resolved "https://registry.yarnpkg.com/@sentry/opentelemetry/-/opentelemetry-10.32.1.tgz#c82955c914875ce5d81e6737dc2c05438eec8a2d"
+  integrity sha512-YLssSz5Y+qPvufrh2cDaTXDoXU8aceOhB+YTjT8/DLF6SOj7Tzen52aAcjNaifawaxEsLCC8O+B+A2iA+BllvA==
   dependencies:
-    "@sentry/core" "10.32.0"
+    "@sentry/core" "10.32.1"
 
-"@sentry/profiling-node@^10.32.0":
-  version "10.32.0"
-  resolved "https://registry.yarnpkg.com/@sentry/profiling-node/-/profiling-node-10.32.0.tgz#eabd5a1735c8c6d70860fa03f3fab82e16762e4c"
-  integrity sha512-HpbY71xq65lyjOP3qloPgggF+G+QKVE0MKa/YEMOI65F05KQ6T2DqmS9rqUUmy2w9tN4LYBnJZ6Pz5eIkJCobg==
+"@sentry/profiling-node@^10.32.1":
+  version "10.32.1"
+  resolved "https://registry.yarnpkg.com/@sentry/profiling-node/-/profiling-node-10.32.1.tgz#5c8ff3a48ffe386087714395dd83b6ff1f7b1239"
+  integrity sha512-UDSZayQw4K5wv/XNHoB+i+KrnlCStLb0H2lsypF4dgQFCrHXmbwhMh9ieofVGk5bxdmXoL3lSE+3W9cJbpqy2A==
   dependencies:
     "@sentry-internal/node-cpu-profiler" "^2.2.0"
-    "@sentry/core" "10.32.0"
-    "@sentry/node" "10.32.0"
+    "@sentry/core" "10.32.1"
+    "@sentry/node" "10.32.1"
 
 "@sesamecare-oss/opentelemetry-node-metrics@1.1.0":
   version "1.1.0"
