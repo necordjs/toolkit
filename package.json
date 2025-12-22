@@ -47,9 +47,9 @@
 	"dependencies": {
 		"@necord/pagination": "2.2.0",
 		"@nestjs/axios": "4.0.1",
-		"@nestjs/common": "11.1.9",
+		"@nestjs/common": "11.1.10",
 		"@nestjs/config": "4.0.2",
-		"@nestjs/core": "11.1.9",
+		"@nestjs/core": "11.1.10",
 		"@opentelemetry/api": "1.9.0",
 		"@opentelemetry/auto-instrumentations-node": "0.67.3",
 		"@opentelemetry/exporter-prometheus": "0.208.0",
