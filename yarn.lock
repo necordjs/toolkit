@@ -2593,38 +2593,38 @@
     "@sentry/cli-win32-i686" "3.1.0"
     "@sentry/cli-win32-x64" "3.1.0"
 
-"@sentry/core@10.37.0":
-  version "10.37.0"
-  resolved "https://registry.yarnpkg.com/@sentry/core/-/core-10.37.0.tgz#21408cdd0d3fae8b9e9e45264e6112164868ff0b"
-  integrity sha512-hkRz7S4gkKLgPf+p3XgVjVm7tAfvcEPZxeACCC6jmoeKhGkzN44nXwLiqqshJ25RMcSrhfFvJa/FlBg6zupz7g==
+"@sentry/core@10.38.0":
+  version "10.38.0"
+  resolved "https://registry.yarnpkg.com/@sentry/core/-/core-10.38.0.tgz#391f2535fde084e3eff4b1d2d634aa5619629b34"
+  integrity sha512-1pubWDZE5y5HZEPMAZERP4fVl2NH3Ihp1A+vMoVkb3Qc66Diqj1WierAnStlZP7tCx0TBa0dK85GTW/ZFYyB9g==
 
-"@sentry/nestjs@^10.37.0":
-  version "10.37.0"
-  resolved "https://registry.yarnpkg.com/@sentry/nestjs/-/nestjs-10.37.0.tgz#61e1203afa435d4ca75daa0d943fb4c7329bd88f"
-  integrity sha512-7lPPwn5axmmrgIVPW+/LYykHnwfhvhdcOgDtpNyfICeQeB61/zZb0f7f3ynUjwBgbyWPbzNdXEATtizbPbSb0A==
+"@sentry/nestjs@^10.38.0":
+  version "10.38.0"
+  resolved "https://registry.yarnpkg.com/@sentry/nestjs/-/nestjs-10.38.0.tgz#37ad8b923945398cd3baa3282fa53cbb0f3c0ba7"
+  integrity sha512-K+dMs0JzCrwAnOV7M1uSbGzm3KvvdkTvRKNyyOcBOPY9IeVoffPQxz+KNtMsXEIeI7UA35T8riFN8zCNxdqH+A==
   dependencies:
     "@opentelemetry/api" "^1.9.0"
     "@opentelemetry/core" "^2.5.0"
     "@opentelemetry/instrumentation" "^0.211.0"
     "@opentelemetry/instrumentation-nestjs-core" "0.57.0"
     "@opentelemetry/semantic-conventions" "^1.39.0"
-    "@sentry/core" "10.37.0"
-    "@sentry/node" "10.37.0"
+    "@sentry/core" "10.38.0"
+    "@sentry/node" "10.38.0"
 
-"@sentry/node-core@10.37.0":
-  version "10.37.0"
-  resolved "https://registry.yarnpkg.com/@sentry/node-core/-/node-core-10.37.0.tgz#ea54abaa2a54b3ca36132def3bb9505b2c5e159e"
-  integrity sha512-gQXf9764ZlEZQqqIaysxOrpHu2H867WN/G8EsHgaUJxxZMJ4ZMixinuFef+iQUE3la3/2MPoGx0A8AR7vRH9hA==
+"@sentry/node-core@10.38.0":
+  version "10.38.0"
+  resolved "https://registry.yarnpkg.com/@sentry/node-core/-/node-core-10.38.0.tgz#39a0385bca18986072edf1ac5a2d050d9577aa7f"
+  integrity sha512-ErXtpedrY1HghgwM6AliilZPcUCoNNP1NThdO4YpeMq04wMX9/GMmFCu46TnCcg6b7IFIOSr2S4yD086PxLlHQ==
   dependencies:
     "@apm-js-collab/tracing-hooks" "^0.3.1"
-    "@sentry/core" "10.37.0"
-    "@sentry/opentelemetry" "10.37.0"
-    import-in-the-middle "^2.0.1"
+    "@sentry/core" "10.38.0"
+    "@sentry/opentelemetry" "10.38.0"
+    import-in-the-middle "^2.0.6"
 
-"@sentry/node@10.37.0":
-  version "10.37.0"
-  resolved "https://registry.yarnpkg.com/@sentry/node/-/node-10.37.0.tgz#39aca7fe4d49db96fe57470e6f6c72dd2ee74bfd"
-  integrity sha512-R0n0McfnPy9D1mGKQXNPG3pfw53QxHBHNbCXGAQJoB1LjUHENM+A645tYBheac4SQjMhbu8i9De9ZyHIQKce/Q==
+"@sentry/node@10.38.0":
+  version "10.38.0"
+  resolved "https://registry.yarnpkg.com/@sentry/node/-/node-10.38.0.tgz#dc618644d2a19e1a735d1f5fe1fb54792d00d991"
+  integrity sha512-wriyDtWDAoatn8EhOj0U4PJR1WufiijTsCGALqakOHbFiadtBJANLe6aSkXoXT4tegw59cz1wY4NlzHjYksaPw==
   dependencies:
     "@opentelemetry/api" "^1.9.0"
     "@opentelemetry/context-async-hooks" "^2.5.0"
@@ -2656,27 +2656,27 @@
     "@opentelemetry/sdk-trace-base" "^2.5.0"
     "@opentelemetry/semantic-conventions" "^1.39.0"
     "@prisma/instrumentation" "7.2.0"
-    "@sentry/core" "10.37.0"
-    "@sentry/node-core" "10.37.0"
-    "@sentry/opentelemetry" "10.37.0"
-    import-in-the-middle "^2.0.1"
+    "@sentry/core" "10.38.0"
+    "@sentry/node-core" "10.38.0"
+    "@sentry/opentelemetry" "10.38.0"
+    import-in-the-middle "^2.0.6"
     minimatch "^9.0.0"
 
-"@sentry/opentelemetry@10.37.0", "@sentry/opentelemetry@^10.37.0":
-  version "10.37.0"
-  resolved "https://registry.yarnpkg.com/@sentry/opentelemetry/-/opentelemetry-10.37.0.tgz#ca2d31e2febd0872eadec042798de48f936f2213"
-  integrity sha512-elRAsmgAcaprVFV1JoxxqU9eteBz3g9fpmecfDk5KTe/Txr2OOxdIiLF/4I0g4MMib3DKtr6iGgme2J+l8H8cA==
+"@sentry/opentelemetry@10.38.0", "@sentry/opentelemetry@^10.38.0":
+  version "10.38.0"
+  resolved "https://registry.yarnpkg.com/@sentry/opentelemetry/-/opentelemetry-10.38.0.tgz#1472b33c3ab25504e8a5afd8126923083bf01c66"
+  integrity sha512-YPVhWfYmC7nD3EJqEHGtjp4fp5LwtAbE5rt9egQ4hqJlYFvr8YEz9sdoqSZxO0cZzgs2v97HFl/nmWAXe52G2Q==
   dependencies:
-    "@sentry/core" "10.37.0"
+    "@sentry/core" "10.38.0"
 
-"@sentry/profiling-node@^10.37.0":
-  version "10.37.0"
-  resolved "https://registry.yarnpkg.com/@sentry/profiling-node/-/profiling-node-10.37.0.tgz#0ba875418caf95b402bfd4c33e0183b3664147e8"
-  integrity sha512-YZBDVZimON+XBN3h3b0XZRegBtKlAtyj6Hxct5t3j1ol4CHnpQw8wUw4GeepghrEAq/fXSzfXFp9BBbOyVtTOw==
+"@sentry/profiling-node@^10.38.0":
+  version "10.38.0"
+  resolved "https://registry.yarnpkg.com/@sentry/profiling-node/-/profiling-node-10.38.0.tgz#e4fc6ff8e89e8eb65dc7c5d775b5407aebcfd733"
+  integrity sha512-XIjVSiPmXfcrKq+UjroehbfNY+l89JWSos3vyvkXEXEwnjDWrjHHv9sUyXHje0rlFOR+Qp1MKn2EySiMa/DZag==
   dependencies:
     "@sentry-internal/node-cpu-profiler" "^2.2.0"
-    "@sentry/core" "10.37.0"
-    "@sentry/node" "10.37.0"
+    "@sentry/core" "10.38.0"
+    "@sentry/node" "10.38.0"
 
 "@sesamecare-oss/opentelemetry-node-metrics@1.1.0":
   version "1.1.0"
@@ -3946,6 +3946,11 @@ cjs-module-lexer@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/cjs-module-lexer/-/cjs-module-lexer-2.1.0.tgz#586e87d4341cb2661850ece5190232ccdebcff8b"
   integrity sha512-UX0OwmYRYQQetfrLEZeewIFFI+wSTofC+pMBLNuH3RUuu/xzG1oz84UCEDOSoQlN3fZ4+AzmV50ZYvGqkMh9yA==
+
+cjs-module-lexer@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/cjs-module-lexer/-/cjs-module-lexer-2.2.0.tgz#b3ca5101843389259ade7d88c77bd06ce55849ca"
+  integrity sha512-4bHTS2YuzUvtoLjdy+98ykbNB5jS0+07EvFNXerqZQJ89F7DI6ET7OQo/HJuW6K0aVsKA9hj9/RVb2kQVOrPDQ==
 
 cli-cursor@^3.1.0:
   version "3.1.0"
@@ -5515,15 +5520,15 @@ import-in-the-middle@^2.0.0:
     cjs-module-lexer "^1.2.2"
     module-details-from-path "^1.0.3"
 
-import-in-the-middle@^2.0.1:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/import-in-the-middle/-/import-in-the-middle-2.0.2.tgz#e287977fb4f33b647cf49ea54d7645fcb85accad"
-  integrity sha512-qet/hkGt3EbNGVtbDfPu0BM+tCqBS8wT1SYrstPaDKoWtshsC6licOemz7DVtpBEyvDNzo8UTBf9/GwWuSDZ9w==
+import-in-the-middle@^2.0.6:
+  version "2.0.6"
+  resolved "https://registry.yarnpkg.com/import-in-the-middle/-/import-in-the-middle-2.0.6.tgz#1972337bfe020d05f6b5e020c13334567436324f"
+  integrity sha512-3vZV3jX0XRFW3EJDTwzWoZa+RH1b8eTTx6YOCjglrLyPuepwoBti1k3L2dKwdCUrnVEfc5CuRuGstaC/uQJJaw==
   dependencies:
-    acorn "^8.14.0"
+    acorn "^8.15.0"
     acorn-import-attributes "^1.9.5"
-    cjs-module-lexer "^1.2.2"
-    module-details-from-path "^1.0.3"
+    cjs-module-lexer "^2.2.0"
+    module-details-from-path "^1.0.4"
 
 import-local@^3.2.0:
   version "3.2.0"
