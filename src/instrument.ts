@@ -71,12 +71,6 @@ export const otelSDK = new NodeSDK({
 
 Sentry.validateOpenTelemetrySetup();
 
-setImmediate(() => {
-	const meterProvider = metrics.getMeterProvider();
-	const meter = meterProvider.getMeter('node-metrics');
-	setupNodeMetrics(meter, { labels: resource.attributes as any });
-});
-
 // You can also use the shutdown method to gracefully shut down the SDK before process shutdown
 // or on some operating system signal.
 process.on('SIGTERM', () => {
