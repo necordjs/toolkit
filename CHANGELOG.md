@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.6.1](https://github.com/necordjs/toolkit/compare/v1.6.0...v1.6.1) (2026-02-07)
+
+### Bug Fixes
+
+* remove deprecated code ([2c12a4d](https://github.com/necordjs/toolkit/commit/2c12a4dd628e1f218beefcd0f8ce480e34dea587))
+* remove deprecated code ([f93437d](https://github.com/necordjs/toolkit/commit/f93437ddd476abf0081e1c6c24c97302b219966a))
+* remove deprecated lib & esm lib ([a88fa6f](https://github.com/necordjs/toolkit/commit/a88fa6fab482377c1a67f2a19287f35acb357083))
+* remove project field due project service dominating ([29429b5](https://github.com/necordjs/toolkit/commit/29429b52ca9e169cd206512c366556dd464c8626))
+* security issue of escape utility ([92b602f](https://github.com/necordjs/toolkit/commit/92b602fff81bb23fad78d80087e68e12d5a1f498))
+
 ## [1.6.0](https://github.com/necordjs/toolkit/compare/v1.5.6...v1.6.0) (2025-11-01)
 
 ### Features
