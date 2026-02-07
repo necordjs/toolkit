@@ -1,3 +1,6 @@
 export function escape(text: string) {
-	return text.replace(/\|\|/g, '|\u200B|').replace(/\*/g, '\\*');
+	return text
+		.replace(/\|\|/g, '|\u200B|')
+		.replace(/\\/g, '\\\\')
+		.replace(/\*/g, '\\*');
 }
