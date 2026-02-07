@@ -5,10 +5,9 @@ import {
 	getResourceDetectors
 } from '@opentelemetry/auto-instrumentations-node';
 import { Logger } from '@nestjs/common';
-import { resourceFromAttributes, DetectedResourceAttributes } from '@opentelemetry/resources';
+import { resourceFromAttributes } from '@opentelemetry/resources';
 import { ATTR_SERVICE_NAME, ATTR_SERVICE_VERSION } from '@opentelemetry/semantic-conventions';
 import { metrics } from '@opentelemetry/api';
-import { setupNodeMetrics } from '@sesamecare-oss/opentelemetry-node-metrics';
 import * as Sentry from '@sentry/nestjs';
 import { nodeProfilingIntegration } from '@sentry/profiling-node';
 import { SentryPropagator, SentrySampler, SentrySpanProcessor } from '@sentry/opentelemetry';
@@ -61,7 +60,7 @@ const instrumentations = [
 
 export const otelSDK = new NodeSDK({
 	resource,
-	metricReader,
+	metricReaders: [metricReader],
 	instrumentations,
 	resourceDetectors: getResourceDetectors(),
 	sampler: sentryClient ? new SentrySampler(sentryClient) : undefined,
