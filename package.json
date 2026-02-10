@@ -78,7 +78,7 @@
 		"@nestjs/testing": "11.1.13",
 		"@release-it/conventional-changelog": "^10.0.5",
 		"@types/jest": "30.0.0",
-		"@types/node": "25.2.2",
+		"@types/node": "25.2.3",
 		"eslint": "^10.0.0",
 		"eslint-config-prettier": "10.1.8",
 		"eslint-plugin-import": "^2.32.0",
