@@ -2468,7 +2468,7 @@
     "@opentelemetry/core" "2.5.1"
     "@opentelemetry/resources" "2.5.1"
 
-"@opentelemetry/sdk-metrics@2.5.1", "@opentelemetry/sdk-metrics@^2.5.1":
+"@opentelemetry/sdk-metrics@2.5.1":
   version "2.5.1"
   resolved "https://registry.yarnpkg.com/@opentelemetry/sdk-metrics/-/sdk-metrics-2.5.1.tgz#b6eeb57f5474d6a47dda255c3375573364166ea4"
   integrity sha512-RKMn3QKi8nE71ULUo0g/MBvq1N4icEBo7cQSKnL3URZT16/YH3nSVgWegOjwx7FRBTrjOIkMJkCUn/ZFIEfn4A==
@@ -2815,14 +2815,6 @@
     "@sentry-internal/node-cpu-profiler" "^2.2.0"
     "@sentry/core" "10.39.0"
     "@sentry/node" "10.39.0"
-
-"@sesamecare-oss/opentelemetry-node-metrics@3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@sesamecare-oss/opentelemetry-node-metrics/-/opentelemetry-node-metrics-3.0.0.tgz#42d76987c650836b5b8030f819df479946d8600a"
-  integrity sha512-u2n1J/Mbp71isgwYqU7YfwORnCMoRQ5eWMkI7LKyN2XSNOrDcGurEChXxCELgQFm9Pc9LhaMGBEVFaVEgKNk4w==
-  dependencies:
-    "@opentelemetry/api" "^1.9.0"
-    "@opentelemetry/sdk-metrics" "^2.5.1"
 
 "@simple-libs/child-process-utils@^1.0.0":
   version "1.0.1"
