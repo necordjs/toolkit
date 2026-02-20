@@ -78,7 +78,7 @@
 		"@release-it/conventional-changelog": "^10.0.5",
 		"@types/jest": "30.0.0",
 		"@types/node": "25.3.0",
-		"eslint": "^10.0.0",
+		"eslint": "^10.0.1",
 		"eslint-config-prettier": "10.1.8",
 		"eslint-plugin-import": "^2.32.0",
 		"eslint-plugin-prettier": "5.5.5",
