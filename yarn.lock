@@ -1366,10 +1366,10 @@
     webpack "5.104.1"
     webpack-node-externals "3.0.0"
 
-"@nestjs/common@11.1.14":
-  version "11.1.14"
-  resolved "https://registry.yarnpkg.com/@nestjs/common/-/common-11.1.14.tgz#f89e8d9ad32a3804958eda1c4846d2e2f107ce28"
-  integrity sha512-IN/tlqd7Nl9gl6f0jsWEuOrQDaCI9vHzxv0fisHysfBQzfQIkqlv5A7w4Qge02BUQyczXT9HHPgHtWHCxhjRng==
+"@nestjs/common@11.1.15":
+  version "11.1.15"
+  resolved "https://registry.yarnpkg.com/@nestjs/common/-/common-11.1.15.tgz#54ae753d59e990bffe5fab13dab6fb7a9196ef1a"
+  integrity sha512-51sqIj83xEhmxi3D+QA+bo+hs+YTnZ5eJvOxa34VFiSlilT8DEF83kZc4t1t3arO8PjfDFI+LaTQQkx0gm1QGA==
   dependencies:
     uid "2.0.2"
     file-type "21.3.0"
@@ -1386,10 +1386,10 @@
     dotenv-expand "12.0.3"
     lodash "4.17.23"
 
-"@nestjs/core@11.1.14":
-  version "11.1.14"
-  resolved "https://registry.yarnpkg.com/@nestjs/core/-/core-11.1.14.tgz#37cb2deb18082f7e78585182f2fca6158748ef8b"
-  integrity sha512-7OXPPMoDr6z+5NkoQKu4hOhfjz/YYqM3bNilPqv1WVFWrzSmuNXxvhbX69YMmNmRYascPXiwESqf5jJdjKXEww==
+"@nestjs/core@11.1.15":
+  version "11.1.15"
+  resolved "https://registry.yarnpkg.com/@nestjs/core/-/core-11.1.15.tgz#fbd26db1ce5fb8a063f04405ec76123f6b3ab86c"
+  integrity sha512-s+SQxA8yAGu8RapbI5Y3GFuNyvF1ocva2Va+d4K5T7G0eC5kAvYfiHr8iKvZg+rue5NjV7fYQQmEvA5jCTG+CA==
   dependencies:
     uid "2.0.2"
     "@nuxt/opencollective" "0.4.1"
@@ -2731,37 +2731,37 @@
     "@sentry/cli-win32-i686" "3.2.3"
     "@sentry/cli-win32-x64" "3.2.3"
 
-"@sentry/core@10.41.0":
-  version "10.41.0"
-  resolved "https://registry.yarnpkg.com/@sentry/core/-/core-10.41.0.tgz#6ac41bdab6ccda863476c9af2312b440423625e2"
-  integrity sha512-TlYMUzyXdx2mICmEKFiCDPDw7fHB/3bIn5lJOOENPmF8SogLTTRiu+HhjIhWkZ9zM/fR3w7WT8qtE/ak7nr24Q==
+"@sentry/core@10.42.0":
+  version "10.42.0"
+  resolved "https://registry.yarnpkg.com/@sentry/core/-/core-10.42.0.tgz#5b6e38d4fde9276588f507d082c9b46debd3d666"
+  integrity sha512-L4rMrXMqUKBanpjpMT+TuAVk6xAijz6AWM6RiEYpohAr7SGcCEc1/T0+Ep1eLV8+pwWacfU27OvELIyNeOnGzA==
 
-"@sentry/nestjs@^10.41.0":
-  version "10.41.0"
-  resolved "https://registry.yarnpkg.com/@sentry/nestjs/-/nestjs-10.41.0.tgz#36ab89449cbee0ff4cef99a99862272a8e55b425"
-  integrity sha512-v5dLvEmGXOD9VokVgwyfNOB91D88DCtF/tgQiw+QEKLe1q3re1d6RSydzcA1h39mGlzfXD4QeAn3B3Wugg0WGQ==
+"@sentry/nestjs@^10.42.0":
+  version "10.42.0"
+  resolved "https://registry.yarnpkg.com/@sentry/nestjs/-/nestjs-10.42.0.tgz#a95958e36c29fb772a73483863377266f04cad33"
+  integrity sha512-ISfULcCtwo3vrLZUy/lxv5LFDWdUz+qkaPpvTw0t1CyMcrhHMBVshUfxXklbnvGmwSAeXioDT4XyKMZKYViEFA==
   dependencies:
     "@opentelemetry/api" "^1.9.0"
     "@opentelemetry/core" "^2.5.1"
     "@opentelemetry/instrumentation" "^0.211.0"
     "@opentelemetry/instrumentation-nestjs-core" "0.57.0"
     "@opentelemetry/semantic-conventions" "^1.39.0"
-    "@sentry/core" "10.41.0"
-    "@sentry/node" "10.41.0"
+    "@sentry/core" "10.42.0"
+    "@sentry/node" "10.42.0"
 
-"@sentry/node-core@10.41.0":
-  version "10.41.0"
-  resolved "https://registry.yarnpkg.com/@sentry/node-core/-/node-core-10.41.0.tgz#1ca23678e9476fcbe2426e9e13c8c384149e939c"
-  integrity sha512-kJXQsREtyvg/y0BokloxMlGDz64diZmjYbidTv7sz6E+86KZAQejVmg5gdaGa9xohjhzoi9/DKtCgmVtdPVTjA==
+"@sentry/node-core@10.42.0":
+  version "10.42.0"
+  resolved "https://registry.yarnpkg.com/@sentry/node-core/-/node-core-10.42.0.tgz#84b527d4f4df35484d790e877a87ecba91187fe1"
+  integrity sha512-9tf3fPV6M071aps72D+PEtdQPTuj+SuqO2+PpTfdPP5ZL4TTKYo3VK0li76SL+5wGdTFGV5qmsokHq9IRBA0iA==
   dependencies:
-    "@sentry/core" "10.41.0"
-    "@sentry/opentelemetry" "10.41.0"
+    "@sentry/core" "10.42.0"
+    "@sentry/opentelemetry" "10.42.0"
     import-in-the-middle "^2.0.6"
 
-"@sentry/node@10.41.0":
-  version "10.41.0"
-  resolved "https://registry.yarnpkg.com/@sentry/node/-/node-10.41.0.tgz#d38ca144ce952d47d01045b939d13dbcbedfcb8f"
-  integrity sha512-DiMt+BPtRrgIwi4JeJRwB8l3jRYltxPyz0ngpU7vWKuXDGOm5cW0gWbWVSFKijU8ckVWtcW5xmCgL2tMrbHHrA==
+"@sentry/node@10.42.0":
+  version "10.42.0"
+  resolved "https://registry.yarnpkg.com/@sentry/node/-/node-10.42.0.tgz#303b19538b3ff430845e46ab5e3b752e0d926691"
+  integrity sha512-ZZfU3Fnni7Aj0lTX4e3QpY3UxK4FGuzfM20316UAJycBGnripm+sDHwcekPMGfLnk/FrN9wa1atspVlHvOI0WQ==
   dependencies:
     "@fastify/otel" "0.16.0"
     "@opentelemetry/api" "^1.9.0"
@@ -2794,26 +2794,26 @@
     "@opentelemetry/sdk-trace-base" "^2.5.1"
     "@opentelemetry/semantic-conventions" "^1.39.0"
     "@prisma/instrumentation" "7.2.0"
-    "@sentry/core" "10.41.0"
-    "@sentry/node-core" "10.41.0"
-    "@sentry/opentelemetry" "10.41.0"
+    "@sentry/core" "10.42.0"
+    "@sentry/node-core" "10.42.0"
+    "@sentry/opentelemetry" "10.42.0"
     import-in-the-middle "^2.0.6"
 
-"@sentry/opentelemetry@10.41.0", "@sentry/opentelemetry@^10.41.0":
-  version "10.41.0"
-  resolved "https://registry.yarnpkg.com/@sentry/opentelemetry/-/opentelemetry-10.41.0.tgz#c97f83f9a151ca08531e225d75ca2be91055f544"
-  integrity sha512-nAprKdw8PvHPfT7eYRLSj6VOL+NlWEjdfKg7ZLnQPgRBdPOmi1mp+Kym2QIUoCF0MnaU6R80opNvQ0VYeOVrJQ==
+"@sentry/opentelemetry@10.42.0", "@sentry/opentelemetry@^10.42.0":
+  version "10.42.0"
+  resolved "https://registry.yarnpkg.com/@sentry/opentelemetry/-/opentelemetry-10.42.0.tgz#c53de1f7d1da4646994c2775d688f9cce6297d21"
+  integrity sha512-5vsYz683iihzlIj3sT1+tEixf0awwXK86a+aYsnMHrTXJDrkBDq4U0ZT+yxdPfJlkaxRtYycFR08SXr2pSm7Eg==
   dependencies:
-    "@sentry/core" "10.41.0"
+    "@sentry/core" "10.42.0"
 
-"@sentry/profiling-node@^10.41.0":
-  version "10.41.0"
-  resolved "https://registry.yarnpkg.com/@sentry/profiling-node/-/profiling-node-10.41.0.tgz#b9975af7ca92a1c6bffe0f42a05d7d4c23db6804"
-  integrity sha512-YLA4ZeQyRM9h2KiqbRGZIcqoIH3FBOiBkz4bizqPpDXhOGudxbzkF3EwPVONXidRMY8lmjg8Ra+h1GSZrXnvgg==
+"@sentry/profiling-node@^10.42.0":
+  version "10.42.0"
+  resolved "https://registry.yarnpkg.com/@sentry/profiling-node/-/profiling-node-10.42.0.tgz#75bd45e35df47e33b4c935021e604846a2f6406a"
+  integrity sha512-HmQn5rLBdAigxMpliasGV2WclDotO64XWJqOXbK5aoNg4rdqzi1BrB9O1wVN2/TDOswnz579X8d6lzTD0g1u6w==
   dependencies:
     "@sentry-internal/node-cpu-profiler" "^2.2.0"
-    "@sentry/core" "10.41.0"
-    "@sentry/node" "10.41.0"
+    "@sentry/core" "10.42.0"
+    "@sentry/node" "10.42.0"
 
 "@simple-libs/child-process-utils@^1.0.0":
   version "1.0.1"
