@@ -78,7 +78,7 @@
 		"@release-it/conventional-changelog": "^10.0.6",
 		"@types/jest": "30.0.0",
 		"@types/node": "25.6.0",
-		"eslint": "^10.2.0",
+		"eslint": "^10.2.1",
 		"eslint-config-prettier": "10.1.8",
 		"eslint-plugin-import": "^2.32.0",
 		"eslint-plugin-prettier": "5.5.5",
@@ -94,6 +94,6 @@
 		"ts-jest": "29.4.9",
 		"ts-node": "10.9.2",
 		"typescript": "6.0.3",
-		"typescript-eslint": "^8.58.2"
+		"typescript-eslint": "^8.59.0"
 	}
 }
