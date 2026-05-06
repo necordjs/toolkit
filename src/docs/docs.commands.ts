@@ -16,7 +16,7 @@ export class DocsCommands {
 	public async necord(
 		@Context() [interaction]: SlashCommandContext,
 		@Options() searchOptions: SearchOptions
-	) {
+	): Promise<unknown> {
 		return this.docsService.replyAlgolia(interaction, searchOptions, AlgoliaApps.Necord);
 	}
 
@@ -25,7 +25,7 @@ export class DocsCommands {
 	public async nestjs(
 		@Context() [interaction]: SlashCommandContext,
 		@Options() searchOptions: SearchOptions
-	) {
+	): Promise<unknown> {
 		return this.docsService.replyAlgolia(interaction, searchOptions, AlgoliaApps.NestJS);
 	}
 
@@ -34,7 +34,7 @@ export class DocsCommands {
 	public async discord(
 		@Context() [interaction]: SlashCommandContext,
 		@Options() searchOptions: SearchOptions
-	) {
+	): Promise<unknown> {
 		return this.docsService.replyAlgolia(interaction, searchOptions, AlgoliaApps.Discord);
 	}
 
@@ -43,7 +43,7 @@ export class DocsCommands {
 	public async discordjs(
 		@Context() [interaction]: SlashCommandContext,
 		@Options() searchOptions: DiscordJSSearchOptions
-	) {
+	): Promise<unknown> {
 		return this.docsService.replyDiscordJS(interaction, searchOptions);
 	}
 
@@ -52,7 +52,7 @@ export class DocsCommands {
 	public async discordjsGuide(
 		@Context() [interaction]: SlashCommandContext,
 		@Options() searchOptions: SearchOptions
-	) {
+	): Promise<unknown> {
 		return this.docsService.replyAlgolia(
 			interaction,
 			searchOptions,
@@ -65,7 +65,7 @@ export class DocsCommands {
 	public async typescript(
 		@Context() [interaction]: SlashCommandContext,
 		@Options() searchOptions: SearchOptions
-	) {
+	): Promise<unknown> {
 		return this.docsService.replyAlgolia(interaction, searchOptions, AlgoliaApps.TypeScript);
 	}
 
@@ -74,7 +74,7 @@ export class DocsCommands {
 	public async nestCommander(
 		@Context() [interaction]: SlashCommandContext,
 		@Options() searchOptions: SearchOptions
-	) {
+	): Promise<unknown> {
 		return this.docsService.replyAlgolia(interaction, searchOptions, AlgoliaApps.NestCommander);
 	}
 
@@ -83,7 +83,7 @@ export class DocsCommands {
 	public async ogma(
 		@Context() [interaction]: SlashCommandContext,
 		@Options() searchOptions: SearchOptions
-	) {
+	): Promise<unknown> {
 		return this.docsService.replyAlgolia(interaction, searchOptions, AlgoliaApps.Ogma);
 	}
 
@@ -92,7 +92,7 @@ export class DocsCommands {
 	public async express(
 		@Context() [interaction]: SlashCommandContext,
 		@Options() searchOptions: SearchOptions
-	) {
+	): Promise<unknown> {
 		return this.docsService.replyAlgolia(interaction, searchOptions, AlgoliaApps.Express);
 	}
 
@@ -101,7 +101,7 @@ export class DocsCommands {
 	public async fastify(
 		@Context() [interaction]: SlashCommandContext,
 		@Options() searchOptions: SearchOptions
-	) {
+	): Promise<unknown> {
 		return this.docsService.replyAlgolia(interaction, searchOptions, AlgoliaApps.Fastify);
 	}
 
@@ -110,7 +110,7 @@ export class DocsCommands {
 	public async mdn(
 		@Context() [interaction]: SlashCommandContext,
 		@Options() searchOptions: SearchOptions
-	) {
+	): Promise<unknown> {
 		return this.docsService.replyMDN(interaction, searchOptions);
 	}
 }

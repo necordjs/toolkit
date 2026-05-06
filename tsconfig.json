@@ -10,10 +10,10 @@
 		"noLib": false,
 		"emitDecoratorMetadata": true,
 		"experimentalDecorators": true,
-		"target": "ES2021",
+		"target": "es2021",
 		"sourceMap": true,
 		"inlineSources": true,
-		"baseUrl": ".",
+		"rootDir": "./src",
 		"outDir": "./dist",
 		"sourceRoot": "/",
 		"skipLibCheck": true,
@@ -21,17 +21,19 @@
 		"esModuleInterop": true,
 		"forceConsistentCasingInFileNames": true,
 		"strictPropertyInitialization": false,
+		"strictNullChecks": false,
 		"paths": {
 			"@src/*": [
-				"src/*"
+				"./src/*"
 			],
 			"@common/*": [
-				"src/common/*"
+				"./src/common/*"
 			],
 			"@shared/*": [
-				"src/shared/*"
+				"./src/shared/*"
 			]
-		}
+		},
+		"types": ["node", "jest"]
 	},
 	"exclude": [
 		"node_modules"
