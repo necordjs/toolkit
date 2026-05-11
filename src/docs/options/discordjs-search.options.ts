@@ -1,6 +1,7 @@
-import { SearchOptions } from './search.options';
-import { StringOption } from 'necord';
 import { SourcesStringUnion } from 'discordjs-docs-parser';
+import { StringOption } from 'necord';
+
+import { SearchOptions } from './search.options';
 
 export class DiscordJSSearchOptions extends SearchOptions {
 	@StringOption({

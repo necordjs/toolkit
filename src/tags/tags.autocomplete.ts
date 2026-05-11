@@ -1,5 +1,6 @@
-import { AutocompleteInterceptor } from 'necord';
 import { ApplicationCommandOptionChoiceData, AutocompleteInteraction } from 'discord.js';
+import { AutocompleteInterceptor } from 'necord';
+
 import { Tags } from './tags.constants';
 
 export class TagsAutocomplete extends AutocompleteInterceptor {

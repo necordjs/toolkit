@@ -1,7 +1,8 @@
 import { Injectable, OnApplicationBootstrap } from '@nestjs/common';
-import { MDN } from '../interfaces';
 import { HttpService } from '@nestjs/axios';
 import { catchError, map, tap } from 'rxjs';
+
+import { MDN } from '../interfaces';
 
 @Injectable()
 export class MDNService implements OnApplicationBootstrap {

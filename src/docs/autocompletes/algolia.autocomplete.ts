@@ -1,10 +1,11 @@
-import { AutocompleteInterceptor } from 'necord';
 import { AutocompleteInteraction } from 'discord.js';
-import { AlgoliaService } from '../services';
-import { truncate } from '../utils';
-import { AlgoliaApps } from '../enums';
+import { AutocompleteInterceptor } from 'necord';
 import { Inject } from '@nestjs/common';
+
+import { AlgoliaService } from '../services';
 import { Algolia } from '../interfaces';
+import { AlgoliaApps } from '../enums';
+import { truncate } from '../utils';
 
 export function AlgoliaAutocomplete(app: AlgoliaApps) {
 	class AlgoliaAutocompleteInterceptor extends AutocompleteInterceptor {

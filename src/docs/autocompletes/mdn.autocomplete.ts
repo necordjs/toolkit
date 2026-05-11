@@ -1,6 +1,7 @@
+import { AutocompleteInteraction } from 'discord.js';
 import { Inject, Injectable } from '@nestjs/common';
 import { AutocompleteInterceptor } from 'necord';
-import { AutocompleteInteraction } from 'discord.js';
+
 import { MDNService } from '../services';
 
 @Injectable()

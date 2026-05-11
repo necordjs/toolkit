@@ -1,8 +1,9 @@
 import { Injectable } from '@nestjs/common';
 import { HttpService } from '@nestjs/axios';
 import { map } from 'rxjs';
-import { Release } from './interfaces';
+
 import { SharedReplayRefresh } from './helpers';
+import { Release } from './interfaces';
 
 @Injectable()
 export class ChangelogService {

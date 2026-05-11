@@ -35,7 +35,7 @@
 	"license": "MIT",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/necordjs/toolkit"
+		"url": "git+https://github.com/necordjs/toolkit.git"
 	},
 	"bugs": {
 		"url": "https://github.com/necordjs/toolkit"
@@ -80,7 +80,7 @@
 		"@types/node": "25.6.2",
 		"eslint": "^10.3.0",
 		"eslint-config-prettier": "10.1.8",
-		"eslint-plugin-import": "^2.32.0",
+		"eslint-plugin-perfectionist": "^5.9.0",
 		"eslint-plugin-prettier": "5.5.5",
 		"globals": "^17.6.0",
 		"husky": "9.1.7",

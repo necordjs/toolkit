@@ -1,6 +1,7 @@
-import { Module } from '@nestjs/common';
-import { AlgoliaService, DiscordJSService, MDNService } from './services';
 import { HttpModule } from '@nestjs/axios';
+import { Module } from '@nestjs/common';
+
+import { AlgoliaService, DiscordJSService, MDNService } from './services';
 import { DocsCommands } from './docs.commands';
 import { DocsService } from './docs.service';
 

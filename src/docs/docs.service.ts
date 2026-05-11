@@ -1,7 +1,3 @@
-import { Injectable } from '@nestjs/common';
-import { AlgoliaService, DiscordJSService, MDNService } from './services';
-import { AlgoliaApps } from './enums';
-import { escape, truncate } from './utils';
 import {
 	ActionRowBuilder,
 	bold,
@@ -15,9 +11,14 @@ import {
 	MessageFlags,
 	underscore
 } from 'discord.js';
+import { SourcesStringUnion } from 'discordjs-docs-parser';
+import { Injectable } from '@nestjs/common';
+
+import { AlgoliaService, DiscordJSService, MDNService } from './services';
 import { DiscordJSSearchOptions, SearchOptions } from './options';
 import { Algolia, DiscordJS, DocsOptions } from './interfaces';
-import { SourcesStringUnion } from 'discordjs-docs-parser';
+import { escape, truncate } from './utils';
+import { AlgoliaApps } from './enums';
 
 @Injectable()
 export class DocsService {

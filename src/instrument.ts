@@ -1,16 +1,16 @@
-import { NodeSDK } from '@opentelemetry/sdk-node';
-import { PrometheusExporter } from '@opentelemetry/exporter-prometheus';
 import {
 	getNodeAutoInstrumentations,
 	getResourceDetectors
 } from '@opentelemetry/auto-instrumentations-node';
-import { Logger } from '@nestjs/common';
-import { resourceFromAttributes } from '@opentelemetry/resources';
 import { ATTR_SERVICE_NAME, ATTR_SERVICE_VERSION } from '@opentelemetry/semantic-conventions';
-import * as Sentry from '@sentry/nestjs';
-import { nodeProfilingIntegration } from '@sentry/profiling-node';
 import { SentryPropagator, SentrySampler, SentrySpanProcessor } from '@sentry/opentelemetry';
 import { RuntimeNodeInstrumentation } from '@opentelemetry/instrumentation-runtime-node';
+import { PrometheusExporter } from '@opentelemetry/exporter-prometheus';
+import { resourceFromAttributes } from '@opentelemetry/resources';
+import { nodeProfilingIntegration } from '@sentry/profiling-node';
+import { NodeSDK } from '@opentelemetry/sdk-node';
+import * as Sentry from '@sentry/nestjs';
+import { Logger } from '@nestjs/common';
 
 const logger = new Logger('OpenTelemetry');
 const version = process.env.npm_package_version;

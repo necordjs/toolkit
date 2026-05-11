@@ -1,9 +1,10 @@
-import { Injectable, OnModuleInit } from '@nestjs/common';
-import { ChangelogService } from './changelog.service';
-import { Context, SlashCommand, SlashCommandContext } from 'necord';
 import { NecordPaginationService, PageBuilder } from '@necord/pagination';
+import { Context, SlashCommand, SlashCommandContext } from 'necord';
+import { Injectable, OnModuleInit } from '@nestjs/common';
 import { map, switchMap, tap, timer } from 'rxjs';
 import { EmbedBuilder, time } from 'discord.js';
+
+import { ChangelogService } from './changelog.service';
 
 @Injectable()
 export class ChangelogController implements OnModuleInit {

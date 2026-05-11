@@ -1,4 +1,3 @@
-import { Injectable } from '@nestjs/common';
 import {
 	Context,
 	MessageCommand,
@@ -11,7 +10,6 @@ import {
 	UserCommand,
 	UserCommandContext
 } from 'necord';
-import { GeneralService } from './general.service';
 import {
 	Client,
 	hideLinkEmbed,
@@ -23,7 +21,10 @@ import {
 	TimestampStyles,
 	User
 } from 'discord.js';
+import { Injectable } from '@nestjs/common';
+
 import { SnowflakeOptions, UserOptions } from './options';
+import { GeneralService } from './general.service';
 import { DEFAULT_EMBED } from '../app.constants';
 
 @Injectable()

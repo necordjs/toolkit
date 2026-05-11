@@ -1,5 +1,5 @@
-import { Injectable, Logger } from '@nestjs/common';
 import { Context, ContextOf, On, Once } from 'necord';
+import { Injectable, Logger } from '@nestjs/common';
 import { MetricService } from 'nestjs-otel';
 import { Client } from 'discord.js';
 

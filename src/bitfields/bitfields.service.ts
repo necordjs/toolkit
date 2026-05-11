@@ -1,7 +1,8 @@
 import { Injectable } from '@nestjs/common';
 import { BitField } from 'discord.js';
-import { BitEntry, BitProducer } from './interfaces';
 import * as kleur from 'kleur';
+
+import { BitEntry, BitProducer } from './interfaces';
 
 @Injectable()
 export class BitfieldsService {

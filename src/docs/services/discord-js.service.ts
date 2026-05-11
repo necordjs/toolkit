@@ -1,5 +1,5 @@
-import { Injectable } from '@nestjs/common';
 import { Doc, DocElement, DocTypes, SourcesStringUnion } from 'discordjs-docs-parser';
+import { Injectable } from '@nestjs/common';
 
 @Injectable()
 export class DiscordJSService {

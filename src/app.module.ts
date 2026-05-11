@@ -1,16 +1,17 @@
+import { ConfigModule, ConfigService } from '@nestjs/config';
+import { APP_FILTER, APP_INTERCEPTOR } from '@nestjs/core';
+import { SentryModule } from '@sentry/nestjs/setup';
+import { OpenTelemetryModule } from 'nestjs-otel';
 import { Module } from '@nestjs/common';
 import { NecordModule } from 'necord';
-import { ConfigModule, ConfigService } from '@nestjs/config';
-import { DocsModule } from './docs/docs.module';
-import { BitfieldsModule } from './bitfields/bitfields.module';
-import { GeneralModule } from './general/general.module';
-import { AppService } from './app.service';
-import { TagsModule } from './tags/tags.module';
-import { ChangelogModule } from './changelog/changelog.module';
-import { SentryModule } from '@sentry/nestjs/setup';
-import { APP_FILTER, APP_INTERCEPTOR } from '@nestjs/core';
+
 import { CommandMetricsInterceptor, NecordSentryExceptionFilter } from './common';
-import { OpenTelemetryModule } from 'nestjs-otel';
+import { BitfieldsModule } from './bitfields/bitfields.module';
+import { ChangelogModule } from './changelog/changelog.module';
+import { GeneralModule } from './general/general.module';
+import { DocsModule } from './docs/docs.module';
+import { TagsModule } from './tags/tags.module';
+import { AppService } from './app.service';
 
 @Module({
 	imports: [

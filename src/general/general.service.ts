@@ -1,5 +1,6 @@
-import { Injectable } from '@nestjs/common';
 import { EmbedBuilder, inlineCode, italic, time, TimestampStyles, User } from 'discord.js';
+import { Injectable } from '@nestjs/common';
+
 import { formatUserFlag } from './utils';
 
 @Injectable()

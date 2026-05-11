@@ -1,6 +1,7 @@
-import { otelSDK } from './instrument';
 import { NestFactory } from '@nestjs/core';
+
 import { AppModule } from './app.module';
+import { otelSDK } from './instrument';
 
 async function bootstrap() {
 	otelSDK.start();

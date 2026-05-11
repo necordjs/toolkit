@@ -1,4 +1,5 @@
 import { Module } from '@nestjs/common';
+
 import { BitfieldsCommands } from './bitfields.commands';
 import { BitfieldsService } from './bitfields.service';
 

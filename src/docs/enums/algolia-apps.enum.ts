@@ -1,11 +1,11 @@
 export enum AlgoliaApps {
-	Necord = 'NECORD',
-	NestJS = 'NestJS',
-	TypeScript = 'TypeScript',
 	Discord = 'Discord',
 	DiscordJSGuide = 'DiscordJS Guide',
-	Ogma = 'Ogma',
-	NestCommander = 'Nest Commander',
 	Express = 'Express',
-	Fastify = 'Fastify'
+	Fastify = 'Fastify',
+	Necord = 'NECORD',
+	NestCommander = 'Nest Commander',
+	NestJS = 'NestJS',
+	Ogma = 'Ogma',
+	TypeScript = 'TypeScript'
 }

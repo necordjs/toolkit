@@ -1,9 +1,10 @@
 import { Injectable, Logger } from '@nestjs/common';
-import { HttpService } from '@nestjs/axios';
-import { Algolia } from '../interfaces';
-import { catchError, map, tap } from 'rxjs';
-import { AlgoliaApps } from '../enums';
 import { ConfigService } from '@nestjs/config';
+import { HttpService } from '@nestjs/axios';
+import { catchError, map, tap } from 'rxjs';
+
+import { Algolia } from '../interfaces';
+import { AlgoliaApps } from '../enums';
 
 @Injectable()
 export class AlgoliaService {

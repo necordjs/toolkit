@@ -1,7 +1,7 @@
-import { SentryGlobalFilter } from '@sentry/nestjs/setup';
 import { type ArgumentsHost, Catch } from '@nestjs/common';
-import { NecordArgumentsHost } from 'necord';
+import { SentryGlobalFilter } from '@sentry/nestjs/setup';
 import { captureException } from '@sentry/nestjs';
+import { NecordArgumentsHost } from 'necord';
 
 @Catch()
 export class NecordSentryExceptionFilter extends SentryGlobalFilter {

@@ -1,9 +1,10 @@
-import { Module } from '@nestjs/common';
 import { NecordPaginationModule } from '@necord/pagination';
 import { HttpModule } from '@nestjs/axios';
-import { ChangelogService } from './changelog.service';
-import { ChangelogController } from './changelog.controller';
 import { ButtonStyle } from 'discord.js';
+import { Module } from '@nestjs/common';
+
+import { ChangelogController } from './changelog.controller';
+import { ChangelogService } from './changelog.service';
 
 @Module({
 	imports: [

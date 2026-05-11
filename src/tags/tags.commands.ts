@@ -1,17 +1,18 @@
-import { Injectable, UseInterceptors } from '@nestjs/common';
 import { Context, Options, SlashCommand, SlashCommandContext } from 'necord';
+import { Injectable, UseInterceptors } from '@nestjs/common';
+import { MessageFlags } from 'discord.js';
+
+import { TagsAutocomplete } from './tags.autocomplete';
 import { SearchOptions } from '../docs/options';
 import { Tags } from './tags.constants';
-import { TagsAutocomplete } from './tags.autocomplete';
-import { MessageFlags } from 'discord.js';
 
 @Injectable()
 export class TagsCommands {
-	@UseInterceptors(TagsAutocomplete)
 	@SlashCommand({
 		name: 'tag',
 		description: '📌 Send a tag by name or alias'
 	})
+	@UseInterceptors(TagsAutocomplete)
 	public async tag(
 		@Context() [interaction]: SlashCommandContext,
 		@Options() searchOptions: SearchOptions

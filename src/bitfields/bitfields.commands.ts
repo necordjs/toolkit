@@ -5,10 +5,11 @@ import {
 	SlashCommandContext,
 	Subcommand
 } from 'necord';
-import { BitfieldOptions } from './options';
 import { codeBlock, IntentsBitField, PermissionFlagsBits, PermissionsBitField } from 'discord.js';
+
 import { BitfieldsService } from './bitfields.service';
 import { DEFAULT_EMBED } from '../app.constants';
+import { BitfieldOptions } from './options';
 
 const BitFieldsCommand = createCommandGroupDecorator({
 	name: 'bitfields',
