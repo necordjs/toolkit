@@ -56,7 +56,7 @@
 		"@opentelemetry/instrumentation-nestjs-core": "^0.65.0",
 		"@opentelemetry/instrumentation-runtime-node": "^0.32.0",
 		"@opentelemetry/sdk-node": "0.219.0",
-		"@sentry/cli": "^3.5.0",
+		"@sentry/cli": "^3.5.1",
 		"@sentry/nestjs": "^10.58.0",
 		"@sentry/opentelemetry": "^10.58.0",
 		"@sentry/profiling-node": "^10.58.0",
