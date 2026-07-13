@@ -70,7 +70,7 @@
 	"devDependencies": {
 		"@commitlint/cli": "21.2.1",
 		"@commitlint/config-angular": "21.2.0",
-		"@eslint/eslintrc": "^3.3.5",
+		"@eslint/eslintrc": "^3.3.6",
 		"@eslint/js": "^10.0.1",
 		"@nestjs/cli": "11.0.24",
 		"@nestjs/schematics": "11.1.0",
@@ -78,7 +78,7 @@
 		"@release-it/conventional-changelog": "^11.0.1",
 		"@types/jest": "30.0.0",
 		"@types/node": "26.1.1",
-		"eslint": "^10.6.0",
+		"eslint": "^10.7.0",
 		"eslint-config-prettier": "10.1.8",
 		"eslint-plugin-perfectionist": "^5.10.0",
 		"eslint-plugin-prettier": "5.5.6",
