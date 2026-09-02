@@ -47,7 +47,7 @@
 					},
 					{
 						"type": "revert",
-						"hidden": true
+						"effect": "hidden"
 					},
 					{
 						"type": "style",
@@ -59,15 +59,15 @@
 					},
 					{
 						"type": "chore",
-						"hidden": true
+						"effect": "hidden"
 					},
 					{
 						"type": "ci",
-						"hidden": true
+						"effect": "hidden"
 					},
 					{
 						"type": "build",
-						"hidden": true
+						"effect": "hidden"
 					}
 				]
 			},
