@@ -3,7 +3,7 @@ import { AutocompleteInteraction } from 'discord.js';
 import { Inject, Injectable } from '@nestjs/common';
 import { AutocompleteInterceptor } from 'necord';
 
-import { DiscordJSService } from '../services';
+import { DiscordJSService } from '../services/index.js';
 
 @Injectable()
 export class DiscordJSAutocomplete extends AutocompleteInterceptor {

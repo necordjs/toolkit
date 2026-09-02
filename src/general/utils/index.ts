@@ -1,1 +1,1 @@
-export * from './flags.util';
+export * from './flags.util.js';

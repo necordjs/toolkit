@@ -1,1 +1,1 @@
-export * from './shared-replay-refresh.helper';
+export * from './shared-replay-refresh.helper.js';

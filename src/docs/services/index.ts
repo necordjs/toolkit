@@ -1,3 +1,3 @@
-export * from './algolia.service';
-export * from './discord-js.service';
-export * from './mdn.service';
+export * from './algolia.service.js';
+export * from './discord-js.service.js';
+export * from './mdn.service.js';

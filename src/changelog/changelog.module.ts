@@ -3,8 +3,8 @@ import { HttpModule } from '@nestjs/axios';
 import { ButtonStyle } from 'discord.js';
 import { Module } from '@nestjs/common';
 
-import { ChangelogController } from './changelog.controller';
-import { ChangelogService } from './changelog.service';
+import { ChangelogController } from './changelog.controller.js';
+import { ChangelogService } from './changelog.service.js';
 
 @Module({
 	imports: [

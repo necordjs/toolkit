@@ -1,1 +1,1 @@
-export * from './necord-sentry-exception.filter';
+export * from './necord-sentry-exception.filter.js';

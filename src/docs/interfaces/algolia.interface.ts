@@ -15,33 +15,31 @@ export namespace Algolia {
 	export interface Hit {
 		anchor: string;
 		content?: string;
-		hierarchy: Hit.Hierarchy;
+		hierarchy: Hierarchy;
 		url: string;
 		objectID: string;
 	}
 
-	export namespace Hit {
-		export interface Hierarchy {
-			lvl0?: string;
-			lvl1?: string;
-			lvl2?: string;
-			lvl3?: string;
-			lvl4?: string;
-			lvl5?: string;
-			lvl6?: string;
+	export interface Hierarchy {
+		lvl0?: string;
+		lvl1?: string;
+		lvl2?: string;
+		lvl3?: string;
+		lvl4?: string;
+		lvl5?: string;
+		lvl6?: string;
+	}
+
+	export function getFormattedHierarchy(hit: Hit) {
+		const { hierarchy } = hit;
+
+		const category = hierarchy.lvl1 ?? hierarchy.lvl0 ?? '';
+		let subcategory = hierarchy.lvl2 ?? hierarchy.lvl1 ?? '';
+
+		if (category === subcategory || subcategory === '') {
+			subcategory = 'Introduction';
 		}
 
-		export function getFormattedHierarchy(hit: Hit) {
-			const { hierarchy } = hit;
-
-			const category = hierarchy.lvl1 ?? hierarchy.lvl0 ?? '';
-			let subcategory = hierarchy.lvl2 ?? hierarchy.lvl1 ?? '';
-
-			if (category === subcategory || subcategory === '') {
-				subcategory = 'Introduction';
-			}
-
-			return `${category}: ${subcategory}${hierarchy.lvl3 ? ` - ${hierarchy.lvl3}` : ''}`;
-		}
+		return `${category}: ${subcategory}${hierarchy.lvl3 ? ` - ${hierarchy.lvl3}` : ''}`;
 	}
 }

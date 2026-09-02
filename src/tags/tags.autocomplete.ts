@@ -1,7 +1,7 @@
 import { ApplicationCommandOptionChoiceData, AutocompleteInteraction } from 'discord.js';
 import { AutocompleteInterceptor } from 'necord';
 
-import { Tags } from './tags.constants';
+import { Tags } from './tags.constants.js';
 
 export class TagsAutocomplete extends AutocompleteInterceptor {
 	public transformOptions(interaction: AutocompleteInteraction): Promise<void> {
@@ -14,8 +14,8 @@ export class TagsAutocomplete extends AutocompleteInterceptor {
 
 		if (query.length < 1) {
 			const hoistedTags = Object.entries(Tags)
-				.filter(([key, value]) => value.hoisted)
-				.map(([key, value]) => ({
+				.filter(([, value]) => value.hoisted)
+				.map(([key]) => ({
 					name: `📌 ${key}`,
 					value: key
 				}));

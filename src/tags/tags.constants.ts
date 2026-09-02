@@ -1,4 +1,4 @@
-import { Tag } from './tag.interface';
+import { Tag } from './tag.interface.js';
 
 export const Tags: Record<string, Tag> = {
 	botception: {

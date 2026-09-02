@@ -14,11 +14,11 @@ import {
 import { SourcesStringUnion } from 'discordjs-docs-parser';
 import { Injectable } from '@nestjs/common';
 
-import { AlgoliaService, DiscordJSService, MDNService } from './services';
-import { DiscordJSSearchOptions, SearchOptions } from './options';
-import { Algolia, DiscordJS, DocsOptions } from './interfaces';
-import { escape, truncate } from './utils';
-import { AlgoliaApps } from './enums';
+import { AlgoliaService, DiscordJSService, MDNService } from './services/index.js';
+import { DiscordJSSearchOptions, SearchOptions } from './options/index.js';
+import { Algolia, DiscordJS, DocsOptions } from './interfaces/index.js';
+import { escape, truncate } from './utils/index.js';
+import { AlgoliaApps } from './enums/index.js';
 
 @Injectable()
 export class DocsService {
@@ -28,21 +28,24 @@ export class DocsService {
 		private readonly discordJSService: DiscordJSService
 	) {}
 
-	public async getAlgoliaResponse(objectID: string, appType: AlgoliaApps): Promise<DocsOptions> {
+	public async getAlgoliaResponse(
+		objectID: string,
+		appType: AlgoliaApps
+	): Promise<DocsOptions | null> {
 		try {
 			const hit = await this.algoliaService.getObject(objectID, appType);
 
 			return {
-				title: bold(Algolia.Hit.getFormattedHierarchy(hit)),
+				title: bold(Algolia.getFormattedHierarchy(hit)),
 				description: hit.content?.length ? hit.content : null,
 				url: hit.url
 			};
-		} catch (err) {
+		} catch {
 			return null;
 		}
 	}
 
-	public async getMDNResponse(query: string): Promise<DocsOptions> {
+	public async getMDNResponse(query: string): Promise<DocsOptions | null> {
 		try {
 			const hit = await this.mdnService.get(query);
 
@@ -63,26 +66,26 @@ export class DocsService {
 				description,
 				url
 			};
-		} catch (err) {
+		} catch {
 			return null;
 		}
 	}
 
-	private async getDiscordJSResponse(source: string, query: string): Promise<DocsOptions> {
+	private async getDiscordJSResponse(source: string, query: string): Promise<DocsOptions | null> {
 		try {
-			const [element, doc] = await this.discordJSService.get(
-				source as SourcesStringUnion,
-				query
-			);
+			const result = await this.discordJSService.get(source as SourcesStringUnion, query);
+			if (!result) return null;
+
+			const [element, doc] = result;
 
 			const description = (element.formattedDescription || element.description) ?? '';
 
 			return {
 				title: DiscordJS.resolveElementString(element, doc),
 				description,
-				url: element.url
+				url: element.url!
 			};
-		} catch (err) {
+		} catch {
 			return null;
 		}
 	}
@@ -150,7 +153,7 @@ export class DocsService {
 				.setStyle(ButtonStyle.Link)
 		);
 
-		const notices = [];
+		const notices: string[] = [];
 
 		if (searchOptions.member) {
 			notices.push(italic(`Suggestion for ${searchOptions.member.toString()}:`));

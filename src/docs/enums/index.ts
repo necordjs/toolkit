@@ -1,1 +1,1 @@
-export * from './algolia-apps.enum';
+export * from './algolia-apps.enum.js';

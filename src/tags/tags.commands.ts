@@ -2,9 +2,9 @@ import { Context, Options, SlashCommand, SlashCommandContext } from 'necord';
 import { Injectable, UseInterceptors } from '@nestjs/common';
 import { MessageFlags } from 'discord.js';
 
-import { TagsAutocomplete } from './tags.autocomplete';
-import { SearchOptions } from '../docs/options';
-import { Tags } from './tags.constants';
+import { TagsAutocomplete } from './tags.autocomplete.js';
+import { SearchOptions } from '../docs/options/index.js';
+import { Tags } from './tags.constants.js';
 
 @Injectable()
 export class TagsCommands {
@@ -18,8 +18,8 @@ export class TagsCommands {
 		@Options() searchOptions: SearchOptions
 	) {
 		const query = searchOptions.query.trim().toLowerCase().replace(/\s+/g, '-');
-		const match = Object.keys(Tags).find(tag => Tags[tag].keywords.includes(query));
-		const tag = Tags[query] ?? Tags[match];
+		const match = Object.keys(Tags).find(tag => Tags[tag]?.keywords.includes(query));
+		const tag = Tags[query] ?? (match ? Tags[match] : undefined);
 
 		if (!tag) {
 			return interaction.reply({

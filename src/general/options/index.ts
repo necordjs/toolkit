@@ -1,2 +1,2 @@
-export * from './snowflake.options';
-export * from './user.options';
+export * from './snowflake.options.js';
+export * from './user.options.js';

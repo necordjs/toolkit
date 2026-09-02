@@ -1,10 +1,14 @@
 import { Context, Options, SlashCommand, SlashCommandContext } from 'necord';
 import { Injectable, UseInterceptors } from '@nestjs/common';
 
-import { AlgoliaAutocomplete, DiscordJSAutocomplete, MDNAutocomplete } from './autocompletes';
-import { DiscordJSSearchOptions, SearchOptions } from './options';
-import { DocsService } from './docs.service';
-import { AlgoliaApps } from './enums';
+import {
+	AlgoliaAutocomplete,
+	DiscordJSAutocomplete,
+	MDNAutocomplete
+} from './autocompletes/index.js';
+import { DiscordJSSearchOptions, SearchOptions } from './options/index.js';
+import { DocsService } from './docs.service.js';
+import { AlgoliaApps } from './enums/index.js';
 
 const DOC_DESCRIPTION = (app: string) => `📖 Display docs for ${app}`;
 

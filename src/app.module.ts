@@ -5,13 +5,13 @@ import { OpenTelemetryModule } from 'nestjs-otel';
 import { Module } from '@nestjs/common';
 import { NecordModule } from 'necord';
 
-import { CommandMetricsInterceptor, NecordSentryExceptionFilter } from './common';
-import { BitfieldsModule } from './bitfields/bitfields.module';
-import { ChangelogModule } from './changelog/changelog.module';
-import { GeneralModule } from './general/general.module';
-import { DocsModule } from './docs/docs.module';
-import { TagsModule } from './tags/tags.module';
-import { AppService } from './app.service';
+import { CommandMetricsInterceptor, NecordSentryExceptionFilter } from './common/index.js';
+import { BitfieldsModule } from './bitfields/bitfields.module.js';
+import { ChangelogModule } from './changelog/changelog.module.js';
+import { GeneralModule } from './general/general.module.js';
+import { DocsModule } from './docs/docs.module.js';
+import { TagsModule } from './tags/tags.module.js';
+import { AppService } from './app.service.js';
 
 @Module({
 	imports: [
@@ -26,12 +26,12 @@ import { AppService } from './app.service';
 		}),
 		NecordModule.forRootAsync({
 			useFactory: (configService: ConfigService) => ({
-				token: configService.get('DISCORD_TOKEN'),
+				token: configService.getOrThrow<string>('DISCORD_TOKEN'),
 				prefix: '!',
 				intents: ['Guilds', 'GuildMembers', 'MessageContent'],
 				development:
 					configService.get('NODE_ENV', 'development') === 'development'
-						? [configService.get('DISCORD_TEST_GUILD')]
+						? [configService.getOrThrow<string>('DISCORD_TEST_GUILD')]
 						: undefined
 			}),
 			inject: [ConfigService]

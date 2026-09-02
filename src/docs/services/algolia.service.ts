@@ -3,8 +3,8 @@ import { ConfigService } from '@nestjs/config';
 import { HttpService } from '@nestjs/axios';
 import { catchError, map, tap } from 'rxjs';
 
-import { Algolia } from '../interfaces';
-import { AlgoliaApps } from '../enums';
+import { Algolia } from '../interfaces/index.js';
+import { AlgoliaApps } from '../enums/index.js';
 
 @Injectable()
 export class AlgoliaService {
