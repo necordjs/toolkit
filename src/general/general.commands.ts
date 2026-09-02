@@ -23,9 +23,9 @@ import {
 } from 'discord.js';
 import { Injectable } from '@nestjs/common';
 
-import { SnowflakeOptions, UserOptions } from './options';
-import { GeneralService } from './general.service';
-import { DEFAULT_EMBED } from '../app.constants';
+import { SnowflakeOptions, UserOptions } from './options/index.js';
+import { GeneralService } from './general.service.js';
+import { DEFAULT_EMBED } from '../app.constants.js';
 
 @Injectable()
 export class GeneralCommands {
@@ -48,7 +48,7 @@ export class GeneralCommands {
 			content: hyperlink(
 				'(click here)',
 				hideLinkEmbed(
-					`https://discord.com/api/oauth2/authorize?client_id=${this.client.application.id}&scope=bot&applications.commands`
+					`https://discord.com/api/oauth2/authorize?client_id=${this.client.application!.id}&scope=bot&applications.commands`
 				)
 			),
 			ephemeral: true

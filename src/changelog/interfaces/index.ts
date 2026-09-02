@@ -1,1 +1,1 @@
-export * from './release.interface';
+export * from './release.interface.js';

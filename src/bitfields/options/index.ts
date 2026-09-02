@@ -1,1 +1,1 @@
-export * from './bitfield.options';
+export * from './bitfield.options.js';

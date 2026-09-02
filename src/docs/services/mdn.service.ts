@@ -2,7 +2,7 @@ import { Injectable, OnApplicationBootstrap } from '@nestjs/common';
 import { HttpService } from '@nestjs/axios';
 import { catchError, map, tap } from 'rxjs';
 
-import { MDN } from '../interfaces';
+import { MDN } from '../interfaces/index.js';
 
 @Injectable()
 export class MDNService implements OnApplicationBootstrap {
@@ -27,12 +27,12 @@ export class MDNService implements OnApplicationBootstrap {
 				map(response => response.data),
 				catchError(() => [])
 			)
-			.toPromise();
+			.toPromise() as Promise<MDN.IndexEntry[]>;
 	}
 
 	public search(query: string): MDN.IndexEntry[] {
 		const parts = query.split(/\.|#/).map(p => p.toLowerCase());
-		const candidates = [];
+		const candidates: { entry: MDN.IndexEntry; matches: string[] }[] = [];
 
 		for (const entry of this.indices) {
 			const lowerTitle = entry.title.toLowerCase();
@@ -73,6 +73,6 @@ export class MDNService implements OnApplicationBootstrap {
 				map(response => response.data?.doc),
 				tap(hit => this.cache.set(qString, hit))
 			)
-			.toPromise();
+			.toPromise() as Promise<MDN.Document>;
 	}
 }

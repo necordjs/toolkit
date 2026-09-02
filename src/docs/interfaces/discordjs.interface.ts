@@ -18,7 +18,7 @@ export namespace DiscordJS {
 	};
 
 	export function resolveElementString(element: DocElement, doc: Doc): string {
-		const parts = [];
+		const parts: string[] = [];
 
 		switch (element.docType) {
 			case DocTypes.Event:

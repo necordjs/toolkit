@@ -1,1 +1,1 @@
-export * from './bit-entry.interface';
+export * from './bit-entry.interface.js';

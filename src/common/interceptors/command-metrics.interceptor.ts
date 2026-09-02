@@ -1,5 +1,5 @@
 import { CallHandler, ExecutionContext, Injectable, Logger, NestInterceptor } from '@nestjs/common';
-import { NecordExecutionContext, SlashCommandDiscovery, SlashCommandContext } from 'necord';
+import { NecordExecutionContext, SlashCommandContext } from 'necord';
 import { MetricService } from 'nestjs-otel';
 import { Observable, tap } from 'rxjs';
 

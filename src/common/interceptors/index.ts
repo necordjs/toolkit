@@ -1,1 +1,1 @@
-export * from './command-metrics.interceptor';
+export * from './command-metrics.interceptor.js';

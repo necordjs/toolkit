@@ -1,6 +1,6 @@
 export interface DocsOptions {
 	title: string;
-	description: string;
+	description: string | null;
 	url: string;
 	emoji?: string;
 }

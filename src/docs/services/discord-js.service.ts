@@ -13,7 +13,7 @@ export class DiscordJSService {
 		return Doc.fetch(source);
 	}
 
-	public async get(source: SourcesStringUnion, query: string): Promise<[DocElement, Doc]> {
+	public async get(source: SourcesStringUnion, query: string): Promise<[DocElement, Doc] | null> {
 		query = query.trim();
 
 		const doc = await this.fetch(source);

@@ -1,2 +1,2 @@
-export * from './escape.util';
-export * from './truncate.util';
+export * from './escape.util.js';
+export * from './truncate.util.js';

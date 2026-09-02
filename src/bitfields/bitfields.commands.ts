@@ -7,9 +7,9 @@ import {
 } from 'necord';
 import { codeBlock, IntentsBitField, PermissionFlagsBits, PermissionsBitField } from 'discord.js';
 
-import { BitfieldsService } from './bitfields.service';
-import { DEFAULT_EMBED } from '../app.constants';
-import { BitfieldOptions } from './options';
+import { BitfieldsService } from './bitfields.service.js';
+import { BitfieldOptions } from './options/index.js';
+import { DEFAULT_EMBED } from '../app.constants.js';
 
 const BitFieldsCommand = createCommandGroupDecorator({
 	name: 'bitfields',
