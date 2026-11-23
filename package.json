@@ -74,10 +74,10 @@
 	"devDependencies": {
 		"@commitlint/cli": "21.2.4",
 		"@commitlint/config-angular": "21.2.4",
-		"@nestjs/testing": "12.5.1",
+		"@nestjs/testing": "12.6.0",
 		"@release-it/conventional-changelog": "^12.0.2",
 		"@types/node": "26.6.6",
-		"@vitest/coverage-v8": "5.1.0",
+		"@vitest/coverage-v8": "5.1.1",
 		"eslint": "^10.15.0",
 		"eslint-plugin-perfectionist": "5.14.0",
 		"eslint-plugin-prettier": "5.5.7",
@@ -92,7 +92,7 @@
 		"rxjs": "7.8.2",
 		"tsc-watch": "7.2.1",
 		"typescript": "7.0.2",
-		"vitest": "5.1.0"
+		"vitest": "5.1.1"
 	},
 	"engines": {
 		"node": "^20.19.0 || >=22.13.0",
